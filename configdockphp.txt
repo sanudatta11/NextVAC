@@ -16,3 +16,6 @@ If you are on Ubuntu 14.04-15.10* use docker.io instead:
   sudo service docker.io restart
 (If you are on Ubuntu 16.04 the service is named "docker" simply)
   Either do a newgrp docker or log out/in to activate the changes to groups.
+
+For Adding Permisson to PHP to write Files and Create directory
+    sudo chown www-data:www-data -R /var/www/html/dockertest/
