@@ -1,0 +1,5 @@
+SET SQL_SAFE_UPDATES = 0;
+
+//use this to set safe updates off in mysql
+
+//chown and chmod the folders properly for right use of php
