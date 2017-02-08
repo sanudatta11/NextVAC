@@ -15,3 +15,6 @@ Then copy your image to a new system with regular file transfer tools such as cp
 
 docker load -i <path to image tar file>
 PS: You may need to sudo all commands.
+
+Remove untagged images Docker :<none>: images
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
