@@ -1,0 +1,4 @@
+FROM ubuntumine
+COPY . /test
+WORKDIR /test
+ENTRYPOINT python testpy.py
