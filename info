@@ -3,3 +3,6 @@ SET SQL_SAFE_UPDATES = 0;
 //use this to set safe updates off in mysql
 
 //chown and chmod the folders properly for right use of php
+
+For Saving Docker containers as new images
+docker commit 5d29c3d1d987 ubuntumine1
