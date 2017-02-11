@@ -18,3 +18,7 @@ PS: You may need to sudo all commands.
 
 Remove untagged images Docker :<none>: images
 docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+
+Saving inp and output with all pids and done:
+timeout --signal=SIGKILL 4 docker run --rm -P --pids-limit 40 --cpu-quota=60000 --name testname -v /media/stuxnet/med/docker/:/try testdock g++ -o tboj testinp.cpp && timeout 4 ./tboj < inp.txt > out.txt
+
