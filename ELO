@@ -9,3 +9,11 @@ echo date("h:si:sa");
 
 echo date("h:i:sa");
 
+
+mktime(hour,minute,second,month,day,year) 
+
+$d=mktime(11, 14, 54, 8, 12, 2014);
+echo "Created date is " . date("Y-m-d h:i:sa", $d);
+
+$d=strtotime("10:30pm April 15 2014");
+echo "Created date is " . date("Y-m-d h:i:sa", $d);
