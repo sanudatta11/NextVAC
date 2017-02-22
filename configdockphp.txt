@@ -1,0 +1,21 @@
+Add the docker group to www-data sudo 
+Optional Add:
+RUN:sudo visudo
+ADD:www-data ALL=NOPASSWD: /usr/bin/docker
+
+MUST :
+http://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo
+
+Add the docker group if it doesn't already exist:
+  sudo groupadd docker
+Add the connected user "${USER}" to the docker group. Change the user name to match your preferred user:
+  sudo gpasswd -a ${USER} docker
+Restart the Docker daemon:
+  sudo service docker restart
+If you are on Ubuntu 14.04-15.10* use docker.io instead:
+  sudo service docker.io restart
+(If you are on Ubuntu 16.04 the service is named "docker" simply)
+  Either do a newgrp docker or log out/in to activate the changes to groups.
+
+For Adding Permisson to PHP to write Files and Create directory
+    sudo chown www-data:www-data -R /var/www/html/dockertest/

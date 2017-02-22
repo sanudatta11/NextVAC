@@ -1,0 +1,24 @@
+SET SQL_SAFE_UPDATES = 0;
+
+//use this to set safe updates off in mysql
+
+//chown and chmod the folders properly for right use of php
+
+For Saving Docker containers as new images
+docker commit 5d29c3d1d987 ubuntumine1
+
+
+You will need to save the docker image as a tar file:
+
+docker save -o <save image to path> <image name>
+Then copy your image to a new system with regular file transfer tools such as cp or scp. After that you will have to load the image into docker:
+
+docker load -i <path to image tar file>
+PS: You may need to sudo all commands.
+
+Remove untagged images Docker :<none>: images
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+
+Saving inp and output with all pids and done:
+timeout --signal=SIGKILL 4 docker run --rm -P --pids-limit 40 --cpu-quota=60000 --name testname -v /media/stuxnet/med/docker/:/try testdock g++ -o tboj testinp.cpp && timeout 4 ./tboj < inp.txt > out.txt
+
