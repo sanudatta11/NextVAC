@@ -1,0 +1,32 @@
+@import url("http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+#fileselector {
+    margin: 10px;
+}
+
+#upload-file-selector {
+    display: none;
+}
+
+#file_upload {
+    cursor: pointer;
+}
+
+#file_download {
+    cursor: pointer;
+}
+
+#download_div {
+    display: none;
+}
+
+#upload_div {
+    display: none;
+}
+
+.container.small_div {
+    width: 900px;
+    padding: 10px;
+}
+.card-begin {
+    cursor:pointer;
+}
