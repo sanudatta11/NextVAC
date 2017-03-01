@@ -94,34 +94,59 @@ if(isset($_SESSION['designation']) && isset($_SESSION['backauth']) && $_SESSION[
             $conn_obj_add->execute();
 
             //Saving in Profile DB
-            $conn_obj_add= $mysql_conn->prepare('INSERT INTO nextvac.profile (secretkey,propic,status,designation,incomming,messages,email,firstname,lastname,cover,hostel,hometown,number,course,semester,gender) VALUES (:seckey,:propic,:status,:designation,:incomming,:messages,:email,:first,:last,:cover,:hostel,:hometown,:num,:course,:sem,gender)');
+            $conn_obj_add= $mysql_conn->prepare('INSERT INTO nextvac.profile (secretkey,propic,status,designation,incomming,messages,email,firstname,lastname,cover,hostel,hometown,number,course,semester,gender) VALUES (:seckey,:propic,:status,:desig,:incom,:messages,:email,:first,:last,:cover,:hostel,:hometown,:num,:course,:sem,gender)');
             $conn_obj_add->bindParam(':seckey',$secretkey,PDO::PARAM_STR);
+            $conn_obj_add->bindValue(':status','I am new to NextVAC');
+            $conn_obj_add->bindValue(':desig','student');
+            $conn_obj_add->bindValue(':incom',0);
+            $conn_obj_add->bindValue(':messages',0);
+            $conn_obj_add->bindParam(':email',$email,PDO::PARAM_STR);
+            $conn_obj_add->bindParam(':first',$firstname,PDO::PARAM_STR);
+            $conn_obj_add->bindParam(':last',$lastname,PDO::PARAM_STR);
+            $conn_obj_add->bindParam(':hostel',$hostel,PDO::PARAM_STR);
+            $conn_obj_add->bindParam(':hometown',$hometown,PDO::PARAM_STR);
+            $conn_obj_add->bindParam(':num',$phone,PDO::PARAM_INT);
+            $conn_obj_add->bindParam(':course',$course,PDO::PARAM_STR);
+            $conn_obj_add->bindParam(':sem',$semester,PDO::PARAM_INT);
+
 
             $_POST['gender'] = preg_replace("/[^0-9]+/", "",$_POST['gender']);
 
             if($_POST['gender'] == 1 || $_POST['gender'] == 2)
             {
                 $gender = $_POST['gender'];
+                $conn_obj_add->bindParam(':gender',$gender,PDO::PARAM_STR);
+                if($_POST['gender'] == 1)
+                {
+                    $conn_obj_add->bindValue(':propic','male.jpg');
+                }
+                else
+                    $conn_obj_add->bindValue(':propic','female.jpg');
+
             }else
             {
                 $gender = 3;
+                $conn_obj_add->bindParam(':gender',$gender,PDO::PARAM_STR);
+                $conn_obj_add->bindValue(':propic','default.jpg');
             }
-
+            $conn_obj_add->bindValue(':cover','defaultcover.jpg');
             $conn_obj_add->execute();
 
-
-
+            $_SESSION['donecreate'] = true;
+            header('Location: ../index.php');       //Send it wherever you want actually Check for sessionvar and unset it
+            die();
 
         }
         else{
-
+            header('Location: ../index.php');
+            die();
         }
 
     }
     else{
-
+        header('Location: ../index.php');
+        die();
     }
-
 
 }
 else if(isset($_SESSION['designation']) && $_SESSION['designation'] == 'master')
