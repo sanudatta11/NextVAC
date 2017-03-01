@@ -1,0 +1,2 @@
+# Info
+This is the repository for the main project that we are working on. This is a total college suite that we are working on consitiing of many feautures that we are trying to incorporate in. Consiting of File Share(Peer to Peer) ,Coding Ground,MCQ Question Answer , Video Lecture Live Stream, Traversing Digital Library of PDFs and Videos,Profile of each student and teacher, a social network that will be totally for the students.

@@ -42,13 +42,19 @@ $(document).ready(function() {
     });
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
     // Taking event for runfom
 
     $('#runform').submit(function(){
         $('#sampleout').hide();
+<<<<<<< HEAD
         $('#runbt').prop('disabled',true);
         $('#runbt').addClass('disabled');
+=======
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
         $('#processingbox').empty();
 
         $('#processingbox').append('<div class="content" id="processdiv"><br>'+
@@ -60,13 +66,22 @@ $(document).ready(function() {
         '<p class="text-center">'+
             '<embed src="../../images/spinner.gif" style="height: 300px; width: 350px; ">'+
             '</p>'+
+<<<<<<< HEAD
         '</div>');
+=======
+            '</div>');
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
 
         $('#processingbox').show("blind", {times: 10,distance: 100}, 1000);
         $('html,body').animate({
                 scrollTop: $("#processingbox").offset().top},
             'slow');
 
+<<<<<<< HEAD
+=======
+        $("#runbt").attr("disabled", true);
+        $('#runbt').addClass('disabled');
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
         //console.log("Sub");
         // Maybe show a loading indicator...
         $.post($(this).attr('action'), $(this).serialize(), function(res){
@@ -84,7 +99,10 @@ $(document).ready(function() {
             console.log(obj);
             $('#sampleout').show();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
             if(obj.errors == true)
             {
                 //Sincere errors as of now
@@ -132,7 +150,10 @@ $(document).ready(function() {
                 $('#youtput').html('No Output generated');
                 $('#sampleverdict').html('Time Limit Exceeded!');
 
+<<<<<<< HEAD
                 $('#runbt').removeClass('disabled');
+=======
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
             }else if(obj.verdict == 2)
             {
                 var input_desired =obj.dinput;
@@ -184,7 +205,10 @@ $(document).ready(function() {
                 }
                 $('#youtput').html(html_out);
 
+<<<<<<< HEAD
                 $('#runbt').removeClass('disabled');
+=======
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
             }else if(obj.verdict == 3)
             {
 
@@ -238,15 +262,23 @@ $(document).ready(function() {
                 }
                 $('#youtput').html(html_out);
 
+<<<<<<< HEAD
                 $('#runbt').removeClass('disabled');
+=======
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
             }else if(obj.verdict == 4)
             {
                 //Unknown Error
             }
 
         });
+<<<<<<< HEAD
         $('#runbt').prop('disabled',false);
         // $('#runbt').removeClass('disabled');
+=======
+        $('#runbt').removeClass('disabled');
+        $('#runbt').removeAttr("disabled");
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
         return false; // prevent default action
 
     });
@@ -258,7 +290,10 @@ $(document).ready(function() {
 
 
     $('#subform').submit(function(){
+<<<<<<< HEAD
         $('#subbt').addClass('disabled');
+=======
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
         $('#processingbox').empty();
         $('#sampleout').hide();
         //console.log("Sub");
@@ -342,7 +377,10 @@ $(document).ready(function() {
                     $('#verdict_text').css('color','limegreen');
                     $('#main_verdict').empty();
                     $('#main_verdict').append('<strong>Congratulations!</strong>');
+<<<<<<< HEAD
                     $('#subbt').removeClass('disabled');
+=======
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
                 }
                 else if($flag_status == 'wrong')
                 {
@@ -350,14 +388,20 @@ $(document).ready(function() {
                     $('#verdict_text').css('color','red');
                     $('#main_verdict').empty();
                     $('#main_verdict').append('<strong>Wrong Answer</strong>');
+<<<<<<< HEAD
                     $('#subbt').removeClass('disabled');
+=======
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
                 }
                 else if($flag_status == 'tle')
                 {
                     $('#verdict_text').css('color','#eeaa00');
                     $('#main_verdict').empty();
                     $('#main_verdict').append('<strong>Time Limit Exceeded!</strong>');
+<<<<<<< HEAD
                     $('#subbt').removeClass('disabled');
+=======
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
                 }
             }
             else if(obj.errortop =='compileerror')
@@ -367,19 +411,27 @@ $(document).ready(function() {
                 $('#main_verdict').empty();
                 $('#main_verdict').append('<strong>Compilation Error</strong>');
                 $('#result').empty();
+<<<<<<< HEAD
                 $('#result').append('<pre  style="max-width: 1100px; align-self: center;"><wre>'+obj.compileerror+'</wre></pre>');
                 $('#subbt').removeClass('disabled');
+=======
+                $('#result').append('<pre>'+obj.compileerror+'</pre>');
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
             }
 
 
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
         return false; // prevent default action
 
     });
 
     //Changing the language and also the theme below with the help with Jquery
     $("#language").change(function(e) {
+<<<<<<< HEAD
 
         editor.getSession().setMode("ace/mode/" + this.value);
         var lang_name = $("#language option:selected").text();
@@ -388,6 +440,13 @@ $(document).ready(function() {
 
     });
 
+=======
+        //console.log(this.value);
+        editor.getSession().setMode("ace/mode/" + this.value);
+        var lang_name = $("#language option:selected").text();
+        $('.language').val(lang_name);
+    });
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
     $("#theme").change(function(e) {
         console.log(this.value);
         editor.setTheme("ace/mode/"+this.value);

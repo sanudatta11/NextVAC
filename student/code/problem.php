@@ -339,7 +339,11 @@ else
 
                             <form action="realsub.php" method="post" id="subform" name="subform">
                                 <textarea class="form-control" style="display:none" id="code_arena_sub" name="code_arena" required></textarea>
+<<<<<<< HEAD
                                 <input type="hidden" class="language hidden" value="C++" name="language" id="sublang">
+=======
+                                <input type="hidden" class="language hidden" value="C++" name="language">
+>>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
                                 <input type="hidden" class="hidden" name="ccode" id="ccode" value="<?php echo $contestcode;?>">
                                 <input type="hidden" class="hidden" name="pcode" id="pcode" value="<?php echo $problemcode;?>">
                                 <button type="submit" class="btn btn-lg btn-success" id="subbt">SUBMIT</button>
