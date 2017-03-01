@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>Feedback</title>
+</head>
+<body>
+<link rel="stylesheet" href="feedback.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<div class="container">
+  <div class="row header">
+    <h1>Feedback US &nbsp;</h1>
+    <h3>Fill out the form below to learn more!</h3>
+  </div>
+  <div class="row body">
+    <form method="post" action="../../mailer/feed.php">
+      <ul>
+        
+        <li>
+          <p class="left">
+            <label for="fname">First Name</label>
+            <input type="text" name="name" placeholder="John" id="fname" onkeyup="merakeyup()" required/>
+          </p>
+          <p class="pull-right">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" placeholder="Smith" id="lname" onkeyup="merakeyup()" required/>
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" name="email" placeholder="name@website.com" id="email"onkeyup="merakeyup()" required/>
+          </p>
+		  <p>&nbsp</p>
+		  <p>
+            <label for="reg">Registration Number<span class="reg">*</span></label>
+            <input type="text" name="regno" placeholder="Registration No:" id="reg" onkeyup="merakeyup()" required/>
+          </p>
+        </li>        
+        <li><div class="divider"></div></li>
+        <li>
+          <label for="feedback">Feedback</label>
+          <textarea class="feedback-me" name="feedback" id="feedback" onkeyup="merakeyup()" required></textarea>
+        </li>
+        
+        <li>
+          <input class="btn btn-primary" value="Submit"  id="submit" onclick="onSubmit()" type="submit">
+        </li>
+      </ul>
+    </form>  
+  </div>
+</div>
+
+<script>	
+function merakeyup(){
+document.getElementById('submit').disabled=false;
+}
+ function onSubmit(){
+ var cansubmit=true;
+ var fname=document.getElementById('fname').value;
+ var lname=document.getElementById('lname').value;
+ var email=document.getElementById('email').value;
+ var reg=document.getElementById('reg').value;
+ var feedback=document.getElementById('feedback').value;
+ var cansubmit=true;
+ if((fname.length==0)||(lname.length==0)||(email.length==0)||(reg.length==0)||(feedback.length==0))
+ {
+	cansubmit=false;
+ }
+ document.getElementById('submit').disabled=!cansubmit;
+ }
+
+</script>
+
+</body>
+</html>
