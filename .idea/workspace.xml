@@ -68,8 +68,8 @@
       <file leaf-file-name="codesub.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/codingground/codesub.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1603">
-              <caret line="398" column="0" lean-forward="true" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
+            <state relative-caret-position="284">
+              <caret line="360" column="71" lean-forward="true" selection-start-line="360" selection-start-column="71" selection-end-line="360" selection-end-column="71" />
               <folding>
                 <marker date="1488365540140" expanded="true" signature="1583:1603" ph="..." />
                 <marker date="1488365540140" expanded="true" signature="1800:1829" ph="..." />
@@ -252,7 +252,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1431" />
+    <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
@@ -585,15 +585,15 @@
       <workItem from="1486896958602" duration="12446000" />
       <workItem from="1486968077652" duration="34713000" />
       <workItem from="1487235792145" duration="603000" />
-      <workItem from="1488357713443" duration="7683000" />
+      <workItem from="1488357713443" duration="7752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209504000" />
+    <option name="totallyTimeSpent" value="209573000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1431" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18908532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -900,8 +900,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/codingground/codesub.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1603">
-          <caret line="398" column="0" lean-forward="true" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
+        <state relative-caret-position="284">
+          <caret line="360" column="71" lean-forward="true" selection-start-line="360" selection-start-column="71" selection-end-line="360" selection-end-column="71" />
           <folding>
             <marker date="1488365540140" expanded="true" signature="1583:1603" ph="..." />
             <marker date="1488365540140" expanded="true" signature="1800:1829" ph="..." />
