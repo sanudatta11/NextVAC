@@ -27,11 +27,10 @@ CREATE TABLE IF NOT EXISTS `nextvac`.`answersdb` (
   `codeid` INT(11) NOT NULL,
   `answer` INT(11) NOT NULL,
   `verdict` BINARY(1) NOT NULL,
-  PRIMARY KEY (`secretkey`))
+  PRIMARY KEY (`secretkey`),
+  UNIQUE INDEX `secretkey_UNIQUE` (`secretkey` ASC))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
-
-CREATE UNIQUE INDEX `secretkey_UNIQUE` ON `nextvac`.`answersdb` (`secretkey` ASC);
 
 
 -- -----------------------------------------------------
@@ -48,13 +47,54 @@ DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
+-- Table `nextvac`.`coderesults`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `nextvac`.`coderesults` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `coderesultscol` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+-- -----------------------------------------------------
+-- Table `nextvac`.`codingdb`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `nextvac`.`codingdb` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `secretkey` VARCHAR(30) NOT NULL,
+  `section` VARCHAR(45) NOT NULL,
+  `contestcode` VARCHAR(35) NOT NULL,
+  `contestname` VARCHAR(75) NOT NULL,
+  `problemname` VARCHAR(75) NOT NULL,
+  `problemcode` INT(11) NOT NULL DEFAULT '1',
+  `problemstat` VARCHAR(2000) NOT NULL,
+  `inputstat` VARCHAR(2000) NOT NULL,
+  `outputstat` VARCHAR(2000) NOT NULL,
+  `totaltestcase` INT(11) NOT NULL,
+  `sample` VARCHAR(75) NOT NULL,
+  `explaination` VARCHAR(700) NULL DEFAULT NULL,
+  `inpfolder` VARCHAR(100) NOT NULL,
+  `outfolder` VARCHAR(100) NOT NULL,
+  `duration` BIGINT(5) NOT NULL,
+  `status` INT(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 12
+DEFAULT CHARACTER SET = latin1;
+
+
+-- -----------------------------------------------------
 -- Table `nextvac`.`globaldata`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `nextvac`.`globaldata` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(70) NOT NULL,
   `events` INT(11) NOT NULL,
-  `crank` INT(11) NOT NULL)
+  `crank` INT(11) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = latin1;
 
 
@@ -81,11 +121,10 @@ CREATE TABLE IF NOT EXISTS `nextvac`.`login` (
   `secretkey` VARCHAR(30) NOT NULL,
   `sessionvar` VARCHAR(60) NOT NULL DEFAULT 'none',
   `designation` VARCHAR(15) NOT NULL,
-  PRIMARY KEY (`username`))
+  PRIMARY KEY (`username`),
+  UNIQUE INDEX `idlogin_UNIQUE` (`username` ASC))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
-
-CREATE UNIQUE INDEX `idlogin_UNIQUE` ON `nextvac`.`login` (`username` ASC);
 
 
 -- -----------------------------------------------------
@@ -102,19 +141,18 @@ CREATE TABLE IF NOT EXISTS `nextvac`.`profile` (
   `firstname` VARCHAR(45) NOT NULL,
   `lastname` VARCHAR(45) NOT NULL,
   `cover` VARCHAR(45) NOT NULL,
-  `hostel` VARCHAR(45) NOT NULL,
+  `hostel` VARCHAR(45) NULL DEFAULT NULL,
   `hometown` VARCHAR(45) NOT NULL,
   `number` VARCHAR(45) NOT NULL,
   `course` VARCHAR(45) NOT NULL,
   `semester` INT(11) NOT NULL,
   `organization` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`secretkey`))
+  `gender` INT(11) NOT NULL DEFAULT '3',
+  PRIMARY KEY (`secretkey`),
+  UNIQUE INDEX `secretkey_UNIQUE` (`secretkey` ASC),
+  UNIQUE INDEX `propic_UNIQUE` (`propic` ASC))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
-
-CREATE UNIQUE INDEX `secretkey_UNIQUE` ON `nextvac`.`profile` (`secretkey` ASC);
-
-CREATE UNIQUE INDEX `propic_UNIQUE` ON `nextvac`.`profile` (`propic` ASC);
 
 
 -- -----------------------------------------------------
@@ -138,6 +176,34 @@ DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
+-- Table `nextvac`.`rankingtable`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `nextvac`.`rankingtable` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `secretkey` VARCHAR(50) NOT NULL,
+  `contestcode` VARCHAR(45) NOT NULL,
+  `problemcode` VARCHAR(35) NOT NULL,
+  `mainscore` DOUBLE NOT NULL,
+  `time` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+-- -----------------------------------------------------
+-- Table `nextvac`.`ratingtable`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `nextvac`.`ratingtable` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `secretkey` VARCHAR(50) NOT NULL,
+  `mainscore` BIGINT(20) NOT NULL DEFAULT '100',
+  `elorating` BIGINT(20) NOT NULL DEFAULT '2000',
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+-- -----------------------------------------------------
 -- Table `nextvac`.`studentinfo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `nextvac`.`studentinfo` (
@@ -147,15 +213,12 @@ CREATE TABLE IF NOT EXISTS `nextvac`.`studentinfo` (
   `regno` INT(11) NOT NULL,
   `attendance` INT(11) NOT NULL,
   `rank` INT(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`secretkey`))
+  PRIMARY KEY (`secretkey`),
+  UNIQUE INDEX `secretkey_UNIQUE` (`secretkey` ASC),
+  UNIQUE INDEX `regno_UNIQUE` (`regno` ASC),
+  UNIQUE INDEX `rank_UNIQUE` (`rank` ASC))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
-
-CREATE UNIQUE INDEX `secretkey_UNIQUE` ON `nextvac`.`studentinfo` (`secretkey` ASC);
-
-CREATE UNIQUE INDEX `regno_UNIQUE` ON `nextvac`.`studentinfo` (`regno` ASC);
-
-CREATE UNIQUE INDEX `rank_UNIQUE` ON `nextvac`.`studentinfo` (`rank` ASC);
 
 
 -- -----------------------------------------------------
@@ -167,14 +230,12 @@ CREATE TABLE IF NOT EXISTS `nextvac`.`teacherinfo` (
   `name` VARCHAR(85) NOT NULL,
   `specialisation` VARCHAR(55) NOT NULL,
   `honour` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`secretkey`))
+  PRIMARY KEY (`secretkey`),
+  UNIQUE INDEX `secretkey_UNIQUE` (`secretkey` ASC))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
-
-CREATE UNIQUE INDEX `secretkey_UNIQUE` ON `nextvac`.`teacherinfo` (`secretkey` ASC);
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
