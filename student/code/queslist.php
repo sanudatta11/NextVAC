@@ -328,6 +328,7 @@ else{
 <script>
     $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
+        $("#wrapper").toggleClass("toggled");
     });
 </script>
 <!--end of tooltip script-->

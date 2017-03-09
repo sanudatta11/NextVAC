@@ -46,9 +46,10 @@ else{
     }
     else
     {
-        //Fuck this guy telling wrong code
+        //Fuck this guy no contests available
         $_SESSION['codeerror'] = true;
-        header('Location: selectcode.php');
+//        echo '<script>window.alert("Wrong Code or You have no Coding Contests")</script>';
+        header('Location: ../dashboard.php');
         die();
     }
 

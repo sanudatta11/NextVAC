@@ -131,7 +131,6 @@ else
     if($language_select == 'C++')
     {
         file_put_contents($tempdock.$random_folder.'/solution.cpp',$_POST['code_arena']);
-<<<<<<< HEAD
         exec("g++ -o /var/www/html/student/tempdockers/".$random_folder."/solution /var/www/html/student/tempdockers/".$random_folder."/solution.cpp 2>&1",$compile_error,$ret_temp);
 
         if(isset($compile_error) && $ret_temp != 0)
@@ -146,7 +145,7 @@ else
             //Error Has Occured
             $data['verdict'] = 0;
             $data['output'] = $final_error;
-=======
+        }
         $compile_error = shell_exec("g++ -o /var/www/html/student/tempdockers/".$random_folder."/solution /var/www/html/student/tempdockers/".$random_folder."/solution.cpp 2>&1");
         if(isset($compile_error))
         {
@@ -154,7 +153,6 @@ else
             //Error Has Occured
             $data['verdict'] = 0;
             $data['output'] = $compile_error;
->>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
             echo json_encode($data);
         }
         else
@@ -168,17 +166,11 @@ else
                     file_put_contents("/var/www/html/student/tempdockers/" . $random_folder . "/runcode.sh","#!/bin/bash\ntimeout 2 ./solution < checkinp.txt > out.txt");
                     shell_exec("chmod 0777 +x /var/www/html/student/tempdockers/".$random_folder."/runcode.sh");
                 }
-<<<<<<< HEAD
+
                 $statement = "timeout --signal=SIGKILL 3 docker run --rm -m 10m --pids-limit 40 --cpu-quota=70000 --name " . $docker_container . " -v /var/www/html/student/tempdockers/" . $random_folder . ":/try testdock timeout 2 ./runcode.sh 2>&1";
             }
             else {
-                $statement = "timeout --signal=SIGKILL 3 docker run --rm -m 10m --pids-limit 40 --cpu-quota=70000 --name " . $docker_container . " -v /var/www/html/student/tempdockers/" . $random_folder . ":/try testdock timeout 2 ./solution > /var/www/html/student/tempdockers/" . $random_folder . "/out.txt 2>&1";
-=======
-                $statement = "timeout --signal=SIGKILL 3 docker run --rm --pids-limit 40 --cpu-quota=70000 --name " . $docker_container . " -v /var/www/html/student/tempdockers/" . $random_folder . ":/try testdock timeout 2 ./runcode.sh 2>&1";
-            }
-            else {
                 $statement = "timeout --signal=SIGKILL 3 docker run --rm --pids-limit 40 --cpu-quota=70000 --name " . $docker_container . " -v /var/www/html/student/tempdockers/" . $random_folder . ":/try testdock timeout 2 ./solution > /var/www/html/student/tempdockers/" . $random_folder . "/out.txt 2>&1";
->>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
             }
             //exec($statement,$output,$ret_stat);
             exec($statement,$output,$retstat);
@@ -227,7 +219,7 @@ else
     elseif ($language_select == 'C')
     {
         file_put_contents($tempdock.$random_folder.'/solution.c',$_POST['code_arena']);
-<<<<<<< HEAD
+
         exec("gcc -o /var/www/html/student/tempdockers/".$random_folder."/solution /var/www/html/student/tempdockers/".$random_folder."/solution.c 2>&1",$compile_error,$ret_temp);
 
         if(isset($compile_error) && $ret_temp != 0)
@@ -303,11 +295,8 @@ else
             echo json_encode($data);
 
         }
-=======
+
         $compile_error = shell_exec("gcc /var/www/html/student/tempdockers/".$random_folder."/solution.c -o /var/www/html/student/tempdockers/".$random_folder."/solution.out  2>&1");
-
->>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
-
 
     }
     elseif ($language_select == 'Java')
@@ -317,8 +306,6 @@ else
     elseif ($language_select == 'Python')
     {
         file_put_contents($tempdock.$random_folder.'/solution.py',$_POST['code_arena']);
-<<<<<<< HEAD
-
             $docker_container =generaterandomstring(10);
             if(file_exists($final_path_inp) && file_exists($final_path_inp_docker)) {
 
@@ -374,11 +361,6 @@ else
             rmdir("/var/www/html/student/tempdockers/".$random_folder);
 
             echo json_encode($data);
-
-
-
-=======
->>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
     }
     else {
         //Some Error has occured while selecting the language

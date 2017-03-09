@@ -112,22 +112,19 @@ else{
         if($language_select == 'C++')
         {
             file_put_contents($tempdock.$random_folder.'/solution.cpp',$_POST['code_arena']);
-<<<<<<< HEAD
             exec("g++ -o /var/www/html/student/tempdockers/".$random_folder."/solution /var/www/html/student/tempdockers/".$random_folder."/solution.cpp 2>&1",$compile_error,$ret_temp);
 
-            if(isset($compile_error) && $ret_temp != 0)
-            {
-                $final_error ="";
-                foreach ($compile_error as $compileline)
-                {
-                    $compileline = substr($compileline,98);
-                    $final_error=$final_error.'<br>'.$compileline;
+            if(isset($compile_error) && $ret_temp != 0) {
+                $final_error = "";
+                foreach ($compile_error as $compileline) {
+                    $compileline = substr($compileline, 98);
+                    $final_error = $final_error . '<br>' . $compileline;
                 }
 //                $compile_error =substr($compile_error,98);
                 //Error Has Occured
                 $data['errortop'] = 'compileerror';
                 $data['compileerror'] = $final_error;
-=======
+            }
             $compile_error = shell_exec("g++ -o /var/www/html/student/tempdockers/".$random_folder."/solution /var/www/html/student/tempdockers/".$random_folder."/solution.cpp 2>&1");
 
             if(isset($compile_error))
@@ -136,7 +133,6 @@ else{
                 //Error Has Occured
                 $data['errortop'] = 'compileerror';
                 $data['compileerror'] = $compile_error;
->>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
                 echo json_encode($data);
             }
             else
@@ -149,13 +145,10 @@ else{
                     $inp_temp=$pre_path.$inpfolder.'/input'.$file_index.'.txt';
                     $out_temp=$pre_path.$outfolder.'/output'.$file_index.'.txt';
 
-<<<<<<< HEAD
 //                    $data['inpfile'] = $inp_temp;
 //                    $data['outfile'] = $out_temp;
-=======
                     $data['inpfile'] = $inp_temp;
                     $data['outfile'] = $out_temp;
->>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
 
                     if(file_exists($inp_temp) && file_exists($out_temp))
                     {
@@ -167,12 +160,8 @@ else{
                             file_put_contents("/var/www/html/student/tempdockers/" . $random_folder . "/runcode.sh","#!/bin/bash\ntimeout 2 ./solution < checkinp.txt > out.txt");
                             shell_exec("chmod 0777 +x /var/www/html/student/tempdockers/".$random_folder."/runcode.sh");
                         }
-
-<<<<<<< HEAD
                         $statement = "timeout --signal=SIGKILL 3 docker run --rm --pids-limit 40 -m 10m --cpu-quota=70000 --name " . $docker_container . " -v /var/www/html/student/tempdockers/" . $random_folder . ":/try testdock timeout 2 ./runcode.sh 2>&1";
-=======
                         $statement = "timeout --signal=SIGKILL 3 docker run --rm --pids-limit 40 --cpu-quota=70000 --name " . $docker_container . " -v /var/www/html/student/tempdockers/" . $random_folder . ":/try testdock timeout 2 ./runcode.sh 2>&1";
->>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
 
                         exec($statement,$output,$retstat);
                         shell_exec("docker rm -f ".$docker_container);
@@ -242,7 +231,6 @@ else{
         elseif ($language_select == 'C')
         {
             file_put_contents($tempdock.$random_folder.'/solution.c',$_POST['code_arena']);
-<<<<<<< HEAD
             exec("gcc -o /var/www/html/student/tempdockers/".$random_folder."/solution /var/www/html/student/tempdockers/".$random_folder."/solution.c 2>&1",$compile_error,$ret_temp);
 
             if(isset($compile_error) && $ret_temp != 0)
@@ -349,25 +337,17 @@ else{
                 echo json_encode($data,JSON_UNESCAPED_SLASHES);
                 die();
             }
-=======
+
             $compile_error = shell_exec("gcc /var/www/html/student/tempdockers/".$random_folder."/solution.c -o /var/www/html/student/tempdockers/".$random_folder."/solution.out  2>&1");
->>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
 
         }
         elseif ($language_select == 'Java')
         {
             file_put_contents($tempdock.$random_folder.'/solution.java',$_POST['code_arena']);
-<<<<<<< HEAD
-
-
-=======
->>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
         }
         elseif ($language_select == 'Python')
         {
             file_put_contents($tempdock.$random_folder.'/solution.py',$_POST['code_arena']);
-<<<<<<< HEAD
-
                 $docker_container =generaterandomstring(10);
                 $file_index = 1;
                 do{
@@ -455,10 +435,6 @@ else{
 
                 echo json_encode($data,JSON_UNESCAPED_SLASHES);
                 die();
-
-
-=======
->>>>>>> ac781e3feb74f6d6e5697f3230547ba5cd2cc5f1
         }
         else {
             //Some Error has occured while selecting the language

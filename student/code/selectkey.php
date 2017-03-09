@@ -45,9 +45,9 @@ if($coding_key_obj->rowCount() > 0)
 }
 else
 {
-    //Fuck this guy telling wrong code
-    $_SESSION['codeerror'] = true;
-    header('Location: selectcode.php');
+    //Fuck this guy telling wrong code or no contest
+    echo '<script>window.alert("Wrong Code or You have no Coding Contests")</script>';
+    header('Location: ../dashboard.php');
     die();
 }
 
