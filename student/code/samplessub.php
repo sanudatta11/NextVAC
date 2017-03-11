@@ -32,12 +32,22 @@ else{
 }
 
 
+
 $tle=1;
 $data=array();
 $seconds = 4;
 set_time_limit($seconds);
 $data['verdict']=4;
 $data['errors']=false;
+
+function trimfile($path)
+{
+    $fh = fopen($path, 'r+') or die("Can't open file");
+    $stat = fstat($fh);
+    ftruncate($fh, $stat['size']-1);
+    fclose($fh);
+}
+
 
 if(empty($_POST['code_arena']))
 {
@@ -197,7 +207,18 @@ else
                 unlink($now_out);
             }
             else{
-                $data['output'] = file_get_contents($now_out);
+                $char = substr(file_get_contents($now_out), -1);
+                if($char == PHP_EOL)
+                {
+                    $data_temp = file_get_contents($now_out);
+                    $data_temp = substr_replace($data_temp ,"",-1);
+                    unlink($now_out);
+                    file_put_contents($now_out,$data_temp);
+                    $data['output'] = $data_temp;
+                }
+                else
+                    $data['output'] = file_get_contents($now_out);
+
                 if(sha1_file($now_out) == sha1_file($final_path_out))
                 {
                     $data['verdict'] = 2;
@@ -277,7 +298,18 @@ else
                 unlink($now_out);
             }
             else{
-                $data['output'] = file_get_contents($now_out);
+                $char = substr(file_get_contents($now_out), -1);
+                if($char == PHP_EOL)
+                {
+                    $data_temp = file_get_contents($now_out);
+                    $data_temp = substr_replace($data_temp ,"",-1);
+                    unlink($now_out);
+                    file_put_contents($now_out,$data_temp);
+                    $data['output'] = $data_temp;
+                }
+                else
+                    $data['output'] = file_get_contents($now_out);
+
                 if(sha1_file($now_out) == sha1_file($final_path_out))
                 {
                     $data['verdict'] = 2;
@@ -312,7 +344,7 @@ else
                 if ($fp1 = fopen($final_path_inp_docker,"r")) {
                     fclose($fp1);
                     copy($final_path_inp_docker, "/var/www/html/student/tempdockers/" . $random_folder . "/checkinp.txt");
-                    file_put_contents("/var/www/html/student/tempdockers/" . $random_folder . "/runcode.sh","#!/bin/bash\ntimeout 2 python3 solution.py < checkinp.txt > out.txt");
+                    file_put_contents("/var/www/html/student/tempdockers/" . $random_folder . "/runcode.sh","#!/bin/bash\ntimeout 2 python3 solution.py < checkinp.txt > out.txt 2>&1");
                     shell_exec("chmod 0777 +x /var/www/html/student/tempdockers/".$random_folder."/runcode.sh");
                 }
                 $statement = "timeout --signal=SIGKILL 3 docker run --rm -m 10m --pids-limit 40 --cpu-quota=70000 --name " . $docker_container . " -v /var/www/html/student/tempdockers/" . $random_folder . ":/try testdock timeout 2 ./runcode.sh 2>&1";
@@ -345,7 +377,18 @@ else
                 unlink($now_out);
             }
             else{
-                $data['output'] = file_get_contents($now_out);
+                $char = substr(file_get_contents($now_out), -1);
+                if($char == PHP_EOL)
+                {
+                    $data_temp = file_get_contents($now_out);
+                    $data_temp = substr_replace($data_temp ,"",-1);
+                    unlink($now_out);
+                    file_put_contents($now_out,$data_temp);
+                    $data['output'] = $data_temp;
+                }
+                else
+                    $data['output'] = file_get_contents($now_out);
+
                 if(sha1_file($now_out) == sha1_file($final_path_out))
                 {
                     $data['verdict'] = 2;
@@ -359,7 +402,6 @@ else
             array_map('unlink', glob("/var/www/html/student/tempdockers/".$random_folder."/*.*"));
             unlink("/var/www/html/student/tempdockers/".$random_folder."/solution");
             rmdir("/var/www/html/student/tempdockers/".$random_folder);
-
             echo json_encode($data);
     }
     else {

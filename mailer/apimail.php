@@ -6,11 +6,11 @@
  * Time: 10:41 AM
  */
 
-session_start();
 require_once '../vendor/autoload.php';
 
 function sendmail($recipent_email,$recipent_name,$username,$password)
     {
+
         $mail = new PHPMailer;
 
         //Enable SMTP debugging.

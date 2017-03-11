@@ -10,6 +10,12 @@
 
     if(isset($_SESSION['secretkey'])&&$_SESSION['designation']=='student')
     {
+        if(isset($_SESSION['codeerror']) && $_SESSION['codeerror'] = true)
+        {
+            unset($_SESSION['codeerror']);
+            echo '<script>window.alert("Sorry No Contest found for You")</script>';
+        }
+
         //Do something here .
         $new_id = session_id();
 
@@ -499,6 +505,7 @@
 <script>
     $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
+        $("#wrapper").toggleClass("toggled");
     });
 </script>
 <!--end of tooltip script-->

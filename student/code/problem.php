@@ -107,10 +107,14 @@ else
             position: relative;
             height: 500px;
         }
-
         .my-editor {
             width: 800px;
             height: 500px;
+        }
+        #codeFS {
+            width: 100%;
+            height: auto;
+            background-color: white;
         }
     </style>
     <style>
@@ -273,6 +277,7 @@ else
                         <div class="well well-sm " style="font-family: 'Electrolize', sans-serif; font-size: 22px;"><strong>Sample Output </strong></div>
                         <pre class="pre-scrollable" style="height: 200px; font-family: 'Electrolize', sans-serif; font-size: 22px;"><?php
                         $final_path_out = $pre_path.$sample.'/sampleout.txt';
+                        //Sample Input Show
 
                         if(file_exists($final_path_out))
                         {
@@ -300,7 +305,7 @@ else
                             <div class="row">
                                 <div class="col-xs-6">
                                     <select class="form-control" id="theme">
-                                        <option value="monokai">Monokai</option>
+                                        <option value ="0"> Select Theme</option>
                                         <option value="cobalt">Cobalt</option>
                                         <option value="ambiance">Ambiance</option>
                                         <option value="solarized_light">Solarized Light</option>
@@ -317,13 +322,18 @@ else
                             </div>
 
                         </div>
+
                         <div class="panel-body">
-                            <div id="editor"></div>
+                            <div class="container" id="codeFS">
+                                <div class="row" style="display: none;" id="hide_row">
+                                    <h1 class="text text-center " style="color: white"><strong>Distraction free mode activated!</strong></h1>
+                                </div>
+                                <div id="editor"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-9">
-
+                        <div class="col-sm-8">
                         </div>
                         <div class="col-sm-1">
                             <form action="samplessub.php" method="post" name="runform" id="runform">
@@ -333,13 +343,10 @@ else
                                 <input type="hidden" class="hidden" name="pcode" id="pcode" value="<?php echo $problemcode;?>">
                                 <button type="submit" class="btn btn-lg btn-info" id="runbt">RUN</button>
                             </form>
-
                         </div>
                         <div class="col-sm-1">
-
                             <form action="realsub.php" method="post" id="subform" name="subform">
                                 <textarea class="form-control" style="display:none" id="code_arena_sub" name="code_arena" required></textarea>
-
                                 <input type="hidden" class="language hidden" value="C++" name="language" id="sublang">
                                 <input type="hidden" class="language hidden" value="C++" name="language">
                                 <input type="hidden" class="hidden" name="ccode" id="ccode" value="<?php echo $contestcode;?>">
@@ -348,25 +355,12 @@ else
                             </form>
 
                         </div>
-                        <div class="col-sm-1">
 
+                        <div class="col-sm-1">
+                                <button type="button" class="btn btn-lg btn-warning" onclick="goFS()"> Fullscreen </button>
                         </div>
                     </div>
-<!--                    <div class="row">-->
-<!--                        <div class="col-xs-9"> </div>-->
-<!--                        <div class="col-xs-3">-->
-<!--                            <div class="btn-group">-->
-<!--                                <form action="samplessub.php" method="post">-->
-<!--                                    <textarea class="form-control" style="display:none" id="code_arena" name="code_arena"></textarea>-->
-<!--                                    <button type="button" class="btn btn-info btn-lg">Run</button>-->
-<!---->
-<!--                                <button type="button" class="btn btn-success btn-lg">Submit</button>-->
-<!--                                </form>-->
-<!--                            </div>-->
-<!---->
-<!---->
-<!--                        </div>-->
-<!--                    </div>-->
+
                     <div class="row">
                         <br>
                         <div class="col-xs-12">
@@ -436,18 +430,41 @@ else
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/student.dashboard.bootstrap.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-
-
-
     <script src="../../js/codingground/codesub.js"></script>
 
     <script src="../../ace/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="../../ace/ace-builds/src-noconflict/ext-language_tools.js"></script>
+    <script src="../../dependencies/screenfull/screenfullrequire.js"></script>
+    <script src="../../dependencies/screenfull.js-gh/src/screenfull.js"></script>
     <script>
+        if (screenfull.enabled) {
+            document.addEventListener(screenfull.raw.fullscreenchange, () => {
+                if (screenfull.isFullscreen) {
+                    document.getElementById('codeFS').style = 'background-color: black;';
+                    document.getElementById('editor').style = 'height: 700px;';
+                    document.getElementById('hide_row').style = 'display: block;';
+                    document.getElementById('editor').style.fontSize = '32px';
+                    var c = document.getElementById('editor').style.fontSize;
+                    //console.log(c);
+                   // console.log("YES");
+                } else {
+                    document.getElementById('editor').style = 'height: 500px;';
+                    document.getElementById('codeFS').style = 'background-color: white;';
+                    document.getElementById('hide_row').style = 'display: none;';
+                    document.getElementById('editor').style.fontSize = '20px';
+                    var c = document.getElementById('editor').style.fontSize;
+                    //console.log(c);
+                   // console.log("NOOOOO");
+
+                }
+                //  console.log('Am I fullscreen? ' + (screenfull.isFullscreen ? 'Yes' : 'No'));
+            });
+        }
+
         ace.require("ace/ext/language_tools");
         var editor = ace.edit("editor");
         document.getElementById('editor').style.fontSize = '22px';
-        editor.setTheme("ace/theme/monokai");
+        editor.setTheme("ace/theme/ambiance");
         editor.getSession().setMode("ace/mode/c_cpp");
         editor.setOptions({
             enableLiveAutocompletion:true,
@@ -457,6 +474,14 @@ else
         });
 
 
+        $("#theme ").change(function(e) {
+            console.log(this.value);
+            editor.setTheme("ace/theme/ambiance");
+        });
+        editor.getSession().on('change', function() {
+            document.getElementById('hide_row').style = 'display: none;';
+        });
+        editor.$blockScrolling = Infinity;
     </script>
 
 </body>

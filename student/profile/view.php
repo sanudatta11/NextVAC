@@ -49,8 +49,10 @@ else{
 
 if(isset($_SESSION['profileerror']))
 {
-   echo $_SESSION['profileerror'];
-    unset($_SESSION['profileerror']);
+   $message = $_SESSION['profileerror'];
+
+   echo '<script>window.alert("'.$_SESSION['profileerror'].'")</script>';
+   unset($_SESSION['profileerror']);
 }
 else if(isset($_SESSION['profilesuccess']))
 {

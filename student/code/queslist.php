@@ -144,7 +144,7 @@ else{
 
         .cp-detail-list-answer {
             font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
-            font-size: 15px;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -174,7 +174,7 @@ else{
                 <a href="../videoconnect/vidkeysub.php"><span class="glyphicon glyphicon-facetime-video"></span> VConnect</a>
             </li>
             <li>
-                <a href="../question/quesstaging.php"><span class="glyphicon glyphicon-pencil"></span></span>Solve Questions</a>
+                <a href="../question/quesstaging.php"><span class="glyphicon glyphicon-pencil"></span>`Solve Questions</a>
             </li>
             <li>
                 <a href="#"> <span class="glyphicon glyphicon-book"></span> Digtal Library</a>
@@ -269,7 +269,7 @@ else{
                 ?>
             </div>
             <div class="col-xs-4">
-                <div class="panel panel-primary" data-spy="affix">
+                <div class="panel panel-primary" data-spy="affix" style="width: 400px;">
                     <div class="panel-body" id="cp-sidebar-heading">
                         <strong>Contest Details</strong>
                     </div>
@@ -279,16 +279,17 @@ else{
                         <!--Chnage to it by innerHTML-->
                         <label class="cp-detail-list-answer" id="detail-status">Ongoing</label>
                         <br><br>
-                        <!--Here Unit ends-->
-                        <label class="cp-detail-list"><i class="glyphicon glyphicon-user fa-2x"></i> Total Registered:&nbsp</label>
-                        <label class="cp-detail-list-answer" id="detail-total-user">4</label>
+                        <label class="cp-detail-list"><i class="glyphicon glyphicon-question-sign fa-1x"></i> Total Question:&nbsp</label>
+                        <label class="cp-detail-list-answer" id="detail-total-question"><?php echo $coding_key_obj->rowCount(); ?></label>
                         <br><br>
-                        <label class="cp-detail-list"><i class="glyphicon glyphicon-question-sign fa-2x"></i> Total Question:&nbsp</label>
-                        <label class="cp-detail-list-answer" id="detail-total-question">10</label>
-                        <br><br>
-                        <label class="cp-detail-list"><i class="glyphicon glyphicon-flag fa-2x"></i> Difficulty Level:&nbsp</label>
-                        <label class="cp-detail-list-answer">Ace</label>
+
+
                     </div>
+                    <a href="leaderboard.php?lcode=<?php echo $key; ?>">
+                        <button class="btn btn-block btn-success btn-sm"> <h3 class="text text-center"><strong>Leaderboad</strong></h3></button>
+                    </a>
+
+                    <br>
                 </div>
             </div>
 

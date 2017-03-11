@@ -28,6 +28,12 @@ else{
     die();
 }
 
+if(isset($_SESSION['message']))
+{
+    echo '<script>window.alert("'.$_SESSION['message'].'");</script>';
+    unset($_SESSION['message']);
+}
+
 
 //Verify Data send by Post or not
 

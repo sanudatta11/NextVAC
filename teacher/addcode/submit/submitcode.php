@@ -82,7 +82,7 @@ else
 //Do All Validation above
 if(isset($_POST))
 {
-    if(isset($_POST['duration']) && isset($_POST['title']) && isset($_POST['statement']) && isset($_POST['inputstat']) && isset($_POST['outputstat']) && isset($_POST['sampleinp']) && isset($_POST['sampleout']))
+    if(isset($_POST['duration']) && isset($_POST['title']) && isset($_POST['statement']) && isset($_POST['inputstat']) && isset($_POST['outputstat']) && isset($_POST['sampleinp']) && isset($_POST['sampleout']) && $_POST['marks'])
     {
         $val_tot = preg_replace('/[^0-9]+/','',$_POST['numtestcase']);
 
@@ -102,6 +102,7 @@ if(isset($_POST))
         $sampleinp = preg_replace('/[^A-Za-z0-9.\s\n ]+/','',$_POST['sampleinp']);
         $sampleout = preg_replace('/[^A-Za-z0-9.\s\n ]+/','',$_POST['sampleout']);
         $duration = preg_replace('/[^0-9:]+/','',$_POST['duration']);
+        $marks = preg_replace('/[^0-9:]+/','',$_POST['marks']);
 
 
         if(isset($_POST['explanation']))
@@ -134,9 +135,10 @@ if(isset($_POST))
             explaination,
             inpfolder,
             outfolder,
-            duration)
+            duration,
+            marks)
             VALUES 
-            (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+            (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 
         //Finding the Max code id
         $code_id_string = "SELECT MAX(problemcode) FROM nextvac.codingdb WHERE contestcode = :ccode AND secretkey = :seckey";
@@ -307,6 +309,7 @@ if(isset($_POST))
         $insert_statement->bindParam(13,$inpfolder,PDO::PARAM_STR);
         $insert_statement->bindParam(14,$outfolder,PDO::PARAM_STR);
         $insert_statement->bindParam(15,$tot,PDO::PARAM_INT);
+        $insert_statement->bindParam(16,$marks,PDO::PARAM_INT);
 
         $insert_statement->execute();
 

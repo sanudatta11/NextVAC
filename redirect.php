@@ -21,9 +21,24 @@ if(isset($_SESSION['secretkey']))
         if($row['sessionvar'] == session_id())
         {
             //Now Redirect to the DashBoard of respective one
-            header('Location: student/dashboard.php');
+            if($_SESSION['designation'] == 'master')
+            {
+                header('Location: master/index.php');
+                die();
+            }
+            else if($_SESSION['designation'] == 'student')
+            {
+                header('Location: student/dashboard.php');
+                die();
+            }
+            else if($_SESSION['designation'] == 'teacher')
+            {
+                header('Location: teacher/dashboard.php');
+                die();
+            }else{
+                die();
+            }
             //Must Use Die Script Below
-            die();
         }
         else{
             $mysql_conn = null;
@@ -33,6 +48,7 @@ if(isset($_SESSION['secretkey']))
             session_start();
             $_SESSION['logout'] = 'logout';
             header('Location:index.php?attempt=logout');
+            die();
         }
     }
 

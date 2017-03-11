@@ -117,7 +117,7 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
              if($extension != "jpg" && $extension != "png" && $extension != "jpeg") {
                  $upload_status = false;
                  // echo "Not correct";
-                 $_SESSION['profileerror'] = "Image Type not proper cannot Upload!";
+                 $_SESSION['profileerror'] = "Image Type Error! Cannot Upload!";
                  header('Location: view.php');
                  $mysql_conn = null;
                  die();
@@ -133,7 +133,8 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
                      $mysql_conn = null;
                      //Redirect with Success
                      $_SESSION['profilesuccess'] = true;
-                     shell_exec("rm -rf images/".$prev_propic);
+                     if($prev_propic != 'default.jpg' && $prev_propic != 'female.jpg' && $prev_propic != 'male.jpg')
+                         shell_exec("rm -rf images/".$prev_propic);
                      $mysql_conn = null;
                      header('Location: view.php');
                      die();

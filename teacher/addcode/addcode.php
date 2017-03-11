@@ -145,7 +145,7 @@ if(isset($_SESSION['codesubmitteacher']) && $_SESSION['codesubmitteacher'] == tr
                                 <div class="col-xs-2">
                                     <div class="btn-group-vertical affix">
                                         <button type="submit" class="btn btn-lg btn-success" data-spy="affix"> SUBMIT </button>
-                                        <button type="button" class="btn btn-lg btn-danger" data-spy="affix" onclick="window.location.href='submit/done.php'">&nbsp; DONE &nbsp; </button>
+                                        <button type="button" class="btn btn-lg btn-danger" data-spy="affix" onclick="window.location.href='submit/done.php'">&nbsp; EXIT &nbsp; </button>
                                         <br>
                                     </div>
                                 </div>
@@ -191,12 +191,17 @@ if(isset($_SESSION['codesubmitteacher']) && $_SESSION['codesubmitteacher'] == tr
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-lg-2 control-label">Explain the problem (Optional):</label>
+                                <label class="col-lg-2 control-label">Explain the problem :</label>
                                 <div class="col-lg-8">
                                     <textarea class="form-control" type="text" rows="5" placeholder="Explain and Describe the problem statement here..." name="explanation"></textarea>
                                 </div>
                             </div>
                         <div class="row">
+                            <label class="col-lg-2 control-label">Enter Score  </label>
+                            <div class="col-xs-3">
+                                <input type="number" name="marks" style="width: 100px;margin-top: 05px;">
+                                <br><br>
+                            </div>
                             <label class="col-lg-2 control-label">Select Duration:  </label>
                             <div class="col-xs-5">
                                     <input type="time" name="duration" style="width: 100px;margin-top: 05px;">

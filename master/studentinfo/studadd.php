@@ -14,23 +14,97 @@
  * Same for cover make it a default one
  * */
 
+session_start();
+
+function is_connected()
+{
+    $connected = @fsockopen("www.google.com", 80);
+    //website, port  (try 80 or 443)
+    if ($connected){
+        $is_conn = true; //action when connected
+        fclose($connected);
+    }else{
+        $is_conn = false; //action in connection failure
+    }
+    return $is_conn;
+
+}
+
+function sendmail($recipent_email,$recipent_name,$username,$password)
+{
+
+    $mail = new PHPMailer;
+
+    //Enable SMTP debugging.
+    $mail->SMTPDebug = 0;
+
+    //Set PHPMailer to use SMTP.
+    $mail->isSMTP();
+    //Set SMTP host name
+    $mail->Host = "smtp.gmail.com";
+
+    //Set this to true if SMTP host requires authentication to send email
+    $mail->SMTPAuth = true;
+
+    //Provide username and password
+    $mail->Username = "contactnextvac@gmail.com";
+    $mail->Password = "nextvac123NEXTVAC";
+
+    //If SMTP requires TLS encryption then set it
+    $mail->SMTPSecure = "tls";
+
+    //Set TCP port to connect to
+    $mail->Port = 587;
+
+    $mail->From = "contactnextvac@gmail.com";
+    $mail->FromName = "Admin";
+
+    $mail->addAddress($recipent_email, $recipent_name);
+
+    $mail->isHTML(true);
+
+    $mail->Subject = "Your Account is now created";
+    $mail->Body = "<i>We have created your account. And your username and password are Username:".$username." and Password:".$password."</i>";
+    $mail->AltBody = "We have created your account. And your username and password are Username:".$username." and Password:".$password;
+
+    if(!$mail->send())
+    {
+        echo "Mailer Error: " . $mail->ErrorInfo;
+        //    $_SESSION['mail']=true;
+        //    header('Location: ../index.php?mail=sent');
+    }
+}
+
+
+
 //    Include Database Connetors
 require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/connector.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/mysql_login.php';
 
+require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
+
 //Including the Random Generator
 require_once $_SERVER['DOCUMENT_ROOT'].'/dependencies/randomize/randomstring.php';
+//require_once $_SERVER['DOCUMENT_ROOT'].'/mailer/apimail.php';
 
-
-if(isset($_SESSION['designation']) && isset($_SESSION['backauth']) && $_SESSION['designation'] == 'master' && $_SESSION['backauth'] = true)
+if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION['designation'] == 'master')
 {
+    if(!is_connected())
+    {
+        echo '<script>window.alert("Internet Not Connected. Didn\'t Add User")</script>';
+        header('Location: studentdash.php');
+        die();
+    }
+
     //Checking Both Login and Studentinfo DB table data for saving
     if(isset($_POST['username']) && isset($_POST['section']) && isset($_POST['regno']))
     {
 //        Make the attendance to be just 0 and make the rank to be the mazimum plus 1 to the original value
 //        Checking the Profile Table data has came or not
-        if(isset($_POST['email']) && isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['hometown']) && isset($_POST['number']) && isset($_POST['course']) && isset($_POST['semester']) )
+        if(isset($_POST['email']) && isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['number']) && isset($_POST['course']) && isset($_POST['semester']) )
         {
+            if(!isset($_POST['hometown']))
+                $_POST['hometown'] = 'undefined';
             /*
              *List of What I am Saving Actually
              * Username = Registration No or UID
@@ -50,73 +124,56 @@ if(isset($_SESSION['designation']) && isset($_SESSION['backauth']) && $_SESSION[
             $password = generaterandomstring(10);
             $section = preg_replace("/[^A-Za-z0-9]+/","",$_POST['section']);
             $regno = preg_replace("/[^0-9]+/","",$_POST['regno']);
-            $email = preg_replace("/[^A-Za-z0-9]+/","",$_POST['email']);
+//            $email = preg_replace("/[^A-Za-z0-9.]+/","",$_POST['email']);
+            $email =  $_POST['email'];
             $firstname = preg_replace("/[^A-Za-z0-9]+/","",$_POST['firstname']);
             $lastname = preg_replace("/[^A-Za-z0-9]+/","",$_POST['lastname']);
             $hometown = preg_replace("/[^A-Za-z0-9]+/","",$_POST['hometown']);
             $phone = preg_replace("/[^A-Za-z0-9]+/","",$_POST['number']);
-            $course = preg_replace("/[^A-Za-z0-9]+/","",$_POST['course']);
+            $course = preg_replace("/[^A-Za-z0-9 ]+/","",$_POST['course']);
             $semester = preg_replace("/[^A-Za-z0-9]+/","",$_POST['semester']);
             $name = $firstname.' '.$lastname;
 
-            if(isset($_POST['hostel']))
-            {
-                $hostel = preg_replace("/[^A-Za-z0-9-]+/","",$_POST['hostel']);
-            }
-            else
-            {
-                $hostel = 'Day Scholar';
-            }
-
             //Generating Random SecretKey For the user. Using
-            $secretkey = sha1((string)$username.generaterandomstring(5));
-            $sessionvar = sha1('invalid');
+            $secretkey = (string)$username.generaterandomstring(5);
 
             //Saving the Login DB value
-            $conn_obj_add= $mysql_conn->prepare('INSERT INTO nextvac.login (username,password,secretkey,sessionvar,designation) VALUES (:username,:pass,:seckey,:sesvar,:desig)');
-            $conn_obj_add->bindParam(':username',$username,PDO::PARAM_INT);
-            $conn_obj_add->bindParam(':pass',$password,PDO::PARAM_STR);
-            $conn_obj_add->bindParam(':seckey',$secretkey,PDO::PARAM_STR);
-            $conn_obj_add->bindParam(':sesvar',$sessionvar,PDO::PARAM_STR);
-            $conn_obj_add->bindValue(':desig','student');
+            $conn_obj_add= $mysql_conn->prepare('INSERT INTO nextvac.login (username,password,secretkey,designation) VALUES (?,?,?,?)');
+            $conn_obj_add->bindParam(1,$username,PDO::PARAM_INT);
+            $conn_obj_add->bindParam(2,$password,PDO::PARAM_STR);
+            $conn_obj_add->bindParam(3,$secretkey,PDO::PARAM_STR);
+            $conn_obj_add->bindValue(4,'student');
 
             $conn_obj_add->execute();
+
 
             //Saving it in the studentinfo DB
-            $conn_obj_add= $mysql_conn->prepare('INSERT INTO nextvac.studentinfo (secretkey,name,section,regno,attendance,rank) VALUES (:seckey,:name,:section,:regno,:attendance,:rank)');
-            $conn_obj_add->bindParam(':seckey',$secretkey,PDO::PARAM_STR);
-            $conn_obj_add->bindParam(':name',$name, PDO::PARAM_STR);
-            $conn_obj_add->bindParam(':section',$section, PDO::PARAM_STR);
-            $conn_obj_add->bindParam(':regno',$regno, PDO::PARAM_STR);
-            $conn_obj_add->bindValue(':attendance',0,PDO::PARAM_INT);
-            $conn_obj_add->bindValue(':rank',0,PDO::PARAM_INT);
-
+            $conn_obj_add= $mysql_conn->prepare('INSERT INTO nextvac.studentinfo (secretkey,name,section,regno) VALUES (?,?,?,?)');
+            $conn_obj_add->bindParam(1,$secretkey,PDO::PARAM_STR);
+            $conn_obj_add->bindParam(2,$name, PDO::PARAM_STR);
+            $conn_obj_add->bindParam(3,$section, PDO::PARAM_STR);
+            $conn_obj_add->bindParam(4,$regno, PDO::PARAM_INT);
             $conn_obj_add->execute();
 
+
             //Saving in Profile DB
-            $conn_obj_add= $mysql_conn->prepare('INSERT INTO nextvac.profile (secretkey,propic,status,designation,incomming,messages,email,firstname,lastname,cover,hostel,hometown,number,course,semester,gender) VALUES (:seckey,:propic,:status,:desig,:incom,:messages,:email,:first,:last,:cover,:hostel,:hometown,:num,:course,:sem,gender)');
+            $conn_obj_add= $mysql_conn->prepare('INSERT INTO nextvac.profile (secretkey,propic,designation,email,firstname,lastname,number,course,semester,gender) VALUES (:seckey,:propic,:desig,:email,:first,:last,:num,:course,:sem,:gender)');
             $conn_obj_add->bindParam(':seckey',$secretkey,PDO::PARAM_STR);
-            $conn_obj_add->bindValue(':status','I am new to NextVAC');
             $conn_obj_add->bindValue(':desig','student');
-            $conn_obj_add->bindValue(':incom',0);
-            $conn_obj_add->bindValue(':messages',0);
             $conn_obj_add->bindParam(':email',$email,PDO::PARAM_STR);
             $conn_obj_add->bindParam(':first',$firstname,PDO::PARAM_STR);
             $conn_obj_add->bindParam(':last',$lastname,PDO::PARAM_STR);
-            $conn_obj_add->bindParam(':hostel',$hostel,PDO::PARAM_STR);
-            $conn_obj_add->bindParam(':hometown',$hometown,PDO::PARAM_STR);
             $conn_obj_add->bindParam(':num',$phone,PDO::PARAM_INT);
             $conn_obj_add->bindParam(':course',$course,PDO::PARAM_STR);
             $conn_obj_add->bindParam(':sem',$semester,PDO::PARAM_INT);
 
 
-            $_POST['gender'] = preg_replace("/[^0-9]+/", "",$_POST['gender']);
+            $gender = preg_replace("/[^0-9]+/", "",$_POST['gender']);
 
-            if($_POST['gender'] == 1 || $_POST['gender'] == 2)
+            if(isset($gender) && $gender == 1 || $gender == 2)
             {
-                $gender = $_POST['gender'];
                 $conn_obj_add->bindParam(':gender',$gender,PDO::PARAM_STR);
-                if($_POST['gender'] == 1)
+                if($gender == 1)
                 {
                     $conn_obj_add->bindValue(':propic','male.jpg');
                 }
@@ -129,11 +186,24 @@ if(isset($_SESSION['designation']) && isset($_SESSION['backauth']) && $_SESSION[
                 $conn_obj_add->bindParam(':gender',$gender,PDO::PARAM_STR);
                 $conn_obj_add->bindValue(':propic','default.jpg');
             }
-            $conn_obj_add->bindValue(':cover','defaultcover.jpg');
             $conn_obj_add->execute();
 
+
+            /*
+             * We will be sending the random password back to the user in his or her email and from there he or she will
+             * be able to change it
+             */
+            //Start Mail here
+            if(is_connected())
+                sendmail($email,$name,$username,$password);
+            else
+                echo '<script>window.alert("Internet Not Connected . Mail Error")</script>';
+
+            //End Mail Here
+
             $_SESSION['donecreate'] = true;
-            header('Location: ../index.php');       //Send it wherever you want actually Check for sessionvar and unset it
+                   //Send it wherever you want actually Check for sessionvar and unset it
+            header('Location: studentdash.php');
             die();
 
         }
@@ -148,11 +218,6 @@ if(isset($_SESSION['designation']) && isset($_SESSION['backauth']) && $_SESSION[
         die();
     }
 
-}
-else if(isset($_SESSION['designation']) && $_SESSION['designation'] == 'master')
-{
-    header('Location: ../index.php');
-    die();
 }
 else
 {

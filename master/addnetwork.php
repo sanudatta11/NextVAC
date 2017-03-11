@@ -9,10 +9,6 @@
 session_start();
 
 
-//    Include Database Connetors
-require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/connector.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/mysql_login.php';
-
 
 if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION['designation'] == 'master')
 {
@@ -82,42 +78,28 @@ else{
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">
-                    Start Bootstrap
-                </a>
-            <li>
                 <img src="Profile/mia.jpg" align="center" height="170px" width="200px">
             </li>
             <li>
                 <h4 class="text text-center text-default"> <a href="#"><strong>Mia Mam </strong></a></h4>
             </li>
             <li>
-                <h5 class="text text-center text-info"><a href="#"><strong>Reg. Number: </strong> 11602153</a></h5>
+                <h5 class="text text-center text-info"><a href="#"><strong>MID. Number: </strong> 11602153</a></h5>
             </li>
             <li>
-                <a href="#"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a>
+                <a href="#"><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a>
             </li>
             <li>
-                <a href="#"><span class="glyphicon glyphicon-facetime-video"></span> VConnect</a>
+                <a href="#"><span class="glyphicon glyphicon-facetime-video"></span>Add to Network</a>
             </li>
             <li>
-                <a href="#"> <span class="glyphicon glyphicon-book"></span> Digtal Library</a>
+                <a href="#"> <span class="glyphicon glyphicon-book"></span>Test 1</a>
             </li>
             <li>
-                <a href="#"><span class="fa fa-code"></span> Coding Ground</a>
+                <a href="#"><span class="fa fa-code"></span>Test 2</a>
             </li>
             <li>
-                <a href="#"><span class="glyphicon glyphicon-plus"></span> Add Q&A</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-share-alt"></span> File Share</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-users"></span> ConnectYou</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-user"></span> My Profile</a>
+                <a href="#"><span class="glyphicon glyphicon-plus"></span> Test 3</a>
             </li>
         </ul>
     </div>
@@ -136,7 +118,7 @@ else{
                 <ul class="nav navbar-nav">
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span><b> Log Out</b></a></li>
+                    <li><a href="../logout.php"><span class="glyphicon glyphicon-log-out"></span><b> Log Out</b></a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-home"></span><b> Reach Us</b></a></li>
                 </ul>
             </div>
@@ -147,13 +129,14 @@ else{
                 <h1 class="text text-center" style="color: lightseagreen"> <strong> &nbsp&nbsp&nbsp&nbsp Manage NextVAC Accounts </strong></h1> <br>
                 <!--Repeat this div-->
                 <div class="container small_div">
+                 <a href="www.google.com">
                     <div class="col-xs-6">
-                        <a href="#">
+
                             <div class="card-begin">
                                 <br> <br>
 
                             </div>
-                        </a>
+
 
                         <div class="w3-card-8" data-toggle="tooltip" data-placement="top" title="Add new master  To Your Database" style="width:100%;">
                             <header class="card-begin w3-green">
@@ -167,7 +150,7 @@ else{
                                         <span class="glyphicon glyphicon-king fa-3x "></span>
                                     </div>
                                     <div class="col-xs-8 ">
-                                        <h3 class="text text-success" id="file_upload"> Add Masters Profile <br>
+                                        <h3 class="text text-success"> Add Masters Profile <br>
                                         </h3>
                                     </div>
                                 </div>
@@ -177,14 +160,15 @@ else{
                             </footer>
                         </div>
                     </div>
-
+                </a>
+                    <a href="hfisud.com">
                     <div class="col-xs-6">
-                        <a href="#">
+
                             <div class="card-begin">
                                 <br> <br>
 
 
-                        </a>
+
                     </div>
                     <div class="w3-card-8" data-toggle="tooltip" data-placement="top" title="Delete the profile of a master" style="width:100%;">
                         <header class="card-begin w3-red">
@@ -198,7 +182,7 @@ else{
                                     <span class="glyphicon glyphicon-remove fa-3x "></span>
                                 </div>
                                 <div class="col-xs-8 ">
-                                    <h3 class="text text-danger" id="file_download">Delete Masters Profile<br>
+                                    <h3 class="text text-danger">Delete Masters Profile<br>
                                     </h3>
                                 </div>
                             </div>
@@ -208,48 +192,51 @@ else{
                         </footer>
                     </div>
                 </div>
-
+                    </a>
             </div>
             <div class="row">
                 <div class="container small_div">
-                    <div class="col-xs-6">
-                        <a href="#">
-                            <div class="card-begin">
-                                <br> <br>
+                    <a href="studentinfo/studentdash.php">
+                        <div class="col-xs-6">
 
-                            </div>
-                        </a>
+                                <div class="card-begin">
+                                    <br> <br>
 
-                        <div class="w3-card-8" data-toggle="tooltip" data-placement="left" title="Add new students  To Your Database" style="width:100%;">
-                            <header class="card-begin w3-green">
-                                &nbsp
-                            </header>
-                            <div class=" card-begin ">
+                                </div>
 
-                                <div class="row ">
-                                    <br>
-                                    <div class="col-xs-4 ">
-                                        <span class="glyphicon glyphicon-user fa-3x "></span>
-                                    </div>
-                                    <div class="col-xs-8 ">
-                                        <h3 class="text text-success" id="file_upload"> Add Student Profile <br>
-                                        </h3>
+
+                            <div class="w3-card-8" data-toggle="tooltip" data-placement="left" title="Add new students  To Your Database" style="width:100%;">
+                                <header class="card-begin w3-green">
+                                    &nbsp
+                                </header>
+                                <div class=" card-begin ">
+
+                                    <div class="row ">
+                                        <br>
+                                        <div class="col-xs-4 ">
+                                            <span class="glyphicon glyphicon-user fa-3x "></span>
+                                        </div>
+                                        <div class="col-xs-8 ">
+                                            <h3 class="text text-success"> Add Student Profile <br>
+                                            </h3>
+                                        </div>
                                     </div>
                                 </div>
+                                <footer class="card-begin w3-green ">
+                                    &nbsp;
+                                </footer>
                             </div>
-                            <footer class="card-begin w3-green ">
-                                &nbsp;
-                            </footer>
                         </div>
-                    </div>
+                     </a>
 
+                    <a href="studentinfo/studdelete.php">
                     <div class="col-xs-6">
-                        <a href="#">
+
                             <div class="card-begin">
                                 <br> <br>
 
 
-                        </a>
+
                     </div>
                     <div class="w3-card-8" data-toggle="tooltip" data-placement="right" title="Delete the profiles" style="width:100%;">
                         <header class="card-begin w3-red">
@@ -263,7 +250,7 @@ else{
                                     <span class="glyphicon glyphicon-remove fa-3x "></span>
                                 </div>
                                 <div class="col-xs-8 ">
-                                    <h3 class="text text-danger" id="file_download">Delete Student Profile<br>
+                                    <h3 class="text text-danger">Delete Student Profile<br>
                                     </h3>
                                 </div>
                             </div>
@@ -273,20 +260,21 @@ else{
                         </footer>
                     </div>
                 </div>
-
+                    </a>
             </div>
             <div class="row">
                 <br>
                 <!--<h1 class="text text-center"> <strong> &nbsp&nbsp&nbsp&nbsp Manage Your Questions </strong></h1> <br>-->
                 <!--Repeat this div-->
                 <div class="container small_div">
+                    <a href="ksasghda.com">
                     <div class="col-xs-6">
-                        <a href="#">
+
                             <div class="card-begin">
                                 <br> <br>
 
                             </div>
-                        </a>
+
 
                         <div class="w3-card-8" data-toggle="tooltip" data-placement="bottom" title="Add teacher to NextVAC network" style="width:100%;">
                             <header class="card-begin w3-green">
@@ -300,7 +288,7 @@ else{
                                         <span class="glyphicon glyphicon-book fa-3x "></span>
                                     </div>
                                     <div class="col-xs-8 ">
-                                        <h3 class="text text-success" id="file_upload"> Add Teacher Profile <br>
+                                        <h3 class="text text-success"> Add Teacher Profile <br>
                                         </h3>
                                     </div>
                                 </div>
@@ -310,14 +298,14 @@ else{
                             </footer>
                         </div>
                     </div>
-
+                    </a>
+                    <a href="asgd.in">
                     <div class="col-xs-6">
-                        <a href="#">
+
                             <div class="card-begin">
                                 <br> <br>
 
 
-                        </a>
                     </div>
                     <div class="w3-card-8" style="width:100%;" data-toggle="tooltip" data-placement="bottom" title="Manage Master Account Details">
                         <header class="card-begin w3-red">
@@ -331,7 +319,7 @@ else{
                                     <span class="glyphicon glyphicon-remove fa-3x "></span>
                                 </div>
                                 <div class="col-xs-8 ">
-                                    <h3 class="text text-danger" id="file_download">Delete teacher profile<br>
+                                    <h3 class="text text-danger">Delete teacher profile<br>
                                     </h3>
                                 </div>
                             </div>
@@ -340,7 +328,7 @@ else{
                             &nbsp;
                         </footer>
                     </div>
-
+                    </a>
                 </div>
 
             </div>
@@ -353,14 +341,11 @@ else{
 
 <br> <br> <br>
 
-<nav class="navbar navbar-inverse navbar-fixed-bottom ">
-    <div class="container-fluid ">
-
-        <h6 class="text text-info "> A Stux-Net Productions &copy; 2017 </h6>
-
-
-    </div>
-</nav>
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid">
+                <h5 class="text text-center" style="color: floralwhite;"> <strong>A Stux-Net Productions &copy; 2017</strong> </h5>
+            </div>
+        </nav>
 
 
 <!--All modals here-->

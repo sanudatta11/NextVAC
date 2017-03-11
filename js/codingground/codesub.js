@@ -10,6 +10,7 @@ $(document).ready(function() {
     });
 
     $('[data-toggle="tooltip"]').tooltip();
+    $("#wrapper").toggleClass("toggled");
 
 
     // Used to hide the result divs
@@ -75,7 +76,7 @@ $(document).ready(function() {
                     scrollTop: $("#sampleout").offset().top},
                 'slow');
 
-
+            console.log(res);
             obj = JSON && JSON.parse(res) || $.parseJSON(res);
             //console.log(obj.errors);
             // Do something with the response `res`
