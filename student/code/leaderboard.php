@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 10/2/17
- * Time: 2:26 PM
- */
-
 session_start();
 unset($_SESSION['submitauth']);
 require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/connector.php';
@@ -23,7 +16,7 @@ else if(isset($_SESSION['secretkey']) && $_SESSION['designation']=='teacher')
     die();
 }
 else{
-    //No Secret key? No Dashboard Fuck Off
+//No Secret key? No Dashboard Fuck Off
     $_SESSION['relogin'] = true;
     header('Location: ../../index.php?attempt=relogin');
     die();
@@ -77,15 +70,21 @@ else{
     <link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script href="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
-    <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--<link rel="stylesheet" href="nav.css">-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+
+    <!--<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">-->
 
     <title>NextVAC</title>
 
@@ -102,51 +101,11 @@ else{
     <script href="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script href="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style type="text/css" media="screen">
+    <style>
         @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 
-        #editor {
-            position: absolute;
-            top: 1320px;
-            right: 100px;
-            bottom: 1000px;
-            left: 100px;
-        }
-
-        #selectRow {
-            margin-left: 50px;
-        }
-
-        .cp-name {
-            background-color: #629e60;
-            font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
-            padding-bottom: 15px;
-            height: 80px;
-        }
-
-        .cp-font {
-            color: white;
-            padding-top: 15px;
-            padding-left: 30px;
-            margin-top: 10px;
-            font-size: 72px;
-            margin-bottom: 35px;
-        }
-
-        #cp-sidebar-heading {
-            background-color: #629e60;
-            color: #fff;
-            font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
-            font-size: 25px;
-        }
-
-        .cp-detail-list {
-            font-size: 17px;
-        }
-
-        .cp-detail-list-answer {
-            font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
-            font-size: 20px;
+        input:focus {
+            background-color: #fbffce;
         }
 
         h1 {
@@ -164,7 +123,7 @@ else{
         }
 
         .tbl-header {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: #8a8c9b;
         }
 
         .tbl-content {
@@ -189,14 +148,42 @@ else{
             vertical-align: middle;
             font-weight: 300;
             font-size: 12px;
-            color: #fff;
+            color: black;
             border-bottom: solid 1px rgba(255, 255, 255, 0.1);
         }
+
+        tr:hover {
+            background: #c2d1d3;
+            cursor: hand;
+            /*border-bottom: 5px solid #b3b5b5;
+            border-left: 7px solid #b3b5b5;*/
+            box-shadow: 1px 10px #91a08d;
+        }
+
+        hr.leader {
+            border-top: 1px solid #8c8b8b;
+            text-align: center;
+        }
+        hr.leader:after {
+            content: '§';
+            display: inline-block;
+            position: relative;
+            top: -14px;
+            padding: 0 10px;
+            background: #f0f0f0;
+            color: #8c8b8b;
+            font-size: 18px;
+            -webkit-transform: rotate(60deg);
+            -moz-transform: rotate(60deg);
+            transform: rotate(60deg);
+        }
+
         /* demo styles */
 
         body {
-            background: -webkit-linear-gradient(left, #170c28, #25b7c4);
-            background: linear-gradient(to right, #170c28, #6f6282);
+            /*background: -webkit-linear-gradient(left, #efedea, #25b7c4);
+            background: linear-gradient(to right, #efedea, #6f6282);*/
+            background-color: #edf1f7;
             font-family: 'Roboto', sans-serif;
         }
 
@@ -214,6 +201,17 @@ else{
 
         ::-webkit-scrollbar-thumb {
             -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .not selected {
+            font-size: 22px;
+        }
+
+        .selected {
+            background: #e6e8f7;
+            /*border-color: #75aaff;
+            border-width: 3px;*/
+            box-shadow: 1px 1px 1px 1px;
         }
     </style>
 </head>
@@ -277,8 +275,6 @@ else{
                 </div>
                 <a href="#menu-toggle" class="btn btn-danger navbar-btn" id="menu-toggle">
                     <h3 class="brand-header">NextVAC</h3>&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-th-list"></span></a>
-                <ul class="nav navbar-nav">
-                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a><span class="glyphicon glyphicon-education fa-1x"> <b><?php echo $_SESSION['section'] ?></b></span></a></li>
                     <li><a href="../../logout.php"><span class="glyphicon glyphicon-log-out"></span><b> Log Out</b></a></li>
@@ -286,12 +282,11 @@ else{
                 </ul>
             </div>
         </nav>
-
-        <a href="top"></a>
-        <section>
-            <!--for demo wrap-->
-            <h1><b>Leaderboard</b></h1>
-            <h1><b><?php
+        <div class="container">
+            <br> <br>
+            <h1 class="text text-center text-info" style="color: #0a8cce;margin-bottom: 0px;padding-bottom: 0px;"><b>Leaderboard</b></h1><br>
+            <hr class="leader">
+            <h1 class="text text-center text-info"><b><?php
                     $score_info_obj = $mysql_conn->prepare('SELECT contestname FROM nextvac.codingdb WHERE contestcode = :ccode LIMIT 1');
                     $score_info_obj->bindParam(':ccode',$key);
                     $score_info_obj->execute();
@@ -309,110 +304,131 @@ else{
                     }
 
                     ?></b></h1>
-            <div class="tbl-header">
-                <table cellpadding="0" cellspacing="0" border="0">
-                    <thead>
-                    <tr>
+            <div class="well" style="cursor: hand;">
+                <section>
+                    <!--for demo wrap-->
 
-                        <th>Avatar</th>
-                        <th>Rank</th>
-                        <th>Name</th>
-                        <th>Total Score</th>
-                    </tr>
-                    </thead>
-                </table>
-            </div>
-            <div class="tbl-content" id="first10">
-                <table cellpadding="0" cellspacing="0" border="0" id="count">
-                    <tbody id="details2">
+                    <div class="tbl-header">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <thead style="background: #17464f;">
+                            <tr>
 
-                    <?php
-                    $counter = 1;
-                    $initial = '../../student/profile/images/';
-                    while ($detail_lead = $lead_obj->fetch())
-                    {
-                        //Get few details about each person
-                        $seckey = $detail_lead['secretkey'];
+                                <th>Avatar</th>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="tbl-content" id="first10">
+                        <table cellpadding="0" cellspacing="0" border="0" id="count">
+                            <tbody id="details2">
 
-                        $info_obj = $mysql_conn->prepare('SELECT propic,firstname,lastname FROM nextvac.profile WHERE secretkey = :seckey LIMIT 1');
-                        $info_obj->bindParam(':seckey',$seckey);
-                        $info_obj->execute();
-                        if($info_obj->rowCount() > 0 )
-                        {
-                            $info_obj->setFetchMode(PDO::FETCH_ASSOC);
-                            $pro_info = $info_obj->fetch();
-                            $name = $pro_info['firstname'].' '.$pro_info['lastname'];
-                            $propic = $pro_info['propic'];
-                            $final_path = $initial.$propic;
-                            echo '
-                        <tr id="'.$counter.'" style="display: none">
-                            <td>
-                                <img src="'.$final_path.'" class="img-rounded" alt="'.$name.'" width="30" height="23">
-                            </td>
-                            <td>'.$counter.'</td>
-                            <td>'.$name.'</td>
-                            <td>'.$detail_lead['score'].'</td>
-                        </tr>
-                    ';
-                            $counter++;
-                        }
-                        else{
-                            //Dont Show Pic
-                            //For Debug keep it open or else uncomment the below lines
+                            <?php
+                            $counter = 1;
+                            $initial = '../../student/profile/images/';
+                            while ($detail_lead = $lead_obj->fetch())
+                            {
+                                //Get few details about each person
+                                $seckey = $detail_lead['secretkey'];
+
+                                $info_obj = $mysql_conn->prepare('SELECT propic,firstname,lastname FROM nextvac.profile WHERE secretkey = :seckey LIMIT 1');
+                                $info_obj->bindParam(':seckey',$seckey);
+                                $info_obj->execute();
+                                if($info_obj->rowCount() > 0 )
+                                {
+                                    $info_obj->setFetchMode(PDO::FETCH_ASSOC);
+                                    $pro_info = $info_obj->fetch();
+                                    $name = $pro_info['firstname'].' '.$pro_info['lastname'];
+                                    $propic = $pro_info['propic'];
+                                    $final_path = $initial.$propic;
+                                    $class_name = "notselected";
+                                    if($_SESSION['secretkey'] == $seckey)
+                                    {
+                                        $class_name="selected";
+                                    }
+                                    echo '
+                                        <tr id="'.$counter.'" style="display: none" class="'.$class_name.'">
+                                            <td>
+                                                <img src="'.$final_path.'" class="img-rounded" alt="'.$name.'" width="30" height="23">
+                                            </td>
+                                            <td>'.$counter.'</td>
+                                            <td>'.$name.'</td>
+                                            <td>'.$detail_lead['score'].'</td>
+                                        </tr>
+                                    ';
+                                    $counter++;
+                                }
+                                else{
+                                    //Dont Show Pic
+                                    //For Debug keep it open or else uncomment the below lines
 //                    echo '<script>window.alert("Some Error Occcures!")</script>';
 //                    header('Location: ../../index.php');
 //                    die();
-                        }
+                                }
 
-                    }
+                            }
 
-                    ?>
+                            ?>
 
-                    </tbody>
+                            </tbody>
 
-                </table>
+                        </table>
 
+
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-5">
+
+                        </div>
+                        <div class="col-xs-5">
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary " id="button2" value="Prev ranks" disabled>Prev ranks</button>
+                                <button type="button" class="btn btn-primary" id="button1" value="Next ranks" >Next ranks</button>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </section>
             </div>
-            <div class="row">
-                <div class="col-xs-5">
-
-                </div>
-                <div class="col-xs-1">
-                    <p class="text text-center"> <br><input type="button" class="btn btn-primary" id="button2" value="Prev ranks" disabled/>
-
-                </div>
-                <div class="col-xs-1">
-                    <p class="text text-center"> <br><input type="button" class="btn btn-primary" id="button1" value="Next ranks" />
-
-                </div>
-            </div>
+            
+        </div>
 
 
-        </section>
-
-        <!--/container-->
     </div>
-    <br><br><br><br><br><br>
+    <br> <br> <br> <br> <br> <br>
     <nav class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="container-fluid">
             <h5 class="text text-center" style="color: floralwhite;"> <strong>A Stux-Net Productions &copy; 2017</strong> </h5>
         </div>
     </nav>
+
+
     <!--ALERT HERE-->
+
 </div>
-<!--container ends here-->
+<!-- /#page-content-wrapper -->
+
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 <script src="../../js/student.dashboard.jquery.js"></script>
+
 <!-- Bootstrap Core JavaScript -->
 <script src="../../js/student.dashboard.bootstrap.min.js"></script>
-<!--ALl Script-->
-<script src ="../../js/leaderboard/mainjquery.js"></script>
-
-
-
+<script src="../../js/leaderboard/mainjquery.js"></script>
+<!--script to activate all toolkit-->
+<!--end of tooltip script-->
 </body>
 
 </html>
