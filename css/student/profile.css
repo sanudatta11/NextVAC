@@ -7,12 +7,10 @@ row-head {
 .card {
     margin-top: 20px;
     padding: 30px;
-    background-color: rgba(214, 224, 226, 0.2);
+    /*background-color: rgba(214, 224, 226, 0.2);*/
     -webkit-border-top-left-radius: 5px;
-    -moz-border-top-left-radius: 5px;
     border-top-left-radius: 5px;
     -webkit-border-top-right-radius: 5px;
-    -moz-border-top-right-radius: 5px;
     border-top-right-radius: 5px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -34,8 +32,6 @@ row-head {
 
 .card-background img {
     -webkit-filter: blur(15px);
-    -moz-filter: blur(15px);
-    -o-filter: blur(30px);
     -ms-filter: blur(15px);
     filter: blur(2px);
     margin-left: -100px;

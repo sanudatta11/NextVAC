@@ -56,7 +56,7 @@ if(isset($_SESSION['profileerror']))
 }
 else if(isset($_SESSION['profilesuccess']))
 {
-    echo "<script>window.alert('Profile Successfully Update')</script>";
+    echo "<script>window.alert('Profile Successfully Updated')</script>";
     unset($_SESSION['profilesuccess']);
 }
 
@@ -86,6 +86,7 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <style>
         .container {
             /*THIS IMG CHANGES CONTAINER's BACKGROUND'*/
@@ -94,27 +95,74 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
             -o-background-size: cover;
             background-size: cover;
         }
+        #coverimg{
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
     </style>
+    <link rel="stylesheet" href="../../css/buttons/buttons.css">
 </head>
 <body style="background-color: #d3dae5;">
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-sm-12">
-            <div class="card hovercard">
-                <div class="card-background">
-                    <img class="card-bkimg" alt="" src="cover/<?php echo $student_profile['cover']; ?>">
+            <div class="card hovercard" style="height: 200px;">
+                <div class="card-background" style="width: 100%;height: 100%;">
+                    <img class="card-bkimg" alt="cover" src="cover/<?php echo $student_profile['cover']; ?>" style="width: 100%;height: 280%;">
                     <!--THIS IMG CHANGES THE TOP PART's BACKGROUND-->
                     <!-- http://lorempixel.com/850/280/people/9/ -->
                 </div>
                 <div class="useravatar">
+                    <div class="row">
+                        <div class="col-md-10">
+                            &nbsp;
+                        </div>
+
+                        <div class="col-md-2">
+                            <button class="btn btn-sm btn-danger btn-transparent" data-toggle="modal" data-target="#cover_pic" id- "cover_pic"><b>UPDATE COVER</b></button>
+                        </div>
+                    </div>
                     <img alt="" src="images/<?php echo $student_profile['propic'];?>">
                 </div>
                 <!--Insert name here-->
 
 
-                <div class="card-info" style="left: 10px;top: 120px;"> <span class="card-title"><?php echo $_SESSION['name']; ?></span>
+                    <div class="modal fade" id="cover_pic" role="dialog">
+                        <form action="savecover.php" method="post" enctype="multipart/form-data">
+                            <div class="modal-dialog">
+
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title"><b>Change cover picture</b></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><input type="file" class="form-control" id="coverphoto" name="coverphoto" required></p>
+                                        <br>
+                                        <p class="text text-center">
+                                            <button type="submit" class="btn btn-success btn-sm">Change my cover picture</button>
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+
+
+
+
+                <div class="card-info" style="left: 10px;top: 120px; margin-top: 25px;"> <span class="card-title"><?php echo $_SESSION['name']; ?></span>
                 </div>
-                <div class="card-info" style="left: 10px;top: 144px; bottom: 0px; font-family: 'Times New Roman'; font-size: medium;"> <span class="card-title"><?php echo $student_profile['status']; ?></span>
+                <div class="card-info" style="left: 10px;top: 144px; bottom: 0px; font-family: 'Times New Roman';margin-top: 30px; font-size: medium;"> <span class="card-title"><?php echo $student_profile['status']; ?></span>
+                </div>
+                <div class="card-info" style="left: 10px;top: 144px; bottom: 0px; font-family: 'Times New Roman'; font-size: medium;"> <span class="card-title"></span>
                 </div>
                 <!--                Enter Status Here-->
                 <div class="card-title"> <span class="card-title"><?php echo $student_profile['status']; ?></span>
@@ -145,7 +193,7 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
             <div class="well">
                 <!--We are giving basic info in this tab -->
                 <div class="tab-content">
-                    <div class="tab-pane fade in active" id="tab1">
+                    <div class="tab-pane fade in active" id="tab1" style="height: 280px;">
 
                         <span class="glyphicon glyphicon-user"></span>
                         <label for=""><b>Name: </b></label>
@@ -205,6 +253,61 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
                             <span class="glyphicon glyphicon-copyright-mark"> </span>
                             <label for=""> Current CGPA/TGPA: </label>
                             <label for=""> <?php echo $student_profile['cgpa'];  ?> </label>
+                        </div>
+                        <div class="col-xs-6">
+
+                        </div>
+                        <div class="col-xs-6">
+                            <p class="text text-right">
+                            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#pass"> Change Password</button>
+                                <a href="../../logout.php">
+                                    <button class="btn btn-danger">Logout</button>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="modal fade" id="pass" role="dialog">
+                            <div class="modal-dialog">
+                                <form action="changepass.php" method="post" enctype="multipart/form-data">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title"><strong>Change NextVAC Password</strong></h4>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">Enter Previous Password:</label>
+                                                <div class="col-md-8">
+                                                    <input class="form-control" type="password" placeholder="Enter old Password" name="prevpass">
+                                                </div>
+                                            </div>
+                                            <br><br>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">Enter New Password:</label>
+                                                <div class="col-md-8">
+                                                    <input class="form-control" type="password" placeholder="Enter new password" name="pass1">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">Confirm new password:</label>
+                                                <div class="col-md-8">
+                                                    <input class="form-control" type="password" placeholder="Enter new password again" name="pass2">
+                                                </div>
+
+                                            </div>
+                                            <br><br>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary" type="submit">Save changes</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -382,13 +485,6 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
                     <input type="file" class="form-control" name="profilepic" id="profilepic">
                 </div>
                 <br>
-                <div class="alert alert-info alert-dismissable">
-                    <a class="panel-close close" data-dismiss="alert">×</a>
-                    <i class="fa fa-coffee"></i> This is <strong>ALERT!</strong>. Use this to show important messages to the user.
-                </div>
-
-
-
                     <div class="form-group">
                         <label class="col-lg-3 control-label">First name:</label>
                         <div class="col-lg-8">
@@ -459,7 +555,6 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
  </div>
 </form>
 <!--Edit Profile ends Here-->
-
 
 </body>
 

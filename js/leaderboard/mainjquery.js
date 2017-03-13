@@ -11,7 +11,6 @@ $(document).ready(function() {
         $("#wrapper").toggleClass("toggled");
     });
 
-
     var prevcount = 1;
     var currentcount = 1;
     var k = 7;
