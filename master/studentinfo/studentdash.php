@@ -131,49 +131,49 @@ if(isset($_SESSION['donecreate']) && $_SESSION['donecreate'] = true)
                 <div class="form-group">
                     <label class="col-lg-3 control-label">UserId:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="number" name="username" id="username" placeholder="Enter username here....">
+                        <input class="form-control" type="number" name="username" id="username" placeholder="Enter userid here...." autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">First name:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" name="firstname" id="firstname" placeholder="Enter first name here....">
+                        <input class="form-control" type="text" name="firstname" id="firstname" placeholder="Enter first name here...." autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Last name:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Enter first name here....">
+                        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Enter first name here...." autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Registration number:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="number" name="regno" id="regno" placeholder="Enter registration number here....">
+                        <input class="form-control" type="number" name="regno" id="regno" placeholder="Enter registration number here...." autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Section:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" name="section" id="section" placeholder="Enter section name here....">
+                        <input class="form-control" type="text" name="section" id="section" placeholder="Enter section name here...." autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Course:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" id="course" name="course" value="" placeholder="Enter course name here....">
+                        <input class="form-control" type="text" id="course" name="course" value="" placeholder="Enter course name here...." autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Email:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="email" id="email" name="email" placeholder="Enter email id here....">
+                        <input class="form-control" type="email" id="email" name="email" placeholder="Enter email id here...." autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Phone Number:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="number" id="number" name="number" placeholder="Enter phone number here....">
+                        <input class="form-control" type="number" id="number" name="number" placeholder="Enter phone number here...." autocomplete="off">
                     </div>
                 </div>
 
@@ -200,7 +200,7 @@ if(isset($_SESSION['donecreate']) && $_SESSION['donecreate'] = true)
                     <div class="col-md-8">
                         <input type="submit" class="btn btn-primary" value="Save Changes">
                         <span></span>
-                        <input type="reset" class="btn btn-default" value="Cancel">
+                        <input type="reset" class="btn btn-default" value="Cancel" onclick="window.location.href='../addnetwork.php'">
                     </div>
                 </div>
             </form>

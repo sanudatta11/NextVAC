@@ -120,7 +120,8 @@ if(isset($_POST['user'])&& isset($_POST['pass']))
                         die();
                     }
                 }
-                else{
+                else
+                {
                     session_unset();
                     session_destroy();
                     header('Location:index.php?attempt=fail');

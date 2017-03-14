@@ -78,28 +78,35 @@ else{
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-                <img src="Profile/mia.jpg" align="center" height="170px" width="200px">
+            <li>
+                <h4 class="text text-center text-default"> <a href="#"><strong>NextVAC Master</strong></a></h4>
             </li>
             <li>
-                <h4 class="text text-center text-default"> <a href="#"><strong>Mia Mam </strong></a></h4>
+                <h5 class="text text-center text-info"><a href="#"><strong>Master Id: </strong> 11602153</a></h5>
             </li>
             <li>
-                <h5 class="text text-center text-info"><a href="#"><strong>MID. Number: </strong> 11602153</a></h5>
+                <a href="#"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a>
             </li>
             <li>
-                <a href="#"><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a>
+                <a href="#"><span class="glyphicon glyphicon-facetime-video"></span> VConnect</a>
             </li>
             <li>
-                <a href="#"><span class="glyphicon glyphicon-facetime-video"></span>Add to Network</a>
+                <a href="#"> <span class="glyphicon glyphicon-book"></span> Digtal Library</a>
             </li>
             <li>
-                <a href="#"> <span class="glyphicon glyphicon-book"></span>Test 1</a>
+                <a href="#"><span class="fa fa-code"></span> Coding Ground</a>
             </li>
             <li>
-                <a href="#"><span class="fa fa-code"></span>Test 2</a>
+                <a href="#"><span class="glyphicon glyphicon-plus"></span> Add Q&A</a>
             </li>
             <li>
-                <a href="#"><span class="glyphicon glyphicon-plus"></span> Test 3</a>
+                <a href="#"><span class="fa fa-share-alt"></span> File Share</a>
+            </li>
+            <li>
+                <a href="#"><span class="fa fa-users"></span> ConnectYou</a>
+            </li>
+            <li>
+                <a href="#"><span class="fa fa-user"></span> My Profile</a>
             </li>
         </ul>
     </div>
@@ -118,7 +125,7 @@ else{
                 <ul class="nav navbar-nav">
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../logout.php"><span class="glyphicon glyphicon-log-out"></span><b> Log Out</b></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span><b> Log Out</b></a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-home"></span><b> Reach Us</b></a></li>
                 </ul>
             </div>
@@ -129,7 +136,7 @@ else{
                 <h1 class="text text-center" style="color: lightseagreen"> <strong> &nbsp&nbsp&nbsp&nbsp Manage NextVAC Accounts </strong></h1> <br>
                 <!--Repeat this div-->
                 <div class="container small_div">
-                 <a href="www.google.com">
+                 <a href="masterinfo/masterdash.php">
                     <div class="col-xs-6">
 
                             <div class="card-begin">
@@ -161,7 +168,7 @@ else{
                         </div>
                     </div>
                 </a>
-                    <a href="hfisud.com">
+                    <a href="masterinfo/masterdelete.php">
                     <div class="col-xs-6">
 
                             <div class="card-begin">
@@ -267,7 +274,7 @@ else{
                 <!--<h1 class="text text-center"> <strong> &nbsp&nbsp&nbsp&nbsp Manage Your Questions </strong></h1> <br>-->
                 <!--Repeat this div-->
                 <div class="container small_div">
-                    <a href="ksasghda.com">
+                    <a href="teacherinfo/teacherdash.php">
                     <div class="col-xs-6">
 
                             <div class="card-begin">
@@ -299,7 +306,7 @@ else{
                         </div>
                     </div>
                     </a>
-                    <a href="asgd.in">
+                    <a href="teacherinfo/teacherdelete.php">
                     <div class="col-xs-6">
 
                             <div class="card-begin">
