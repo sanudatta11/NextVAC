@@ -79,6 +79,9 @@ if(isset($_SESSION['setupdate']) && $_GET['update'] = 'success' && $_SESSION['se
     <![endif]-->
 
     <script src="../js/manageset_change.js"></script>
+    <!--    Piwik Tracker-->
+    <script src="../../include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
 
 </head>
 

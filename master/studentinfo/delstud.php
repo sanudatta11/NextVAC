@@ -40,7 +40,7 @@ if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION
     $del_conn_obj->bindParam(':username',$username);
     $del_conn_obj->execute();
     $del_conn_obj->setFetchMode(PDO::FETCH_ASSOC);
-    echo 'f1';
+//    echo 'f1';
     if($del_conn_obj->rowCount() > 0)
     {
         //Getting the Secret Key as its all in mY Db
@@ -50,50 +50,50 @@ if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION
         $del_conn_obj = $mysql_conn->prepare('DELETE FROM nextvac.login WHERE secretkey = :seckey LIMIT 1');
         $del_conn_obj->bindParam(':seckey',$seckey);
         $del_conn_obj->execute();
-        echo 'f2';
+//        echo 'f2';
         $del_conn_obj = $mysql_conn->prepare('DELETE FROM nextvac.studentinfo WHERE secretkey = :seckey LIMIT 1');
         $del_conn_obj->bindParam(':seckey',$seckey);
         $del_conn_obj->execute();
-        echo 'f3';
+//        echo 'f3';
         //Save the Picture Info
         $picture_obj = $mysql_conn->prepare('SELECT * FROM nextvac.profile WHERE secretkey = :seckey LIMIT 1');
         $picture_obj->bindParam(':seckey',$seckey);
         $picture_obj->execute();
         $picture_obj->setFetchMode(PDO::FETCH_ASSOC);
-        echo 'f4';
+//        echo 'f4';
 
         if($picture_obj->rowCount() > 0)
         {
             $picture_data = $picture_obj->fetch();
             $propic = $picture_data['propic'];
             //Can delete cover pic too later
-            if($propic!='default.jpg')
+            if($propic!='default.jpg'&& $propic!='male.jpg'&& $propic!='female.jpg')
                 unlink('../../student/profile/images/'.$propic);
         }else{
             //Something is fishy under
             echo 'dead';
             die();
         }
-        echo 'f5';
+        //echo 'f5';
 
         $del_conn_obj = $mysql_conn->prepare('DELETE FROM nextvac.profile WHERE secretkey = :seckey');
         $del_conn_obj->bindParam(':seckey',$seckey);
         $del_conn_obj->execute();
 
-        echo 'f6';
+        //echo 'f6';
         //Delete Supplementary datas like code results and all below
 
 //        $supp_obj = $mysql_conn->prepare('DELETE FROM nextvac.coderesults WHERE secretkey = :seckey');
 //        $supp_obj->bindParam(':seckey',$seckey);
 //        $supp_obj->execute();
 
-        echo 'f7';
+        //echo 'f7';
 
         $supp_obj = $mysql_conn->prepare('DELETE FROM nextvac.answersdb WHERE secretkey = :seckey');
         $supp_obj->bindParam(':seckey',$seckey);
         $supp_obj->execute();
 
-        echo 'f8';
+       // echo 'f8';
 
         //Done
         $_SESSION['donedelete'] = true;

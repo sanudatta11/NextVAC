@@ -100,6 +100,7 @@ else{
     <!--[if lt IE 9]>
     <script href="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script href="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
     <![endif]-->
     <style>
         @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
@@ -214,6 +215,9 @@ else{
             box-shadow: 1px 1px 1px 1px;
         }
     </style>
+    <!--    Piwik Tracker-->
+    <script src="../../include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
 </head>
 
 <body style="background-color: #edf1f7">

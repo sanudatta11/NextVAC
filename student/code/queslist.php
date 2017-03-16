@@ -147,6 +147,10 @@ else{
             font-size: 20px;
         }
     </style>
+
+    <!--    Piwik Tracker-->
+    <script src="../../include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
 </head>
 
 <body style="background-color: #edf1f7">

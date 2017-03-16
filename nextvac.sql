@@ -87,6 +87,20 @@ DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
+-- Table `nextvac`.`defaultskill`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `nextvac`.`defaultskill` (
+  `id` BIGINT(2) NOT NULL,
+  `branch` VARCHAR(100) NOT NULL DEFAULT 'global',
+  `skillname` VARCHAR(300) NOT NULL,
+  `skillhash` VARCHAR(100) NOT NULL,
+  `active` INT(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+-- -----------------------------------------------------
 -- Table `nextvac`.`globaldata`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `nextvac`.`globaldata` (
@@ -130,6 +144,21 @@ DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
+-- Table `nextvac`.`masterdb`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `nextvac`.`masterdb` (
+  `secretkey` VARCHAR(50) NOT NULL,
+  `propic` VARCHAR(45) NULL DEFAULT 'default.jpg',
+  `firstname` VARCHAR(100) NOT NULL,
+  `lastname` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`secretkey`),
+  UNIQUE INDEX `secretkey_UNIQUE` (`secretkey` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+-- -----------------------------------------------------
 -- Table `nextvac`.`profile`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `nextvac`.`profile` (
@@ -143,11 +172,11 @@ CREATE TABLE IF NOT EXISTS `nextvac`.`profile` (
   `firstname` VARCHAR(45) NOT NULL,
   `lastname` VARCHAR(45) NOT NULL,
   `cover` VARCHAR(45) NOT NULL DEFAULT 'defaultcover.jpg',
-  `hostel` VARCHAR(45) NOT NULL DEFAULT 'Day Scholar',
+  `hostel` VARCHAR(45) NULL DEFAULT 'Day Scholar',
   `hometown` VARCHAR(45) NULL DEFAULT 'Not Given',
   `number` VARCHAR(45) NOT NULL,
-  `course` VARCHAR(45) NOT NULL,
-  `semester` INT(11) NOT NULL,
+  `course` VARCHAR(45) NULL DEFAULT 'Teacher',
+  `semester` INT(11) NOT NULL DEFAULT '0',
   `organization` VARCHAR(45) NULL DEFAULT NULL,
   `gender` INT(11) NOT NULL DEFAULT '3',
   `cgpa` DOUBLE NOT NULL DEFAULT '0',
@@ -161,7 +190,7 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `nextvac`.`questiondb`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `nextvac`.`questiondb` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `secretkey` VARCHAR(30) NOT NULL,
   `section` VARCHAR(20) NOT NULL,
   `code` VARCHAR(20) NOT NULL,
@@ -172,7 +201,9 @@ CREATE TABLE IF NOT EXISTS `nextvac`.`questiondb` (
   `third` VARCHAR(45) NOT NULL,
   `fourth` VARCHAR(45) NOT NULL,
   `correct` SMALLINT(5) NOT NULL,
-  `status` INT(11) NOT NULL DEFAULT '0')
+  `status` INT(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -212,7 +243,7 @@ CREATE TABLE IF NOT EXISTS `nextvac`.`skilldb` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `secretkey` VARCHAR(50) NOT NULL,
   `skillname` VARCHAR(200) NOT NULL,
-  `skillid` VARCHAR(100) NOT NULL,
+  `skillihash` VARCHAR(100) NOT NULL,
   `level` INT(11) NOT NULL,
   `loggedate` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP());
 
@@ -249,7 +280,18 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
 
+-- -----------------------------------------------------
+-- Table `nextvac`.`uniquecreate`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `nextvac`.`uniquecreate` (
+  `uniqueid` VARCHAR(500) NOT NULL,
+  `sessionkey` VARCHAR(100) NOT NULL,
+  `firstname` VARCHAR(100) NOT NULL,
+  `lastname` VARCHAR(100) NOT NULL,
+  `created` INT(11) NOT NULL DEFAULT '0',
+  `createdat` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP());
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-

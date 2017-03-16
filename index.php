@@ -98,6 +98,9 @@ if(isset($_SESSION['secretkey']))
 
     <link rel="stylesheet" href="css/mainpage/mainpage.css">
     <link rel="stylesheet" href="css/mainpage/rightnav.css">
+    <!--    Piwik Tracker-->
+    <script src="include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
 
     <!--End-->
 </head>

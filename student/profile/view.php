@@ -103,6 +103,9 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
 
     </style>
     <link rel="stylesheet" href="../../css/buttons/buttons.css">
+    <!--    Piwik Tracker-->
+    <script src="../../include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
 </head>
 <body style="background-color: #d3dae5;">
 <div class="container">

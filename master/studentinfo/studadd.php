@@ -66,7 +66,6 @@ if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION
             $password = generaterandomstring(10);
             $section = preg_replace("/[^A-Za-z0-9]+/","",$_POST['section']);
             $regno = preg_replace("/[^0-9]+/","",$_POST['regno']);
-//            $email = preg_replace("/[^A-Za-z0-9.]+/","",$_POST['email']);
             $email =  $_POST['email'];
             $firstname = preg_replace("/[^A-Za-z0-9]+/","",$_POST['firstname']);
             $lastname = preg_replace("/[^A-Za-z0-9]+/","",$_POST['lastname']);
@@ -78,6 +77,24 @@ if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION
 
             //Generating Random SecretKey For the user. Using
             $secretkey = (string)$username.generaterandomstring(5);
+
+            //Check if the Account is already there or not
+            $check_obj_string = "SELECT * FROM nextvac.login WHERE username = :user";
+            $check_obj = $mysql_conn->prepare($check_obj_string);
+            $check_obj->bindParam(':user',$username,PDO::PARAM_INT);
+            $check_obj->execute();
+
+            if($check_obj->rowCount() > 0)
+            {
+                //User Already Added
+                $_SESSION['error'] = "Account already exist!";
+                header('Location: ../addnetwork.php');
+                die();
+            }
+            else{
+                //Account not Created
+                //Go Ahead
+            }
 
             //Saving the Login DB value
             $conn_obj_add= $mysql_conn->prepare('INSERT INTO nextvac.login (username,password,secretkey,designation) VALUES (?,?,?,?)');

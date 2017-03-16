@@ -123,6 +123,10 @@ else
             cursor: pointer;
         }
     </style>
+
+    <!--    Piwik Tracker-->
+    <script src="../../include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
 </head>
 
 <body style="background-color: #edf1f7">
@@ -315,8 +319,9 @@ else
                                     <select class="form-control" id="language">
                                         <option value="c_cpp">C++</option>
                                         <option value="c_cpp">C</option>
-                                        <option value="java">Java</option>
-                                        <option value="python">Python</option>
+<!--                                        <option value="java">Java</option>-->
+                                        <option value="python2">Python2</option>
+                                        <option value="python3">Python3</option>
                                     </select>
                                 </div>
                             </div>
@@ -461,27 +466,7 @@ else
             });
         }
 
-        ace.require("ace/ext/language_tools");
-        var editor = ace.edit("editor");
-        document.getElementById('editor').style.fontSize = '22px';
-        editor.setTheme("ace/theme/ambiance");
-        editor.getSession().setMode("ace/mode/c_cpp");
-        editor.setOptions({
-            enableLiveAutocompletion:true,
-            enableBasicAutocompletion: true,
-            minLines:25,
-            maxLines:2000
-        });
 
-
-        $("#theme ").change(function(e) {
-            console.log(this.value);
-            editor.setTheme("ace/theme/ambiance");
-        });
-        editor.getSession().on('change', function() {
-            document.getElementById('hide_row').style = 'display: none;';
-        });
-        editor.$blockScrolling = Infinity;
     </script>
 
 </body>

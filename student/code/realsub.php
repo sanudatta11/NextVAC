@@ -55,7 +55,7 @@ else{
     $oldmask = umask(0);
 
     mkdir($tempdock.$random_folder,0744);
-    $language_select = preg_replace('/[^A-Za-z+]+/','',$_POST['language']);
+    $language_select = preg_replace('/[^A-Za-z0-9+]+/','',$_POST['language']);
     $contest_code = preg_replace('/[^A-Za-z0-9]+/','',$_POST['ccode']);
     $problem_code = preg_replace('/[^0-9]+/','',$_POST['pcode']);
 
@@ -436,7 +436,7 @@ else{
         {
             file_put_contents($tempdock.$random_folder.'/solution.java',$_POST['code_arena']);
         }
-        elseif ($language_select == 'Python')
+        elseif ($language_select == 'Python3')
         {
             file_put_contents($tempdock.$random_folder.'/solution.py',$_POST['code_arena']);
             $docker_container =generaterandomstring(10);
@@ -563,18 +563,148 @@ else{
             echo json_encode($data,JSON_UNESCAPED_SLASHES);
             die();
         }
+        elseif ($language_select == 'Python2')
+        {
+            file_put_contents($tempdock.$random_folder.'/solution.py',$_POST['code_arena']);
+            $docker_container =generaterandomstring(10);
+            $file_index = 1;
+            do{
+                $temp_data = array();
+                $temp_index_string = "test".$file_index;
+                $inp_temp=$pre_path.$inpfolder.'/input'.$file_index.'.txt';
+                $out_temp=$pre_path.$outfolder.'/output'.$file_index.'.txt';
+
+//                    $data['inpfile'] = $inp_temp;
+//                    $data['outfile'] = $out_temp;
+
+                if(file_exists($inp_temp) && file_exists($out_temp))
+                {
+                    //Reducing time in previous one by checking as i know its already there
+
+                    if ($fp1 = fopen($inp_temp,"r")) {
+                        fclose($fp1);
+                        copy($inp_temp, "/var/www/html/student/tempdockers/" . $random_folder . "/checkinp.txt");
+                        file_put_contents("/var/www/html/student/tempdockers/" . $random_folder . "/runcode.sh","#!/bin/bash\ntimeout 2 python solution.py < checkinp.txt > out.txt");
+                        shell_exec("chmod 0777 +x /var/www/html/student/tempdockers/".$random_folder."/runcode.sh");
+                    }
+
+                    $statement = "timeout --signal=SIGKILL 3 docker run --rm --pids-limit 40 -m 10m --cpu-quota=70000 --name " . $docker_container . " -v /var/www/html/student/tempdockers/" . $random_folder . ":/try testdock timeout 2 ./runcode.sh 2>&1";
+
+                    exec($statement,$output,$retstat);
+                    shell_exec("docker rm -f ".$docker_container);
+
+                    $fuck_temp = "test".$file_index;
+
+                    if($retstat == 124 || $retstat == 127 || $retstat == 137 || !isset($output))
+                    {
+                        $temp_data['verdict'] = 1;
+                        $temp_data['retstat'] = $retstat;
+                        $data[$fuck_temp] = $temp_data;
+                    }
+                    else{
+                        $now_out = "/var/www/html/student/tempdockers/" . $random_folder . "/out.txt";
+
+                        //Mega Output
+                        if(filesize($now_out) > 2000000)
+                        {
+                            $temp_data['verdict'] = 1;
+                            $temp_data['retstat'] = $retstat;
+                            unlink($now_out);
+                            continue;
+                        }
+                        else{
+                            $char = substr(file_get_contents($now_out), -1);
+                            if($char == PHP_EOL)
+                            {
+                                $data_temp = file_get_contents($now_out);
+                                $data_temp = substr_replace($data_temp ,"",-1);
+                                unlink($now_out);
+                                file_put_contents($now_out,$data_temp);
+                                $temp_data['output'] = $data_temp;
+                                unset($data_temp);
+                            }
+                            else
+                                $temp_data['output'] = file_get_contents($now_out);
+
+                            if(sha1_file($now_out) == sha1_file($out_temp))
+                            {
+                                $score = $score + ($max_score/$total_test);
+                                $temp_data['verdict'] = 2;
+                            }else{
+                                $temp_data['verdict'] = 3;
+                                $temp_data['retstat'] = $retstat;
+                            }
+                        }
+
+                        $data[$fuck_temp] = $temp_data;
+                        unset($temp_data);
+                        unlink("/var/www/html/student/tempdockers/" . $random_folder . "/checkinp.txt");
+                        unlink($now_out);
+
+                    }
+
+                    //Done with fucking thing
+                }
+                else
+                {
+                    //No more checks all is done
+                    $file_flag = false;
+                    break;
+                }
+
+                unset($inp_temp);   //Not deleting it bro just unsetting it.
+                unset($out_temp);   //Not deleting it also
+                ++$file_index;
+            }while($file_index <= $total_test);
+
+//                End of loop
+            if(isset($temp_id))
+                $data['tempid'] = $temp_id;
+//                End of loop
+            if(isset($prev_score)&&$score>$prev_score) {
+                $created_date = date("Y-m-d H:i:s");
+                $update_stat = "UPDATE nextvac.coderesults SET score = :score,subtime = :subtime WHERE id = :tid";
+                $update_obj = $mysql_conn->prepare($update_stat);
+                $update_obj->bindParam(':score',$score,PDO::PARAM_INT);
+                $update_obj->bindParam(':subtime',$created_date);
+                $update_obj->bindParam(':tid',$temp_id,PDO::PARAM_INT);
+                unset($temp_id);
+                //$update_obj->bindParam(':seckey',$_SESSION['secretkey'],PDO::PARAM_STR);
+                $update_obj->execute();
+                unset($created_date);
+            }elseif (!isset($prev_score)){
+                $create_statement = "INSERT INTO nextvac.coderesults (secretkey,contestcode,problemcode,score) VALUES (?,?,?,?)";
+                $created_obj = $mysql_conn->prepare($create_statement);
+                $created_obj->bindParam(1,$_SESSION['secretkey'],PDO::PARAM_STR);
+                $created_obj->bindParam(2,$contest_code,PDO::PARAM_STR);
+                $created_obj->bindParam(3,$problem_code,PDO::PARAM_INT);
+                $created_obj->bindParam(4,$score,PDO::PARAM_INT);
+                $created_obj->execute();
+            }
+
+            //Removing all temporary files and directories
+            array_map('unlink', glob("/var/www/html/student/tempdockers/".$random_folder."/*.*"));
+            unlink("/var/www/html/student/tempdockers/".$random_folder."/solution");
+            rmdir("/var/www/html/student/tempdockers/".$random_folder);
+
+            echo json_encode($data,JSON_UNESCAPED_SLASHES);
+            die();
+
+        }
         else {
             //Some Error has occured while selecting the language
+            $data['errortop'] = "Sorry Some unforseen error Occured";
+            echo json_encode($data,JSON_UNESCAPED_SLASHES);
+            die();
         }
-
 
     }
     else
     {
         //Tampered Data or contest taken off when submitted
         //Redirect to the contest page
-
-        header('Location: contest.php');
+        $data['errortop'] = "Sorry No Code was given as input";
+        echo json_encode($data,JSON_UNESCAPED_SLASHES);
         die();
     }
 

@@ -85,6 +85,10 @@ else{
     <script href="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!--    Piwik Tracker-->
+    <script src="../../include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
+
 </head>
 
 <body style="background-color: #edf1f7">

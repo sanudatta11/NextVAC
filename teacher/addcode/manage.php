@@ -50,6 +50,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/teacher/validate.php';
     <script href="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script href="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!--    Piwik Tracker-->
+    <script src="../../include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
 
 </head>
 
@@ -198,7 +201,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/teacher/validate.php';
                 <div class="container small_div">
                     <div class="col-xs-6">
 
-                        <a href="#">
+                        <a href="../leaderboard/list.php">
                             <div class="card-begin">
                                 <br> <br>
                                 <div class="w3-card-8" data-toggle="tooltip" data-placement="bottom" title="Get the dashboard of the class" style="width:100%;">

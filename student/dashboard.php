@@ -95,6 +95,11 @@
     <script src="../jquery/jquery.min.js"></script>
     <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
     <script src="../bootstrap/css/bootstrap.min.css"></script>
+
+    <!--    Piwik Tracker-->
+    <script src="../include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
+
     <!--<link rel="stylesheet" href="nav.css">-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
@@ -117,6 +122,7 @@
     <script href="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script href="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 
 </head>
 

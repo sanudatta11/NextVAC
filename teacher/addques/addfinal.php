@@ -145,6 +145,9 @@ else{
     <![endif]-->
 
     <script src="../js/required_final.js"></script>
+    <!--    Piwik Tracker-->
+    <script src="../../include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
 
 </head>
 

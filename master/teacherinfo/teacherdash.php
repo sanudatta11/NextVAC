@@ -72,6 +72,9 @@ if(isset($_SESSION['error']))
             background-color: #fbffce;
         }
     </style>
+    <!--    Piwik Tracker-->
+    <script src="../../include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
 </head>
 
 <body style="background-color: #edf1f7">
@@ -92,7 +95,7 @@ if(isset($_SESSION['error']))
                 <a href="#"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a>
             </li>
             <li>
-                <a href="#"><span class="glyphicon glyphicon-facetime-video"></span> VConnect</a>
+                <a href="../addnetwork.php"><span class="glyphicon glyphicon-facetime-video"></span> Network Suite </a>
             </li>
             <li>
                 <a href="#"> <span class="glyphicon glyphicon-book"></span> Digtal Library</a>

@@ -43,6 +43,24 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
     //Generating Random SecretKey For the user. Using
     $secretkey = (string)$username.generaterandomstring(6);
 
+    //Check if the Account is already there or not
+    $check_obj_string = "SELECT * FROM nextvac.login WHERE username = :user";
+    $check_obj = $mysql_conn->prepare($check_obj_string);
+    $check_obj->bindParam(':user',$username,PDO::PARAM_INT);
+    $check_obj->execute();
+
+    if($check_obj->rowCount() > 0)
+    {
+        //User Already Added
+        $_SESSION['error'] = "Account already exist!";
+        header('Location: ../addnetwork.php');
+        die();
+    }
+    else{
+        //Account not Created
+        //Go Ahead
+    }
+
     //Saving the Login DB value
     $conn_obj_add= $mysql_conn->prepare('INSERT INTO nextvac.login (username,password,secretkey,designation) VALUES (?,?,?,?)');
     $conn_obj_add->bindParam(1,$username,PDO::PARAM_INT);

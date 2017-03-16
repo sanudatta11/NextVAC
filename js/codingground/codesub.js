@@ -254,6 +254,7 @@ $(document).ready(function() {
 
 
     $('#subform').submit(function(){
+
         $('#processingbox').empty();
         $('#sampleout').hide();
         //console.log("Sub");
@@ -368,6 +369,23 @@ $(document).ready(function() {
 
     });
 
+    ace.require("ace/ext/language_tools");
+    var editor = ace.edit("editor");
+    document.getElementById('editor').style.fontSize = '22px';
+    editor.setTheme("ace/theme/ambiance");
+    editor.getSession().setMode("ace/mode/c_cpp");
+    editor.setOptions({
+        enableLiveAutocompletion:true,
+        enableBasicAutocompletion: true,
+        minLines:25,
+        maxLines:2000
+    });
+
+    editor.getSession().on('change', function() {
+        document.getElementById('hide_row').style = 'display: none;';
+    });
+    editor.$blockScrolling = Infinity;
+
     //Changing the language and also the theme below with the help with Jquery
     $("#language").change(function(e) {
         //console.log(this.value);
@@ -377,7 +395,7 @@ $(document).ready(function() {
     });
     $("#theme").change(function(e) {
         console.log(this.value);
-        editor.setTheme("ace/mode/"+this.value);
+        editor.setTheme("ace/theme/"+this.value);
     });
 
 });

@@ -91,7 +91,7 @@ if(isset($_SESSION['error']))
                 <a href="#"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a>
             </li>
             <li>
-                <a href="#"><span class="glyphicon glyphicon-facetime-video"></span> VConnect</a>
+                <a href="../addnetwork.php"><span class="glyphicon glyphicon-facetime-video"></span> Network Suite </a>
             </li>
             <li>
                 <a href="#"> <span class="glyphicon glyphicon-book"></span> Digtal Library</a>

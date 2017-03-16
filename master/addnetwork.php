@@ -23,6 +23,11 @@ else{
     header('Location: ../index.php');
     die();
 }
+
+if(isset($_SESSION['error']))
+{
+    echo '<script>window.alert("'.$_SESSION['error'].'")</script>';
+}
 ?>
 
 <!--Navbar as usual-->
@@ -69,6 +74,9 @@ else{
             background-color: #fbffce;
         }
     </style>
+    <!--    Piwik Tracker-->
+    <script src="../include/tracker.js"></script>
+    <!--    End of Piwik Tracker-->
 </head>
 
 <body style="background-color: #edf1f7">
@@ -88,7 +96,7 @@ else{
                 <a href="#"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a>
             </li>
             <li>
-                <a href="#"><span class="glyphicon glyphicon-facetime-video"></span> VConnect</a>
+                <a href="#"><span class="glyphicon glyphicon-facetime-video"></span> Network Suite </a>
             </li>
             <li>
                 <a href="#"> <span class="glyphicon glyphicon-book"></span> Digtal Library</a>
@@ -125,7 +133,7 @@ else{
                 <ul class="nav navbar-nav">
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span><b> Log Out</b></a></li>
+                    <li><a href="../logout.php"><span class="glyphicon glyphicon-log-out"></span><b> Log Out</b></a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-home"></span><b> Reach Us</b></a></li>
                 </ul>
             </div>

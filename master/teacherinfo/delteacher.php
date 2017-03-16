@@ -65,7 +65,7 @@ if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION
             $picture_data = $picture_obj->fetch();
             $propic = $picture_data['propic'];
             //Can delete cover pic too later
-            if($propic!='default.jpg')
+            if($propic!='default.jpg' && $propic!='male.jpg'&& $propic!='female.jpg')
                 unlink('../../student/profile/images/'.$propic);
         }else{
             //Something is fishy under
