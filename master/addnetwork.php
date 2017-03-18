@@ -75,7 +75,7 @@ if(isset($_SESSION['error']))
         }
     </style>
     <!--    Piwik Tracker-->
-    <script src="../include/tracker.js"></script>
+<!--    <script src="../include/tracker.js"></script>-->
     <!--    End of Piwik Tracker-->
 </head>
 
@@ -99,22 +99,10 @@ if(isset($_SESSION['error']))
                 <a href="#"><span class="glyphicon glyphicon-facetime-video"></span> Network Suite </a>
             </li>
             <li>
-                <a href="#"> <span class="glyphicon glyphicon-book"></span> Digtal Library</a>
+                <a href="masscreator/massadd.php"> <span class="glyphicon glyphicon-plus-sign"></span> Mass Creator</a>
             </li>
             <li>
                 <a href="#"><span class="fa fa-code"></span> Coding Ground</a>
-            </li>
-            <li>
-                <a href="#"><span class="glyphicon glyphicon-plus"></span> Add Q&A</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-share-alt"></span> File Share</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-users"></span> ConnectYou</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-user"></span> My Profile</a>
             </li>
         </ul>
     </div>

@@ -99,7 +99,7 @@ if(isset($_GET['delete']) && $_GET['delete'] == 'success' && isset($_SESSION['do
                 <a href="../addnetwork.php"><span class="glyphicon glyphicon-facetime-video"></span> Network Suite </a>
             </li>
             <li>
-                <a href="#"> <span class="glyphicon glyphicon-book"></span>Test 1</a>
+                <a href="../masscreator/massadd.php"> <span class="glyphicon glyphicon-plus-sign"></span> Mass Creator</a>
             </li>
             <li>
                 <a href="#"><span class="fa fa-code"></span>Test 2</a>

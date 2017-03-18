@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c8e065-4e32-417a-8aa9-1e6229aa9f11" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/master/masscreator/massadd.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/master/masscreator/masssub.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twilio-php-master/test.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accountcreator/thankyou.php" afterPath="$PROJECT_DIR$/accountcreator/thankyou.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dependencies/accountcreate/mailandint.php" afterPath="$PROJECT_DIR$/dependencies/accountcreate/mailandint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/addnetwork.php" afterPath="$PROJECT_DIR$/master/addnetwork.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/index.php" afterPath="$PROJECT_DIR$/master/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/masterinfo/masterdash.php" afterPath="$PROJECT_DIR$/master/masterinfo/masterdash.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/masterinfo/masterdelete.php" afterPath="$PROJECT_DIR$/master/masterinfo/masterdelete.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/studentinfo/studdelete.php" afterPath="$PROJECT_DIR$/master/studentinfo/studdelete.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/studentinfo/studentdash.php" afterPath="$PROJECT_DIR$/master/studentinfo/studentdash.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/teacherinfo/teacherdash.php" afterPath="$PROJECT_DIR$/master/teacherinfo/teacherdash.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/teacherinfo/teacherdelete.php" afterPath="$PROJECT_DIR$/master/teacherinfo/teacherdelete.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/code/queslist.php" afterPath="$PROJECT_DIR$/student/code/queslist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/dashboard.php" afterPath="$PROJECT_DIR$/student/dashboard.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +44,48 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="massadd.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/master/masscreator/massadd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="90" column="17" lean-forward="false" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+              <folding>
+                <marker date="1489844052320" expanded="true" signature="443:459" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/master/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="149" column="7" lean-forward="false" selection-start-line="149" selection-start-column="7" selection-end-line="149" selection-end-column="7" />
+              <folding>
+                <marker date="1489844185478" expanded="true" signature="540:614" ph="SELECT SUM(v... piwiklog_visit" />
+                <marker date="1489844185478" expanded="true" signature="1136:1187" ph="SELECT COUNT... studentinfo" />
+                <marker date="1489844185478" expanded="true" signature="1443:1494" ph="SELECT COUNT... teacherinfo" />
+                <marker date="1489844185478" expanded="true" signature="1749:1821" ph="SELECT COUNT... login" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addnetwork.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/master/addnetwork.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="61" column="22" lean-forward="false" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+              <folding>
+                <marker date="1489844190026" expanded="true" signature="551:567" ph="..." />
+                <marker date="1489844190026" expanded="true" signature="14839:14899" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,10 +98,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>password</find>
-      <find>autocomplete=&quot;false&quot;</find>
-      <find>sendmail</find>
-      <find>add tea</find>
       <find>teacher</find>
       <find>student re</find>
       <find>remove s</find>
@@ -58,7 +111,6 @@
       <find>preg</find>
       <find>../../</find>
       <find>Next</find>
-      <find>form</find>
       <find>....</find>
       <find>log</find>
       <find>echo</find>
@@ -71,9 +123,19 @@
       <find>stuxnet</find>
       <find>$total_visits</find>
       <find>student</find>
+      <find>selectcode</find>
+      <find>stux</find>
+      <find>btn</find>
+      <find>form</find>
+      <find>input</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Soumyajit Dutta &lt;sanudatta11@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
       <GitPushTagMode />
@@ -82,17 +144,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/master/masterinfo/delmaster.php" />
-        <option value="$PROJECT_DIR$/master/masterinfo/addmaster.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/testsms/test.php" />
-        <option value="$PROJECT_DIR$/master/Analytics/index.php" />
-        <option value="$PROJECT_DIR$/master/analytics/index.php" />
-        <option value="$PROJECT_DIR$/student/code/realsub.php" />
-        <option value="$PROJECT_DIR$/student/code/samplessub.php" />
-        <option value="$PROJECT_DIR$/js/codingground/codesub.js" />
         <option value="$PROJECT_DIR$/accountcreator/addstud/creatorstud.php" />
-        <option value="$PROJECT_DIR$/dependencies/accountcreate/mailandint.php" />
         <option value="$PROJECT_DIR$/master/studentinfo/delstud.php" />
         <option value="$PROJECT_DIR$/master/teacherinfo/delteacher.php" />
         <option value="$PROJECT_DIR$/teacher/leaderboard/leader.html" />
@@ -100,11 +152,7 @@
         <option value="$PROJECT_DIR$/student/skills/skillsearch.php" />
         <option value="$PROJECT_DIR$/master/studentinfo/studadd.php" />
         <option value="$PROJECT_DIR$/master/teacherinfo/teachadd.php" />
-        <option value="$PROJECT_DIR$/master/masterinfo/masterdash.php" />
-        <option value="$PROJECT_DIR$/master/masterinfo/masterdelete.php" />
-        <option value="$PROJECT_DIR$/student/dashboard.php" />
         <option value="$PROJECT_DIR$/student/code/problem.php" />
-        <option value="$PROJECT_DIR$/student/code/queslist.php" />
         <option value="$PROJECT_DIR$/student/code/leaderboard.php" />
         <option value="$PROJECT_DIR$/student/code/contest.php" />
         <option value="$PROJECT_DIR$/student/profile/view.php" />
@@ -113,11 +161,6 @@
         <option value="$PROJECT_DIR$/student/question/test.php" />
         <option value="$PROJECT_DIR$/student/videoconnect/vidkeysub.php" />
         <option value="$PROJECT_DIR$/student/videoconnect/ipvideo.php" />
-        <option value="$PROJECT_DIR$/master/addnetwork.php" />
-        <option value="$PROJECT_DIR$/master/teacherinfo/teacherdash.php" />
-        <option value="$PROJECT_DIR$/master/teacherinfo/teacherdelete.php" />
-        <option value="$PROJECT_DIR$/master/studentinfo/studdelete.php" />
-        <option value="$PROJECT_DIR$/master/studentinfo/studentdash.php" />
         <option value="$PROJECT_DIR$/teacher/addcode/addcode.php" />
         <option value="$PROJECT_DIR$/teacher/addcode/adddetail.php" />
         <option value="$PROJECT_DIR$/teacher/addcode/manage.php" />
@@ -132,7 +175,26 @@
         <option value="$PROJECT_DIR$/accountcreator/create.php" />
         <option value="$PROJECT_DIR$/analytics/include/tracker.js" />
         <option value="$PROJECT_DIR$/confidential/mysql_login.php" />
+        <option value="$PROJECT_DIR$/twilio-php-master/test.php" />
+        <option value="$PROJECT_DIR$/way2sms/test.php" />
+        <option value="$PROJECT_DIR$/student/code/queslist.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/master/studentinfo/mass/massadd.php" />
+        <option value="$PROJECT_DIR$/student/dashboard.php" />
+        <option value="$PROJECT_DIR$/master/studentinfo/mass/bla.php" />
+        <option value="$PROJECT_DIR$/master/studentinfo/mass/masssub.php" />
+        <option value="$PROJECT_DIR$/dependencies/accountcreate/mailandint.php" />
+        <option value="$PROJECT_DIR$/accountcreator/thankyou.php" />
+        <option value="$PROJECT_DIR$/master/studentinfo/studentdash.php" />
+        <option value="$PROJECT_DIR$/master/masterinfo/masterdash.php" />
+        <option value="$PROJECT_DIR$/master/masterinfo/masterdelete.php" />
+        <option value="$PROJECT_DIR$/master/studentinfo/studdelete.php" />
+        <option value="$PROJECT_DIR$/master/teacherinfo/teacherdash.php" />
+        <option value="$PROJECT_DIR$/master/teacherinfo/teacherdelete.php" />
+        <option value="$PROJECT_DIR$/master/masscreator/massadd.php" />
         <option value="$PROJECT_DIR$/master/index.php" />
+        <option value="$PROJECT_DIR$/master/addnetwork.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
       </list>
     </option>
   </component>
@@ -208,7 +270,39 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="twilio-php-master" />
+              <option name="myItemId" value="student" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="master" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="master" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="masscreator" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -223,25 +317,25 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="del&#9;FILE&#9;file:///var/www/html/master/teacherinfo/delteacher.php&#10;dels&#9;FILE&#9;file:///var/www/html/master/studentinfo/delstud.php&#10;addne&#9;FILE&#9;file:///var/www/html/master/addnetwork.php&#10;mana&#9;FILE&#9;file:///var/www/html/teacher/addques/manageset.php&#10;ques&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;dashb&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;das&#9;FILE&#9;file:///var/www/html/master/masterinfo/masterdash.php&#10;code&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;addn&#9;FILE&#9;file:///var/www/html/master/addnetwork.php&#10;add&#9;FILE&#9;file:///var/www/html/master/masterinfo/addmaster.php&#10;st&#9;FILE&#9;file:///var/www/html/master/studentinfo/studentdash.php&#10;as&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;lea&#9;FILE&#9;file:///var/www/html/teacher/leaderboard/leader.html&#10;que&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;proble&#9;FILE&#9;file:///var/www/html/student/code/problem.php&#10;quesli&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;prob&#9;FILE&#9;file:///var/www/html/student/code/problem.php&#10;view&#9;FILE&#9;file:///var/www/html/student/profile/view.php&#10;pro&#9;FILE&#9;file:///var/www/html/student/profile/changeprofile.php&#10;sampl&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;real&#9;FILE&#9;file:///var/www/html/student/code/realsub.php&#10;codes&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;sam&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;addcode&#9;FILE&#9;file:///var/www/html/teacher/addcode/addcode.php&#10;dash&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;sample&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;chan&#9;FILE&#9;file:///var/www/html/student/profile/changeprofile.php&#10;red&#9;FILE&#9;file:///var/www/html/redirect.php&#10;index&#9;FILE&#9;file:///var/www/html/index.php&#10;rando&#9;FILE&#9;file:///var/www/html/dependencies/randomize/randomstring.php&#10;mail&#9;FILE&#9;file:///var/www/html/mailer/mail.php&#10;.js&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;login&#9;FILE&#9;file:///var/www/html/login.php&#10;mai&#9;FILE&#9;file:///var/www/html/mailer/mail.php&#10;logi&#9;FILE&#9;file:///var/www/html/login.php&#10;save&#9;FILE&#9;file:///var/www/html/student/question/saveans.php&#10;re&#9;FILE&#9;file:///var/www/html/student/code/realsub.php&#10;da&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;form&#9;null&#9;null&#10;verify&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/verify.php&#10;rand&#9;FILE&#9;file:///var/www/html/dependencies/randomize/randomstring.php&#10;submit&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/submitcode.php&#10;sub&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;ips&#9;FILE&#9;file:///var/www/html/student/videoconnect/ipsubmit.php&#10;status&#9;FILE&#9;file:///var/www/html/teacher/managecode/status.php&#10;ver&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/verify.php&#10;su&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/submitcode.php&#10;addd&#9;FILE&#9;file:///var/www/html/teacher/addcode/adddetail.php&#10;staging&#9;FILE&#9;file:///var/www/html/teacher/addques/addstaging.php&#10;stag&#9;FILE&#9;file:///var/www/html/student/question/quesstaging.php" />
+    <property name="SearchEverywhereHistoryKey" value="quesli&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;del&#9;FILE&#9;file:///var/www/html/master/teacherinfo/delteacher.php&#10;dels&#9;FILE&#9;file:///var/www/html/master/studentinfo/delstud.php&#10;addne&#9;FILE&#9;file:///var/www/html/master/addnetwork.php&#10;mana&#9;FILE&#9;file:///var/www/html/teacher/addques/manageset.php&#10;ques&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;dashb&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;das&#9;FILE&#9;file:///var/www/html/master/masterinfo/masterdash.php&#10;code&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;addn&#9;FILE&#9;file:///var/www/html/master/addnetwork.php&#10;add&#9;FILE&#9;file:///var/www/html/master/masterinfo/addmaster.php&#10;st&#9;FILE&#9;file:///var/www/html/master/studentinfo/studentdash.php&#10;as&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;lea&#9;FILE&#9;file:///var/www/html/teacher/leaderboard/leader.html&#10;que&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;proble&#9;FILE&#9;file:///var/www/html/student/code/problem.php&#10;prob&#9;FILE&#9;file:///var/www/html/student/code/problem.php&#10;view&#9;FILE&#9;file:///var/www/html/student/profile/view.php&#10;pro&#9;FILE&#9;file:///var/www/html/student/profile/changeprofile.php&#10;sampl&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;real&#9;FILE&#9;file:///var/www/html/student/code/realsub.php&#10;codes&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;sam&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;addcode&#9;FILE&#9;file:///var/www/html/teacher/addcode/addcode.php&#10;dash&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;sample&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;chan&#9;FILE&#9;file:///var/www/html/student/profile/changeprofile.php&#10;red&#9;FILE&#9;file:///var/www/html/redirect.php&#10;index&#9;FILE&#9;file:///var/www/html/index.php&#10;rando&#9;FILE&#9;file:///var/www/html/dependencies/randomize/randomstring.php&#10;mail&#9;FILE&#9;file:///var/www/html/mailer/mail.php&#10;.js&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;login&#9;FILE&#9;file:///var/www/html/login.php&#10;mai&#9;FILE&#9;file:///var/www/html/mailer/mail.php&#10;logi&#9;FILE&#9;file:///var/www/html/login.php&#10;save&#9;FILE&#9;file:///var/www/html/student/question/saveans.php&#10;re&#9;FILE&#9;file:///var/www/html/student/code/realsub.php&#10;da&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;form&#9;null&#9;null&#10;verify&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/verify.php&#10;rand&#9;FILE&#9;file:///var/www/html/dependencies/randomize/randomstring.php&#10;submit&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/submitcode.php&#10;sub&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;ips&#9;FILE&#9;file:///var/www/html/student/videoconnect/ipsubmit.php&#10;status&#9;FILE&#9;file:///var/www/html/teacher/managecode/status.php&#10;ver&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/verify.php&#10;su&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/submitcode.php&#10;addd&#9;FILE&#9;file:///var/www/html/teacher/addcode/adddetail.php&#10;staging&#9;FILE&#9;file:///var/www/html/teacher/addques/addstaging.php&#10;stag&#9;FILE&#9;file:///var/www/html/student/question/quesstaging.php" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="jsx.switch.disabled" value="true" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/master/masscreator" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/teacher/profile" />
       <recent name="$PROJECT_DIR$/student/code" />
       <recent name="$PROJECT_DIR$/student" />
-      <recent name="$PROJECT_DIR$/student/code/submit" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/student/code" />
+      <recent name="$PROJECT_DIR$/way2sms" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/student/profile/images" />
       <recent name="$PROJECT_DIR$/accountcreator/addstud" />
-      <recent name="$PROJECT_DIR$/teacher/pictures" />
-      <recent name="$PROJECT_DIR$/dependencies" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.test.php">
@@ -378,7 +472,9 @@
       <workItem from="1489723103261" duration="318000" />
       <workItem from="1489724051318" duration="1827000" />
       <workItem from="1489730694734" duration="1350000" />
-      <workItem from="1489739661557" duration="793000" />
+      <workItem from="1489739661557" duration="9697000" />
+      <workItem from="1489820704742" duration="2207000" />
+      <workItem from="1489837474952" duration="8135000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 11 March">
       <created>1489233468758</created>
@@ -394,20 +490,28 @@
       <option name="project" value="LOCAL" />
       <updated>1489703938765</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit 17 March Push 2">
+      <created>1489743643828</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1489743643828</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358719000" />
+    <option name="totallyTimeSpent" value="377965000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18908532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18908532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -421,7 +525,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39940387" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -435,7 +538,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit 11 March" />
     <MESSAGE value="Commit 17 March" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 17 March" />
+    <MESSAGE value="Commit 17 March Push 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 17 March Push 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -444,127 +548,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/student/videoconnect/ipsubmit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="13" column="63" lean-forward="true" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/teacherinfo/teachadd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/skills/skillsearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1935">
-          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/code/realsub.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1380">
-          <caret line="57" column="53" lean-forward="false" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fusion_charts/js/maps/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fusion_charts/js/fusioncharts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/masterinfo/masterdash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="94" column="28" lean-forward="false" selection-start-line="94" selection-start-column="28" selection-end-line="94" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/masterinfo/masterdelete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="93" column="28" lean-forward="false" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/code/queslist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="151" column="23" lean-forward="false" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/code/problem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="127" column="23" lean-forward="false" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/code/leaderboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="218" column="23" lean-forward="false" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/code/contest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="97" column="23" lean-forward="false" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/profile/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/profile/changeprofile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/question/quespage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/question/saveans.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/question/quesstaging.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="87" column="2" lean-forward="false" selection-start-line="87" selection-start-column="2" selection-end-line="89" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/question/test.php" />
     <entry file="file://$PROJECT_DIR$/student/videoconnect/ipvideo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -579,38 +562,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/master/teacherinfo/teacherdash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="76" column="35" lean-forward="false" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/teacherinfo/teacherdelete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="76" column="35" lean-forward="false" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/master/teacherinfo/delteacher.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="68" column="64" lean-forward="true" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/studentinfo/studdelete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="81" column="35" lean-forward="false" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/addcode/addcode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="65" column="35" lean-forward="false" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -625,13 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="54" column="35" lean-forward="false" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/addcode/submit/submitcode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1620">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -743,38 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="99" column="31" lean-forward="false" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/addnetwork.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="77" column="20" lean-forward="false" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
-          <folding>
-            <marker date="1489700830163" expanded="true" signature="551:567" ph="..." />
-            <marker date="1489700830163" expanded="true" signature="15268:15328" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/studentinfo/studentdash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="35" lean-forward="false" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/studentinfo/studadd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/confidential/mysql_login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -782,15 +698,235 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/way2sms/sendsms.php" />
+    <entry file="file://$PROJECT_DIR$/way2sms/README.md" />
+    <entry file="file://$PROJECT_DIR$/twilio-php-master/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/way2sms/test.php" />
+    <entry file="file://$PROJECT_DIR$/teacher/addcode/addcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="65" column="35" lean-forward="false" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/addcode/submit/submitcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2745">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/code/queslist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="55" column="35" lean-forward="false" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="105" column="24" lean-forward="false" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="29" lean-forward="false" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+          <folding>
+            <marker date="1489837921780" expanded="true" signature="770:918" ph="SELECT name,... " />
+            <marker date="1489837921780" expanded="true" signature="1330:1385" ph="SELECT * FRO... profile" />
+            <marker date="1489837921780" expanded="true" signature="1746:1778" ph="SELECT * FRO... globaldata" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_7.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/studentinfo/studadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="62" />
+          <folding>
+            <marker date="1489686118254" expanded="true" signature="3488:3538" ph="SELECT * FRO... login" />
+            <marker date="1489686118254" expanded="true" signature="4148:4232" ph="INSERT INTO nextvac.login... " />
+            <marker date="1489686118254" expanded="true" signature="4622:4701" ph="INSERT INTO nextvac.studentinfo... " />
+            <marker date="1489686118254" expanded="true" signature="5089:5280" ph="INSERT INTO nextvac.profile... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/studentinfo/mass/bla.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dependencies/accountcreate/mailandint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="75" column="100" lean-forward="false" selection-start-line="75" selection-start-column="100" selection-end-line="75" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/masscreator/masssub.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="61" column="59" lean-forward="false" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
+          <folding>
+            <marker date="1489843520509" expanded="true" signature="725:781" ph="SELECT * FRO... uniquecreate" />
+            <marker date="1489843520509" expanded="true" signature="1736:1790" ph="INSERT INTO nextvac.uniquecreate... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcreator/addstud/creatorstud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1489652235123" expanded="true" signature="1075:1139" ph="SELECT * FRO... uniquecreate" />
+            <marker date="1489652235123" expanded="true" signature="4468:4552" ph="INSERT INTO nextvac.login... " />
+            <marker date="1489652235123" expanded="true" signature="5007:5086" ph="INSERT INTO nextvac.studentinfo... " />
+            <marker date="1489652235123" expanded="true" signature="5539:5730" ph="INSERT INTO nextvac.profile... " />
+            <marker date="1489652235123" expanded="true" signature="7208:7330" ph="UPDATE nextv... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcreator/thankyou.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/studentinfo/studentdash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="91" column="51" lean-forward="false" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/masterinfo/delmaster.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1489519919950" expanded="true" signature="483:563" ph="SELECT * FRO... login" />
+            <marker date="1489519919950" expanded="true" signature="1005:1067" ph="SELECT * FRO... login" />
+            <marker date="1489519919950" expanded="true" signature="1510:1569" ph="DELETE FROM " />
+            <marker date="1489519919950" expanded="true" signature="1707:1761" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/studentinfo/studdelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="102" column="17" lean-forward="false" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/masterinfo/masterdash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="96" column="12" lean-forward="false" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/masterinfo/masterdelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="97" column="17" lean-forward="false" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/teacherinfo/teacherdash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="101" column="17" lean-forward="false" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/teacherinfo/teacherdelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="101" column="17" lean-forward="false" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/masscreator/massadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="90" column="17" lean-forward="false" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+          <folding>
+            <marker date="1489844052320" expanded="true" signature="443:459" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/master/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+        <state relative-caret-position="525">
+          <caret line="149" column="7" lean-forward="false" selection-start-line="149" selection-start-column="7" selection-end-line="149" selection-end-column="7" />
           <folding>
-            <marker date="1489732378483" expanded="true" signature="540:614" ph="SELECT SUM(v... piwiklog_visit" />
-            <marker date="1489732378483" expanded="true" signature="1136:1187" ph="SELECT COUNT... studentinfo" />
-            <marker date="1489732378483" expanded="true" signature="1443:1494" ph="SELECT COUNT... teacherinfo" />
-            <marker date="1489732378483" expanded="true" signature="1749:1821" ph="SELECT COUNT... login" />
+            <marker date="1489844185478" expanded="true" signature="540:614" ph="SELECT SUM(v... piwiklog_visit" />
+            <marker date="1489844185478" expanded="true" signature="1136:1187" ph="SELECT COUNT... studentinfo" />
+            <marker date="1489844185478" expanded="true" signature="1443:1494" ph="SELECT COUNT... teacherinfo" />
+            <marker date="1489844185478" expanded="true" signature="1749:1821" ph="SELECT COUNT... login" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/code/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/addnetwork.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="61" column="22" lean-forward="false" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+          <folding>
+            <marker date="1489844190026" expanded="true" signature="551:567" ph="..." />
+            <marker date="1489844190026" expanded="true" signature="14839:14899" ph="{...}" />
           </folding>
         </state>
       </provider>

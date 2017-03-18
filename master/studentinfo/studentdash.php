@@ -12,7 +12,7 @@ if(isset($_SESSION['designation']) && $_SESSION['designation'] == 'master')
     //Do Nothing
 }
 else{
-    header('Location: ../index.php');
+    header('Location: ../../index.php');
     die();
 }
 
@@ -89,7 +89,7 @@ if(isset($_SESSION['donecreate']) && $_SESSION['donecreate'] = true)
                 <a href="../addnetwork.php"><span class="glyphicon glyphicon-facetime-video"></span> Network Suite </a>
             </li>
             <li>
-                <a href="../addnetwork.php"><span class="glyphicon glyphicon-facetime-video"></span>Add to Network</a>
+                <a href="../masscreator/massadd.php"><span class="glyphicon glyphicon-facetime-video"></span>Mass Creator</a>
             </li>
             <li>
                 <a href="#"> <span class="glyphicon glyphicon-book"></span>Test 1</a>

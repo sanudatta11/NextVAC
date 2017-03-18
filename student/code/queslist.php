@@ -53,7 +53,7 @@ if(isset($_GET['contestcode']))
     {
         //Fuck this guy telling wrong code
         $_SESSION['codeerror'] = true;
-        header('Location: selectcode.php');
+        header('Location: selectkey.php');
         die();
     }
 

@@ -106,6 +106,7 @@ if(isset($_POST['user'])&& isset($_POST['pass']))
                 else if($_SESSION['designation'] == 'master')
                 {
                     $_SESSION['secretkey'] = preg_replace("/[^A-Za-z0-9]+/", "", $row['secretkey']);
+
 //                    //Redirect to Student Dashboard
                     if(isset($_SESSION['secretkey']))
                     {

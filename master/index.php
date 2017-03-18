@@ -146,7 +146,7 @@ $total_master = $result['countit'];
         }
     </style>
     <!--    Piwik Tracker-->
-    <script src="../include/tracker.js"></script>
+<!--    <script src="../include/tracker.js"></script>-->
     <!--    End of Piwik Tracker-->
 </head>
 
@@ -170,7 +170,7 @@ $total_master = $result['countit'];
                 <a href="addnetwork.php"><span class="glyphicon glyphicon-facetime-video"></span> Network Suite </a>
             </li>
             <li>
-                <a href="#"> <span class="glyphicon glyphicon-book"></span> Digtal Library</a>
+                <a href="masscreator/massadd.php"> <span class="glyphicon glyphicon-book"></span> Mass Creator</a>
             </li>
             <li>
                 <a href="#"><span class="fa fa-code"></span> Coding Ground</a>

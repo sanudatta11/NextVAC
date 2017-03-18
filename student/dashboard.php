@@ -64,6 +64,7 @@
             $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
         }
         else{
+            unset($_SESSION);
             header('Location: ../index.php?attempt=relogin');
             die();
         }
