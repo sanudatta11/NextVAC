@@ -14,9 +14,7 @@ $_SESSION['accept'] = true;
 
 if(isset($_SESSION['secretkey']))
     {
-        unset($newpath);
-        $newpath = 'redirect.php';
-        header('Location:'.$newpath);
+        header('Location: redirect.php');
         die();
     }
 
@@ -73,169 +71,223 @@ if(isset($_SESSION['secretkey']))
  else {
      $info = false;
  }
+
+if ($info == true && $_SESSION['accept'] == true) {
+    echo '<script>window.alert("' . $info_message . '")</script>';
+}
  ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>NextVAC - Log In</title>
-
-    <!--Bootstrap-->
-
-    <!-- Latest compiled and minified CSS -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-    <!--End of Bootstrap-->
+    <title>NextVAC</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!--Local Include-->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <!--Stylesheet-->
-
-    <link rel="stylesheet" href="css/mainpage/mainpage.css">
-    <link rel="stylesheet" href="css/mainpage/rightnav.css">
-    <!--    Piwik Tracker-->
-    <script src="include/tracker.js"></script>
-    <!--    End of Piwik Tracker-->
-
-    <!--End-->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 </head>
 <body>
+<style media="screen">
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-<!-- Image and text -->
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="mynav">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <img src="images/logo.png" alt="logo" id="logoimg">
+    .btn {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        padding: 4px 10px 4px;
+        margin-bottom: 0;
+        font-size: 13px;
+        line-height: 18px;
+        color: #333333;
+        text-align: center;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        vertical-align: middle;
+        background-color: #f5f5f5;
+        background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+        background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+        background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+        background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+        background-image: linear-gradient(top, #ffffff, #e6e6e6);
+        background-repeat: repeat-x;
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0);
+        border-color: #e6e6e6 #e6e6e6 #e6e6e6;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        border: 1px solid #e6e6e6;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        *margin-left: .3em;
+    }
 
-            <a class="navbar-brand">NextVAC</a>
+    .btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+        background-color: #e6e6e6;
+    }
+
+    .btn-large {
+        padding: 9px 14px;
+        font-size: 15px;
+        line-height: normal;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .btn:hover {
+        color: #333333;
+        text-decoration: none;
+        background-color: #e6e6e6;
+        background-position: 0 -15px;
+        -webkit-transition: background-position 0.1s linear;
+        -moz-transition: background-position 0.1s linear;
+        -ms-transition: background-position 0.1s linear;
+        -o-transition: background-position 0.1s linear;
+        transition: background-position 0.1s linear;
+    }
+
+    .btn-primary, .btn-primary:hover {
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        color: #ffffff;
+    }
+
+    .btn-primary.active {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .btn-primary {
+        background-color: #4a77d4;
+        background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4);
+        background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4));
+        background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4);
+        background-image: -o-linear-gradient(top, #6eb6de, #4a77d4);
+        background-image: linear-gradient(top, #6eb6de, #4a77d4);
+        background-repeat: repeat-x;
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);
+        border: 1px solid #3762bc;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+        filter: none;
+        background-color: #4a77d4;
+    }
+
+    .btn-block {
+        width: 100%;
+        display: block;
+    }
+
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: 'Open Sans', sans-serif;
+        background: #092756;
+        background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -moz-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+        background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -webkit-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+        background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -o-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+        background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -ms-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+        background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), linear-gradient(135deg, #670d10 0%, #092756 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3E1D6D', endColorstr='#092756', GradientType=1);
+    }
+
+    .login {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        margin: -150px 0 0 -150px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .login h1 {
+        color: #fff;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+        background: rgba(0, 0, 0, 0.3);
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 13px;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+        -webkit-transition: box-shadow .5s ease;
+        -moz-transition: box-shadow .5s ease;
+        -o-transition: box-shadow .5s ease;
+        -ms-transition: box-shadow .5s ease;
+        transition: box-shadow .5s ease;
+    }
+
+    input:focus {
+        box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4), 0 1px 1px rgba(255, 255, 255, 0.2);
+    }
+
+</style>
+<div class="login">
+    <h1>NextVAC Login</h1>
+    <form method="post" action="login.php">
+        <input type="number" name="user" placeholder="User Id" required="required"/>
+        <input type="password" name="pass" placeholder="Password" required="required"/>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+    </form>
+    <br>
+    <div class="row">
+        <br><br>
+        <br><br><br>
+        <h4 class="text text-center" style="color: white;"><b>A Stux-Net Production (c) 2017 </b></h4>
+
+        <div class="col-xs-4">
+            <img src="ico/sanu.jpg" class="img-circle" alt="Cinque Terre" width="70" height="73">
+            <h4 class="text text-default text-center" style="color: white;">Soumyajit Dutta</h4>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav" style="float:right;">
-                <li>
-                    <a href="#">About Us</a>
-                </li>
-            </ul>
+        <div class="col-xs-4">
+            <img src="ico/bisso.jpg" class="img-circle" alt="Cinque Terre" width="70" height="73">
+            <h4 class="text text-default text-center" style="color: white;">Biswarup Banerjee</h4>
         </div>
-        <!-- /.navbar-collapse -->
+        <div class="col-xs-4">
+            <img src="ico/sameer.jpg" class="img-circle" alt="Cinque Terre" width="70" height="73">
+            <h4 class="text text-default text-center" style="color: white;">Sameer Raj</h4>
+        </div>
+        <h5 class="text  text-center text-default" style="color: white">Visit www.nextvac.in to know more</h5>
     </div>
-    <!-- /.container -->
-</nav>
-<!--Navigation End-->
-
-<br><br>
-<div class="container" id="mycont">
-    <div class="boxbelow">
-
-        <div class="leftbox">
-            <img src="images/frontinfo.jpg" height="1300px" alt="info" class="detailimage">
-        </div>
-
-
-    </div>
-
-    <div class="rightbox">
-
-        <div class="login-wrap">
-
-            <div class="login-html">
-                <div class="group <?php if(!$info) echo "hide";?> " style="font-size: large;">
-                    <label for="warning" class="label" style="font-size: large;">
-                        <?php
-                        if($info)
-                        {
-                            echo $info_message;
-                        }
-
-                        ?>
-                    </label>
-                </div>
-                <br><br>
-                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-                <input id="tab-2" type="radio" name="tab" class="contact-form"><label for="tab-2" class="tab">Contact Form</label>
-
-
-
-
-                <div class="login-form">
-
-                    <!-- This is the first active Phase  -->
-                    <form method="POST" action="login.php">
-                        <div class="sign-in-htm">
-                            <div class="group">
-                                <label for="user" class="label">Reg No</label>
-                                <input id="user" type="number" class="input" name="user" maxlength="10" required>
-                            </div>
-                            <div class="group">
-                                <label for="pass" class="label">Password</label>
-                                <input id="pass" type="password" class="input" data-type="password" maxlength="45" name="pass" required>
-                            </div>
-                            <div class="group">
-                                <input id="check" type="checkbox" class="check" name="check" checked>
-                                <label for="check"><span class="icon"></span> Keep me Signed in</label>
-                            </div>
-                            <div class="group">
-                                <input type="submit" class="button" value="Log In">
-                            </div>
-                            <div class="hr"></div>
-                            <div class="foot-lnk">
-                                <a href="#">Forgot Password?</a>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- End of the firt active Phase -->
-
-
-                    <!-- New side -->
-                    <div class="contact-form-htm">
-
-                       <form method="post" action="mailer/contact.php">
-                           <div class="group">
-                               <label for="user" class="label">Your Name</label>
-                               <input id="name" type="text" class="input" name="name" required>
-                           </div>
-                           <div class="group">
-                               <label for="pass" class="label">Your Email</label>
-                               <input id="email_contact" type="email" class="input" data-type="email" name="email" required>
-                           </div>
-                           <div class="group">
-                               <label for="subject" class="label">Subject</label>
-                               <input id="subject" type="text" class="input" data-type="text" name="subject" required>
-                           </div>
-                           <div class="group" id="context">
-                               <label for="context" class="label">Your Talk</label>
-                               <textarea type="text" class="input" name="body" required></textarea>
-                           </div>
-                           <div class="group">
-                               <input type="submit" class="button" value="Ping Us">
-                           </div>
-                           <div class="foot-lnk">
-                               <label for="tab-1">Want to Log In?</label>
-                           </div>
-                       </form>
-
-                    </div>
-
-                    <!-- End of New side -->
-
-                </div>
-
-            </div>
-        </div>
-
-
-
-    </div>
-</div>
 </div>
 
 </body>
 </html>
+

@@ -1,25 +1,308 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="2" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9c8e065-4e32-417a-8aa9-1e6229aa9f11" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/master/masscreator/massadd.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/master/masscreator/masssub.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twilio-php-master/test.php" />
+    <list default="true" id="a9c8e065-4e32-417a-8aa9-1e6229aa9f11" name="Default" comment="Commit 21 March">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-awesome/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-awesome/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ico/bisso.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-awesome/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-awesome/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-awesome/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/googlefonts/aldrich.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/googlefonts/orbitron.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/googlefonts/taviraj.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ace/ace.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/backsupport/html5shiv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/backsupport/respond.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-ui.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/analytics/tmp/sessions/sess_1hf90t9d48ua89as2sl0p8n2q2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/analytics/tmp/sessions/sess_bukgq2vcskukqn64apt6mc5646" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/configdockphp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/code/just.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/profile/cover/zAdefd07cCghITTRzIxA.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/profile/images/Fy8TzzrYb7rTOuJ1o0Tb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/profile/images/alAf8078UseWx9mv0Elw.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/0MpYuqbWbMGy0TawnseUQB5rHtTal0/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/0MpYuqbWbMGy0TawnseUQB5rHtTal0/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/1JHREbzLX29JGzhU1b5KnWcmHq6lDD/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/1JHREbzLX29JGzhU1b5KnWcmHq6lDD/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/1JHREbzLX29JGzhU1b5KnWcmHq6lDD/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/1JHREbzLX29JGzhU1b5KnWcmHq6lDD/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/2jt83FkXrYGUD6e5RadrPdBMxADRRa/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/2jt83FkXrYGUD6e5RadrPdBMxADRRa/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/2orcpO5lYPGuywNu0lTTCbZ22EXcNO/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/2pzyKFgT9mZL0qqwpM3G6x4lw3k3nk/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/2t36acRfDpigq23XOaUlpSUCdCYOel/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/2t36acRfDpigq23XOaUlpSUCdCYOel/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/3O4SUoRwc0ZyGbeEmtcDJSRXnm2vpY/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/3O4SUoRwc0ZyGbeEmtcDJSRXnm2vpY/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/3O4SUoRwc0ZyGbeEmtcDJSRXnm2vpY/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/3O4SUoRwc0ZyGbeEmtcDJSRXnm2vpY/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/42BceiudSkxZYpGcaJc6ybPVSq6B3y/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/42BceiudSkxZYpGcaJc6ybPVSq6B3y/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/4DCDyX4YAG6cr8dt3JzX8iMlbE3Ef5/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/4DCDyX4YAG6cr8dt3JzX8iMlbE3Ef5/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/4SRiiURFDnjOfMaHd0g75pBLMLpLuI/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/4SRiiURFDnjOfMaHd0g75pBLMLpLuI/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/5XmO48rB1GdsZWuZ1nYWjOZPublJJ1/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/5XmO48rB1GdsZWuZ1nYWjOZPublJJ1/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/5nnZTXkhd3ADDeX2LteKKXrr35ucxv/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/5zkGKS1pkNJgF2441KMvwAFCY8LGEa/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/6i73I3H1aSq74SHf3PHYYDG4FEXVUZ/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/6i73I3H1aSq74SHf3PHYYDG4FEXVUZ/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/6i73I3H1aSq74SHf3PHYYDG4FEXVUZ/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/6sWtQubWNnJ5sgp7HYJsjmV9uON3Ne/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/6sWtQubWNnJ5sgp7HYJsjmV9uON3Ne/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/6sWtQubWNnJ5sgp7HYJsjmV9uON3Ne/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/7SWKKwmiDr6vt0j3cpwfItk7la8sD1/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/86miqKwKJeokcZ9vC2doA6m4IVl0RO/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/86miqKwKJeokcZ9vC2doA6m4IVl0RO/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/8GxZuMctaR5yAtQinMx9EVgzY9w0TJ/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/8GxZuMctaR5yAtQinMx9EVgzY9w0TJ/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/9q3vUBZ3DRQo9Q5mQ7j3a5lKkjRF37/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/9q3vUBZ3DRQo9Q5mQ7j3a5lKkjRF37/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/9q3vUBZ3DRQo9Q5mQ7j3a5lKkjRF37/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/9q3vUBZ3DRQo9Q5mQ7j3a5lKkjRF37/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/ANzNc4wEXlTbh6u1R9t9kKJqLPOeQA/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/ANzNc4wEXlTbh6u1R9t9kKJqLPOeQA/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/ANzNc4wEXlTbh6u1R9t9kKJqLPOeQA/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/ANzNc4wEXlTbh6u1R9t9kKJqLPOeQA/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/B2WuQZdylOy1xpNwEcsuS1Z03MKYzX/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/BB36O57CK0gApPUNrNOpaWIK5ZBtkC/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/BB36O57CK0gApPUNrNOpaWIK5ZBtkC/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/CoUBZSlXRrSYbBlCLEkwZPihi5V8zz/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/CoUBZSlXRrSYbBlCLEkwZPihi5V8zz/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/CydK7kadtiifw6iBD1ixaJdyfYiiBr/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/D4K2owKGkpJcmvQSq1t6U943Qt813V/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/D4K2owKGkpJcmvQSq1t6U943Qt813V/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/DPWKifjEp6E2lgFeQZ2eAg8BwVIf8V/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/DPWKifjEp6E2lgFeQZ2eAg8BwVIf8V/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/DPWKifjEp6E2lgFeQZ2eAg8BwVIf8V/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/DPWKifjEp6E2lgFeQZ2eAg8BwVIf8V/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/DVUxGwqIaNYbtP4mvfBH97s7DpTmJM/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/DqXGsvJRuYyVR9r5vVysFSmI8lQdtm/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/E6J8nqZlRfSct5jn8N1ccsUVI6ATq5/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/Er4JdnZcNCYXVwhc1xhdKqJVpjZQAv/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/FGGE8gMiCV4yDtJ0sNFzKhPT7UJTHC/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/FGGE8gMiCV4yDtJ0sNFzKhPT7UJTHC/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/FGGE8gMiCV4yDtJ0sNFzKhPT7UJTHC/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/FGGE8gMiCV4yDtJ0sNFzKhPT7UJTHC/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/FQtVbtirZRr5dTI1FNO1EeLFvDgdjm/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/GZ3m9TIOCgOl8bRKSEw5FEAzGniNZb/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/GZ3m9TIOCgOl8bRKSEw5FEAzGniNZb/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/HI3Gq9FkZTrDlL1EpeeJstHUPdyIrJ/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/HRYEqgjFlaXDJI12zjWcKPlPsObMVJ/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/HYERVxhjDLmdLsAFTlbfbgB07UxbKy/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/HYXO1nea3Cp6AGLeZhgtFSBlGc8PXc/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/HcjgpMsstPPlkkNKifQuRBFSZjRsw7/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/JFJgSNTysXTT3CE4oRxVxmKXcx1eSh/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/JWKiM9WI944nc07IBRKD2v1vj0knGS/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/LjJ1AVykh5hfdoxC2tMYWHH6siB2D2/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/MFNZnKCK6qOmi7rL3X9Zb79rhy1JXC/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/MSkG1gIv3Yscww8inkPLCBFzzXl9Hs/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/MSkG1gIv3Yscww8inkPLCBFzzXl9Hs/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/MSkG1gIv3Yscww8inkPLCBFzzXl9Hs/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/MSkG1gIv3Yscww8inkPLCBFzzXl9Hs/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/MWnPUF6qNmA5Qgw8GzoYGlX7HeEf6J/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/N44zYylvmpIo1wFhtUVCDRt0fkD9Fs/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/N44zYylvmpIo1wFhtUVCDRt0fkD9Fs/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/N44zYylvmpIo1wFhtUVCDRt0fkD9Fs/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/NLSeDk4PNLCKbEGpFMPDfdc5zhN94q/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/OIDA75v4V4YhRuOPHPriIstlusGmVU/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/OdEcjizXAaQtJxhSeg08RZTeYExuhJ/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/Ox5QcqwMNTcD8tR5FhlGwAiTpNngcZ/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/Ox5QcqwMNTcD8tR5FhlGwAiTpNngcZ/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PCDtbcT49EjIo9LIGuPj5wT0U1ECR4/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PCDtbcT49EjIo9LIGuPj5wT0U1ECR4/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PCDtbcT49EjIo9LIGuPj5wT0U1ECR4/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PCDtbcT49EjIo9LIGuPj5wT0U1ECR4/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PNiyS728dKfYO313P2GcR7ejB2htHA/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PVvxkrc4n50IiNEfLkkJw2TczL8aqs/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PVvxkrc4n50IiNEfLkkJw2TczL8aqs/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PVvxkrc4n50IiNEfLkkJw2TczL8aqs/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PlTxKnVNOdZ7l7h0XpifouhgtrPWft/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PlTxKnVNOdZ7l7h0XpifouhgtrPWft/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PlTxKnVNOdZ7l7h0XpifouhgtrPWft/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/PlTxKnVNOdZ7l7h0XpifouhgtrPWft/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/QKjw3U0CX4uVHjk35Z9aVwum09ZJAz/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/QKjw3U0CX4uVHjk35Z9aVwum09ZJAz/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/QKjw3U0CX4uVHjk35Z9aVwum09ZJAz/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/QKjw3U0CX4uVHjk35Z9aVwum09ZJAz/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/R0q4lZvAz4v032ifeB7R4WRrxGQy5d/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/R0q4lZvAz4v032ifeB7R4WRrxGQy5d/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/R9LDMRu5eJBqgzHsPiu4wiYm78ArPG/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/R9LDMRu5eJBqgzHsPiu4wiYm78ArPG/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/S10nZo5I5fjteQBaB5GZxPYLEmngtf/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/SXESo5151R5Zcz8DSEsTy9PyT1M9QA/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/SXESo5151R5Zcz8DSEsTy9PyT1M9QA/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/SXESo5151R5Zcz8DSEsTy9PyT1M9QA/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/SfWnP5sYAinsrwFSgxZx0h2gYkUxW2/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/T63CIA84wqWaZnpGGxqIeQRNLm1mV8/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/T63CIA84wqWaZnpGGxqIeQRNLm1mV8/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/Ud70gG8YetsAPN9F9kNEta7hi6fY6o/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/Uj7Y80b9MYYxsPe7FXVbmmrKldAkWg/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/V3LEyyTTUlixMpqQc3g3Y3fViCyXc3/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/VYVv67ldBtUwsQqtLsUQOcmNDQvtTA/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/WHGmlsLR1tb47DZPA9HWcPn0gta0dC/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/WSW14HTUNw1E6VFBzYHZldGtKTmqaL/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/WSW14HTUNw1E6VFBzYHZldGtKTmqaL/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/WSW14HTUNw1E6VFBzYHZldGtKTmqaL/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/WSW14HTUNw1E6VFBzYHZldGtKTmqaL/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/WbL4Bq3mgKsyyspQxse5IIzB6w1z00/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/WbL4Bq3mgKsyyspQxse5IIzB6w1z00/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/XUxHUIENGGItqrjp0MExt1FgGP6M4v/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/YVQ5OAUCGKiBjZrZZDwPVCJJDT2HRs/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/YVQ5OAUCGKiBjZrZZDwPVCJJDT2HRs/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/b6zkdhV1u9Han7tlmbqzYWhJagvFi2/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/bDGsfOcUZqBEIQRRQjDm247LT4l7mu/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/bDGsfOcUZqBEIQRRQjDm247LT4l7mu/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/bDGsfOcUZqBEIQRRQjDm247LT4l7mu/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/bDGsfOcUZqBEIQRRQjDm247LT4l7mu/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/bq606P4owWUy7GqFQhLgo5k3RujaHY/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/bq606P4owWUy7GqFQhLgo5k3RujaHY/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/doCgAyMC9FWjacYj2PW1PVpGIBCPUn/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/dxSOLYZs78o07uwga65aJvzDBj9pK2/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/eDELqTNptz74BDEfNhE1AP1KfLKogB/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/eDELqTNptz74BDEfNhE1AP1KfLKogB/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/eWvW6WHDu4iWMsrpoGfNLSaq7dSANZ/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/ffnPebGjVGXezOvgrKEdVAyT4GhpcP/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/ffnPebGjVGXezOvgrKEdVAyT4GhpcP/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/gaSAhxQQLS5aKhw05k5EVceHbYrDmm/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/gaSAhxQQLS5aKhw05k5EVceHbYrDmm/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/gaSAhxQQLS5aKhw05k5EVceHbYrDmm/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/gaSAhxQQLS5aKhw05k5EVceHbYrDmm/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/hXWg5Aexu7SNHPxjt0KCAqnoOedmn8/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/hujIeF87zyTbpIdey9QBsnJeqwVOiX/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/hujIeF87zyTbpIdey9QBsnJeqwVOiX/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/jgrfiGKNp5lZ52jULrICGXz4OLc8nH/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/l9W4BFvVfON6GExComecm2nSfhcMVF/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/lAgH0Yg0UiXZ4vLK4uSvb9iC5tVvY3/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/lAgH0Yg0UiXZ4vLK4uSvb9iC5tVvY3/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/lAgH0Yg0UiXZ4vLK4uSvb9iC5tVvY3/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/la5PqD03r1mGlqyB5G8kuEsGvT9J9z/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/la5PqD03r1mGlqyB5G8kuEsGvT9J9z/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/la5PqD03r1mGlqyB5G8kuEsGvT9J9z/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/la5PqD03r1mGlqyB5G8kuEsGvT9J9z/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/latRshzp9VC6h9LfFIOdWxvwDYCk5h/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/latRshzp9VC6h9LfFIOdWxvwDYCk5h/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/mHUAk0wxIiFPcVHRAXPqbf8mrRGnWb/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/mPV5JPLTMqJW9ZSeOTy4MXsH9HujEi/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/mPV5JPLTMqJW9ZSeOTy4MXsH9HujEi/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/mPV5JPLTMqJW9ZSeOTy4MXsH9HujEi/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/mPV5JPLTMqJW9ZSeOTy4MXsH9HujEi/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/nbxgFkI6ztIOIdCSTp69M3k13n8B7S/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/ngCXFAWhudSEb0LCVN9Gd7UlRHaqeI/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/ngCXFAWhudSEb0LCVN9Gd7UlRHaqeI/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/ngCXFAWhudSEb0LCVN9Gd7UlRHaqeI/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/osz1xJVpu2vwXSKF8K5sbRlLIR2t8F/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/pFaOaNMo23O6UT2Kq5DnsEMM0kCuIX/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/pR1BOSHflJvMMCWlVkW7AmfFIFMc3d/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/q8Sd9bhhp9tJZvZxhwZ3uB45I2Nm0v/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/q8Sd9bhhp9tJZvZxhwZ3uB45I2Nm0v/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/q8Sd9bhhp9tJZvZxhwZ3uB45I2Nm0v/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/qdPyE4kxhceJEhjzmryijQS0Is2mZa/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/sAxuRCZ2v5KAaghu3Ibp4jVFspN8gS/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/sAxuRCZ2v5KAaghu3Ibp4jVFspN8gS/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/sAxuRCZ2v5KAaghu3Ibp4jVFspN8gS/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/sdAwqSxMHmjRt1dU6eUERDwpEjs6zk/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/sjuSOBdLvgnemhT1lbXws0MMIRRRxg/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/u6I51ffAZ7e9RJkDBjoBtT74GtFmLQ/solution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/v11VBCqKWQ3rIg5kD24E5WHPClPCw1/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/vLdahwtLs7mG6nlTHVLTPSSHlVGWiq/solution.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/vLdahwtLs7mG6nlTHVLTPSSHlVGWiq/solution.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/vwhBnm4MQ6Fw5Lvskan4uxsOlpfhJC/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/vwhBnm4MQ6Fw5Lvskan4uxsOlpfhJC/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/vwhBnm4MQ6Fw5Lvskan4uxsOlpfhJC/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/x4yj2uiysvWHLXSORTqyh4ZXDevLlm/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/x4yj2uiysvWHLXSORTqyh4ZXDevLlm/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/x88KCq9rfLD6EXyZGUgQRFTvvJueNB/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/x88KCq9rfLD6EXyZGUgQRFTvvJueNB/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/x88KCq9rfLD6EXyZGUgQRFTvvJueNB/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/yM6xwHbCE6cSB9nIQaPnX3Y3RTiRik/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/z0ROxY8RRqLGEPvKAaJdfWxio6JSrd/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/z7m9DCp0YsqQvS853MUCzFeeQkbIlr/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/z7m9DCp0YsqQvS853MUCzFeeQkbIlr/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/zQLWtmOJcUkqJTRKoGr6nNTkV0tvqs/solution" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/zQLWtmOJcUkqJTRKoGr6nNTkV0tvqs/solution.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/zwkgHtuV5ARzD8ZZ20UoCpsqMl0x05/checkinp.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/zwkgHtuV5ARzD8ZZ20UoCpsqMl0x05/out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/zwkgHtuV5ARzD8ZZ20UoCpsqMl0x05/runcode.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/tempdockers/zwkgHtuV5ARzD8ZZ20UoCpsqMl0x05/solution.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/html.iml" afterPath="$PROJECT_DIR$/.idea/html.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accountcreator/create.php" afterPath="$PROJECT_DIR$/accountcreator/create.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accountcreator/thankyou.php" afterPath="$PROJECT_DIR$/accountcreator/thankyou.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dependencies/accountcreate/mailandint.php" afterPath="$PROJECT_DIR$/dependencies/accountcreate/mailandint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analytics/tmp/cache/tracker/eagercache-302-tracker.php" afterPath="$PROJECT_DIR$/analytics/tmp/cache/tracker/eagercache-302-tracker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analytics/tmp/cache/tracker/eagercache-302-ui.php" afterPath="$PROJECT_DIR$/analytics/tmp/cache/tracker/eagercache-302-ui.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_1.php" afterPath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_Translations-en-5a404fadefeb4aaf415ea9e2c13309a9118dd707.php" afterPath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_Translations-en-5a404fadefeb4aaf415ea9e2c13309a9118dd707.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_Translations-en-86fb2a0455febf5106b60efff7879eceb2ea272a.php" afterPath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_Translations-en-86fb2a0455febf5106b60efff7879eceb2ea272a.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_Translations-en-daa0fb20b0ef4433ab689fa5c09336f02990dd41.php" afterPath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_Translations-en-daa0fb20b0ef4433ab689fa5c09336f02990dd41.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_allSiteUrlsPerSite.php" afterPath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_allSiteUrlsPerSite.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_general.php" afterPath="$PROJECT_DIR$/analytics/tmp/cache/tracker/piwikcache_general.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dependencies/savecode/loadlocal.php" afterPath="$PROJECT_DIR$/dependencies/savecode/loadlocal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dependencies/savecode/savelocal.php" afterPath="$PROJECT_DIR$/dependencies/savecode/savelocal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/tracker.js" afterPath="$PROJECT_DIR$/include/tracker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/codingground/codesub.js" afterPath="$PROJECT_DIR$/js/codingground/codesub.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/addnetwork.php" afterPath="$PROJECT_DIR$/master/addnetwork.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/index.php" afterPath="$PROJECT_DIR$/master/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/masscreator/massadd.php" afterPath="$PROJECT_DIR$/master/masscreator/massadd.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/masterinfo/masterdash.php" afterPath="$PROJECT_DIR$/master/masterinfo/masterdash.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/masterinfo/masterdelete.php" afterPath="$PROJECT_DIR$/master/masterinfo/masterdelete.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/studentinfo/delstud.php" afterPath="$PROJECT_DIR$/master/studentinfo/delstud.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/studentinfo/studadd.php" afterPath="$PROJECT_DIR$/master/studentinfo/studadd.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/studentinfo/studdelete.php" afterPath="$PROJECT_DIR$/master/studentinfo/studdelete.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/studentinfo/studentdash.php" afterPath="$PROJECT_DIR$/master/studentinfo/studentdash.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/teacherinfo/delteacher.php" afterPath="$PROJECT_DIR$/master/teacherinfo/delteacher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/teacherinfo/teachadd.php" afterPath="$PROJECT_DIR$/master/teacherinfo/teachadd.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/teacherinfo/teacherdash.php" afterPath="$PROJECT_DIR$/master/teacherinfo/teacherdash.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master/teacherinfo/teacherdelete.php" afterPath="$PROJECT_DIR$/master/teacherinfo/teacherdelete.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/code/contest.php" afterPath="$PROJECT_DIR$/student/code/contest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/code/leaderboard.php" afterPath="$PROJECT_DIR$/student/code/leaderboard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/code/problem.php" afterPath="$PROJECT_DIR$/student/code/problem.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/code/queslist.php" afterPath="$PROJECT_DIR$/student/code/queslist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/code/realsub.php" afterPath="$PROJECT_DIR$/student/code/realsub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/code/samplessub.php" afterPath="$PROJECT_DIR$/student/code/samplessub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/code/selectkey.php" afterPath="$PROJECT_DIR$/student/code/selectkey.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/dashboard.php" afterPath="$PROJECT_DIR$/student/dashboard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/profile/view.php" afterPath="$PROJECT_DIR$/student/profile/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/question/quespage.php" afterPath="$PROJECT_DIR$/student/question/quespage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/question/quesstaging.php" afterPath="$PROJECT_DIR$/student/question/quesstaging.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/question/saveans.php" afterPath="$PROJECT_DIR$/student/question/saveans.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/videoconnect/ipvideo.php" afterPath="$PROJECT_DIR$/student/videoconnect/ipvideo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/videoconnect/vidkeysub.php" afterPath="$PROJECT_DIR$/student/videoconnect/vidkeysub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/addcode/addcode.php" afterPath="$PROJECT_DIR$/teacher/addcode/addcode.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/addcode/adddetail.php" afterPath="$PROJECT_DIR$/teacher/addcode/adddetail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/addcode/manage.php" afterPath="$PROJECT_DIR$/teacher/addcode/manage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/addcode/submit/submitcode.php" afterPath="$PROJECT_DIR$/teacher/addcode/submit/submitcode.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/addques/addfinal.php" afterPath="$PROJECT_DIR$/teacher/addques/addfinal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/addques/addstaging.php" afterPath="$PROJECT_DIR$/teacher/addques/addstaging.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/addques/carddetails/carddetail.php" afterPath="$PROJECT_DIR$/teacher/addques/carddetails/carddetail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/addques/manageset.php" afterPath="$PROJECT_DIR$/teacher/addques/manageset.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/dashboard.php" afterPath="$PROJECT_DIR$/teacher/dashboard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/leaderboard/leaderboard.php" afterPath="$PROJECT_DIR$/teacher/leaderboard/leaderboard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/leaderboard/list.php" afterPath="$PROJECT_DIR$/teacher/leaderboard/list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/managecode/details.php" afterPath="$PROJECT_DIR$/teacher/managecode/details.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/managecode/status.php" afterPath="$PROJECT_DIR$/teacher/managecode/status.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/profile/view.php" afterPath="$PROJECT_DIR$/teacher/profile/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/updatepro/changepass.php" afterPath="$PROJECT_DIR$/teacher/updatepro/changepass.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/updatepro/changeprofile.php" afterPath="$PROJECT_DIR$/teacher/updatepro/changeprofile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/updatepro/savecover.php" afterPath="$PROJECT_DIR$/teacher/updatepro/savecover.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacher/videoconnect/room.php" afterPath="$PROJECT_DIR$/teacher/videoconnect/room.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/tst.php" afterPath="$PROJECT_DIR$/test/tst.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,42 +327,29 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="massadd.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/master/masscreator/massadd.php">
+    <leaf>
+      <file leaf-file-name="quespage.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/student/question/quespage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="90" column="17" lean-forward="false" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+            <state relative-caret-position="1755">
+              <caret line="209" column="48" lean-forward="false" selection-start-line="209" selection-start-column="48" selection-end-line="209" selection-end-column="48" />
               <folding>
-                <marker date="1489844052320" expanded="true" signature="443:459" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/master/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="149" column="7" lean-forward="false" selection-start-line="149" selection-start-column="7" selection-end-line="149" selection-end-column="7" />
-              <folding>
-                <marker date="1489844185478" expanded="true" signature="540:614" ph="SELECT SUM(v... piwiklog_visit" />
-                <marker date="1489844185478" expanded="true" signature="1136:1187" ph="SELECT COUNT... studentinfo" />
-                <marker date="1489844185478" expanded="true" signature="1443:1494" ph="SELECT COUNT... teacherinfo" />
-                <marker date="1489844185478" expanded="true" signature="1749:1821" ph="SELECT COUNT... login" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addnetwork.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/master/addnetwork.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="61" column="22" lean-forward="false" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
-              <folding>
-                <marker date="1489844190026" expanded="true" signature="551:567" ph="..." />
-                <marker date="1489844190026" expanded="true" signature="14839:14899" ph="{...}" />
+                <marker date="1490113123379" expanded="true" signature="5572:5668" ph="SELECT sessi... login" />
+                <marker date="1490113123379" expanded="true" signature="6631:6740" ph="SELECT * FRO... questiondb" />
+                <marker date="1490113123379" expanded="true" signature="7682:7785" ph="SELECT * FRO... answersdb" />
+                <marker date="1490113123379" expanded="true" signature="8727:8955" ph="..." />
+                <marker date="1490113123379" expanded="true" signature="8787:8955" ph="..." />
+                <marker date="1490113123379" expanded="true" signature="8841:8955" ph="..." />
+                <marker date="1490113123379" expanded="true" signature="8905:8955" ph="..." />
+                <marker date="1490113123379" expanded="true" signature="9011:9177" ph="..." />
+                <marker date="1490113123379" expanded="true" signature="9466:9520" ph="..." />
+                <marker date="1490113123379" expanded="true" signature="9548:9704" ph="..." />
+                <marker date="1490113123379" expanded="true" signature="9609:9704" ph="..." />
+                <marker date="1490113123379" expanded="true" signature="11550:11782" ph="..." />
+                <marker date="1490113123379" expanded="false" signature="11658:11665" ph="×" />
+                <marker date="1490113123379" expanded="true" signature="12075:12333" ph="..." />
+                <marker date="1490113123379" expanded="false" signature="12183:12190" ph="×" />
+                <marker date="1490113123379" expanded="true" signature="13839:13851" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -90,44 +360,44 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>teacher</find>
-      <find>student re</find>
-      <find>remove s</find>
-      <find>cance</find>
-      <find>done</find>
-      <find>cancel</find>
-      <find>delete</find>
-      <find>master</find>
-      <find>language</find>
-      <find>theme</find>
-      <find>preg</find>
-      <find>../../</find>
-      <find>Next</find>
-      <find>....</find>
-      <find>log</find>
-      <find>echo</find>
-      <find>gender</find>
-      <find>alert</find>
-      <find>leader</find>
-      <find>manage</find>
-      <find>ccode</find>
-      <find>$class_name</find>
-      <find>stuxnet</find>
-      <find>$total_visits</find>
       <find>student</find>
       <find>selectcode</find>
       <find>stux</find>
       <find>btn</find>
-      <find>form</find>
       <find>input</find>
+      <find>$student_profile</find>
+      <find>password</find>
+      <find>$target_file</find>
+      <find>profile</find>
+      <find>pro</find>
+      <find>hostel</find>
+      <find>semester</find>
+      <find>modal</find>
+      <find>document</find>
+      <find>save`</find>
+      <find>codesub</find>
+      <find>preg</find>
+      <find>run</find>
+      <find>rank</find>
+      <find>score</find>
+      <find>$inptext</find>
+      <find>biswa</find>
+      <find>mail</find>
+      <find>logout</find>
+      <find>sha1_file</find>
+      <find>C++</find>
+      <find>total</find>
+      <find>form</find>
+      <find>add</find>
+      <find>SOLVE</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,61 +410,62 @@
     <option name="PUSH_TAGS">
       <GitPushTagMode />
     </option>
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/accountcreator/addstud/creatorstud.php" />
-        <option value="$PROJECT_DIR$/master/studentinfo/delstud.php" />
-        <option value="$PROJECT_DIR$/master/teacherinfo/delteacher.php" />
-        <option value="$PROJECT_DIR$/teacher/leaderboard/leader.html" />
-        <option value="$PROJECT_DIR$/teacher/leaderboard/index.php" />
-        <option value="$PROJECT_DIR$/student/skills/skillsearch.php" />
-        <option value="$PROJECT_DIR$/master/studentinfo/studadd.php" />
-        <option value="$PROJECT_DIR$/master/teacherinfo/teachadd.php" />
-        <option value="$PROJECT_DIR$/student/code/problem.php" />
-        <option value="$PROJECT_DIR$/student/code/leaderboard.php" />
-        <option value="$PROJECT_DIR$/student/code/contest.php" />
-        <option value="$PROJECT_DIR$/student/profile/view.php" />
-        <option value="$PROJECT_DIR$/student/question/quespage.php" />
-        <option value="$PROJECT_DIR$/student/question/quesstaging.php" />
-        <option value="$PROJECT_DIR$/student/question/test.php" />
-        <option value="$PROJECT_DIR$/student/videoconnect/vidkeysub.php" />
-        <option value="$PROJECT_DIR$/student/videoconnect/ipvideo.php" />
+        <option value="$PROJECT_DIR$/css/backsupport/respond.js" />
+        <option value="$PROJECT_DIR$/css/bootstrap/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/teacher/dashboard.php" />
+        <option value="$PROJECT_DIR$/js/ace/ace.js" />
+        <option value="$PROJECT_DIR$/js/jquery/jquery-ui.js" />
         <option value="$PROJECT_DIR$/teacher/addcode/addcode.php" />
         <option value="$PROJECT_DIR$/teacher/addcode/adddetail.php" />
         <option value="$PROJECT_DIR$/teacher/addcode/manage.php" />
-        <option value="$PROJECT_DIR$/teacher/addques/addstaging.php" />
         <option value="$PROJECT_DIR$/teacher/addques/addfinal.php" />
+        <option value="$PROJECT_DIR$/teacher/addques/addstaging.php" />
         <option value="$PROJECT_DIR$/teacher/addques/manageset.php" />
-        <option value="$PROJECT_DIR$/teacher/videoconnect/room.php" />
-        <option value="$PROJECT_DIR$/teacher/dashboard.php" />
         <option value="$PROJECT_DIR$/teacher/leaderboard/leaderboard.php" />
         <option value="$PROJECT_DIR$/teacher/leaderboard/list.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/accountcreator/create.php" />
-        <option value="$PROJECT_DIR$/analytics/include/tracker.js" />
-        <option value="$PROJECT_DIR$/confidential/mysql_login.php" />
-        <option value="$PROJECT_DIR$/twilio-php-master/test.php" />
-        <option value="$PROJECT_DIR$/way2sms/test.php" />
-        <option value="$PROJECT_DIR$/student/code/queslist.php" />
-        <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/master/studentinfo/mass/massadd.php" />
+        <option value="$PROJECT_DIR$/teacher/managecode/details.php" />
+        <option value="$PROJECT_DIR$/teacher/managecode/status.php" />
+        <option value="$PROJECT_DIR$/js/bootstrap.min.js" />
+        <option value="$PROJECT_DIR$/teacher/profile/view.php" />
+        <option value="$PROJECT_DIR$/teacher/videoconnect/room.php" />
         <option value="$PROJECT_DIR$/student/dashboard.php" />
-        <option value="$PROJECT_DIR$/master/studentinfo/mass/bla.php" />
-        <option value="$PROJECT_DIR$/master/studentinfo/mass/masssub.php" />
-        <option value="$PROJECT_DIR$/dependencies/accountcreate/mailandint.php" />
-        <option value="$PROJECT_DIR$/accountcreator/thankyou.php" />
-        <option value="$PROJECT_DIR$/master/studentinfo/studentdash.php" />
+        <option value="$PROJECT_DIR$/student/code/contest.php" />
+        <option value="$PROJECT_DIR$/student/code/leaderboard.php" />
+        <option value="$PROJECT_DIR$/student/code/selectkey.php" />
+        <option value="$PROJECT_DIR$/student/profile/view.php" />
+        <option value="$PROJECT_DIR$/student/question/quesstaging.php" />
+        <option value="$PROJECT_DIR$/student/videoconnect/ipvideo.php" />
+        <option value="$PROJECT_DIR$/student/videoconnect/vidkeysub.php" />
+        <option value="$PROJECT_DIR$/master/addnetwork.php" />
+        <option value="$PROJECT_DIR$/master/index.php" />
+        <option value="$PROJECT_DIR$/master/teacherinfo/teacherdelete.php" />
+        <option value="$PROJECT_DIR$/master/teacherinfo/teacherdash.php" />
+        <option value="$PROJECT_DIR$/master/studentinfo/studdelete.php" />
         <option value="$PROJECT_DIR$/master/masterinfo/masterdash.php" />
         <option value="$PROJECT_DIR$/master/masterinfo/masterdelete.php" />
-        <option value="$PROJECT_DIR$/master/studentinfo/studdelete.php" />
-        <option value="$PROJECT_DIR$/master/teacherinfo/teacherdash.php" />
-        <option value="$PROJECT_DIR$/master/teacherinfo/teacherdelete.php" />
         <option value="$PROJECT_DIR$/master/masscreator/massadd.php" />
-        <option value="$PROJECT_DIR$/master/index.php" />
-        <option value="$PROJECT_DIR$/master/addnetwork.php" />
-        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/accountcreator/thankyou.php" />
+        <option value="$PROJECT_DIR$/accountcreator/create.php" />
+        <option value="$PROJECT_DIR$/teacher/addcode/submit/submitcode.php" />
+        <option value="$PROJECT_DIR$/student/code/problem.php" />
+        <option value="$PROJECT_DIR$/teacher/addcode/questions/EKV3cozvSbcf28nEQj3P3NBmD8gbYC/sampleinp.txt" />
+        <option value="$PROJECT_DIR$/out.txt" />
+        <option value="$PROJECT_DIR$/master/studentinfo/studentdash.php" />
+        <option value="$PROJECT_DIR$/include/tracker.js" />
+        <option value="$PROJECT_DIR$/master/studentinfo/studadd.php" />
+        <option value="$PROJECT_DIR$/student/code/realsub.php" />
+        <option value="$PROJECT_DIR$/student/code/queslist.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/student/code/samplessub.php" />
+        <option value="$PROJECT_DIR$/student/question/saveans.php" />
+        <option value="$PROJECT_DIR$/teacher/addques/carddetails/carddetail.php" />
+        <option value="$PROJECT_DIR$/student/question/quespage.php" />
       </list>
     </option>
   </component>
@@ -224,10 +495,32 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
+    <option name="x" value="1431" />
     <option name="y" value="24" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Invalid elementsCSS</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CssInvalidFunction</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -247,6 +540,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -260,55 +554,8 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="master" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="master" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="masscreator" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,25 +564,26 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="quesli&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;del&#9;FILE&#9;file:///var/www/html/master/teacherinfo/delteacher.php&#10;dels&#9;FILE&#9;file:///var/www/html/master/studentinfo/delstud.php&#10;addne&#9;FILE&#9;file:///var/www/html/master/addnetwork.php&#10;mana&#9;FILE&#9;file:///var/www/html/teacher/addques/manageset.php&#10;ques&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;dashb&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;das&#9;FILE&#9;file:///var/www/html/master/masterinfo/masterdash.php&#10;code&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;addn&#9;FILE&#9;file:///var/www/html/master/addnetwork.php&#10;add&#9;FILE&#9;file:///var/www/html/master/masterinfo/addmaster.php&#10;st&#9;FILE&#9;file:///var/www/html/master/studentinfo/studentdash.php&#10;as&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;lea&#9;FILE&#9;file:///var/www/html/teacher/leaderboard/leader.html&#10;que&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;proble&#9;FILE&#9;file:///var/www/html/student/code/problem.php&#10;prob&#9;FILE&#9;file:///var/www/html/student/code/problem.php&#10;view&#9;FILE&#9;file:///var/www/html/student/profile/view.php&#10;pro&#9;FILE&#9;file:///var/www/html/student/profile/changeprofile.php&#10;sampl&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;real&#9;FILE&#9;file:///var/www/html/student/code/realsub.php&#10;codes&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;sam&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;addcode&#9;FILE&#9;file:///var/www/html/teacher/addcode/addcode.php&#10;dash&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;sample&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;chan&#9;FILE&#9;file:///var/www/html/student/profile/changeprofile.php&#10;red&#9;FILE&#9;file:///var/www/html/redirect.php&#10;index&#9;FILE&#9;file:///var/www/html/index.php&#10;rando&#9;FILE&#9;file:///var/www/html/dependencies/randomize/randomstring.php&#10;mail&#9;FILE&#9;file:///var/www/html/mailer/mail.php&#10;.js&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;login&#9;FILE&#9;file:///var/www/html/login.php&#10;mai&#9;FILE&#9;file:///var/www/html/mailer/mail.php&#10;logi&#9;FILE&#9;file:///var/www/html/login.php&#10;save&#9;FILE&#9;file:///var/www/html/student/question/saveans.php&#10;re&#9;FILE&#9;file:///var/www/html/student/code/realsub.php&#10;da&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;form&#9;null&#9;null&#10;verify&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/verify.php&#10;rand&#9;FILE&#9;file:///var/www/html/dependencies/randomize/randomstring.php&#10;submit&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/submitcode.php&#10;sub&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;ips&#9;FILE&#9;file:///var/www/html/student/videoconnect/ipsubmit.php&#10;status&#9;FILE&#9;file:///var/www/html/teacher/managecode/status.php&#10;ver&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/verify.php&#10;su&#9;FILE&#9;file:///var/www/html/teacher/addcode/submit/submitcode.php&#10;addd&#9;FILE&#9;file:///var/www/html/teacher/addcode/adddetail.php&#10;staging&#9;FILE&#9;file:///var/www/html/teacher/addques/addstaging.php&#10;stag&#9;FILE&#9;file:///var/www/html/student/question/quesstaging.php" />
+    <property name="SearchEverywhereHistoryKey" value="QUESPA&#9;FILE&#9;file:///var/www/html/student/question/quespage.php&#10;card&#9;FILE&#9;file:///var/www/html/teacher/addques/carddetails/carddetail.php&#10;sampl&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;rea&#9;FILE&#9;file:///var/www/html/student/code/realsub.php&#10;quesli&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;real&#9;FILE&#9;file:///var/www/html/student/code/realsub.php&#10;quesl&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;samples&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;tracker&#9;FILE&#9;file:///var/www/html/include/tracker.js&#10;studentd&#9;FILE&#9;file:///var/www/html/master/studentinfo/studentdash.php&#10;inpu&#9;FILE&#9;file:///var/www/html/teacher/addcode/questions/8jmeGidCMUI4qyOmRlnYuw7aUR4GmR/fuaCJRVWtHRcLhKAECV2BpyIztAEaW/input1.txt&#10;stude&#9;FILE&#9;file:///var/www/html/master/studentinfo/studentdash.php&#10;problem&#9;FILE&#9;file:///var/www/html/student/code/problem.php&#10;mass&#9;FILE&#9;file:///var/www/html/master/masscreator/masssub.php&#10;re&#9;FILE&#9;file:///var/www/html/student/code/realsub.php&#10;view&#9;FILE&#9;file:///var/www/html/teacher/profile/view.php&#10;das&#9;FILE&#9;file:///var/www/html/teacher/dashboard.php&#10;code&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;lead&#9;FILE&#9;file:///var/www/html/student/code/leaderboard.php&#10;pro&#9;FILE&#9;file:///var/www/html/student/code/problem.php&#10;codes&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;dashb&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;masterda&#9;FILE&#9;file:///var/www/html/master/masterinfo/masterdash.php&#10;del&#9;FILE&#9;file:///var/www/html/master/teacherinfo/delteacher.php&#10;dels&#9;FILE&#9;file:///var/www/html/master/studentinfo/delstud.php&#10;addne&#9;FILE&#9;file:///var/www/html/master/addnetwork.php&#10;mana&#9;FILE&#9;file:///var/www/html/teacher/addques/manageset.php&#10;ques&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;addn&#9;FILE&#9;file:///var/www/html/master/addnetwork.php&#10;add&#9;FILE&#9;file:///var/www/html/master/masterinfo/addmaster.php&#10;st&#9;FILE&#9;file:///var/www/html/master/studentinfo/studentdash.php&#10;as&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;lea&#9;FILE&#9;file:///var/www/html/teacher/leaderboard/leader.html&#10;que&#9;FILE&#9;file:///var/www/html/student/code/queslist.php&#10;proble&#9;FILE&#9;file:///var/www/html/student/code/problem.php&#10;prob&#9;FILE&#9;file:///var/www/html/student/code/problem.php&#10;sam&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;addcode&#9;FILE&#9;file:///var/www/html/teacher/addcode/addcode.php&#10;dash&#9;FILE&#9;file:///var/www/html/student/dashboard.php&#10;sample&#9;FILE&#9;file:///var/www/html/student/code/samplessub.php&#10;chan&#9;FILE&#9;file:///var/www/html/student/profile/changeprofile.php&#10;red&#9;FILE&#9;file:///var/www/html/redirect.php&#10;index&#9;FILE&#9;file:///var/www/html/index.php&#10;rando&#9;FILE&#9;file:///var/www/html/dependencies/randomize/randomstring.php&#10;mail&#9;FILE&#9;file:///var/www/html/mailer/mail.php&#10;.js&#9;FILE&#9;file:///var/www/html/js/codingground/codesub.js&#10;login&#9;FILE&#9;file:///var/www/html/login.php&#10;mai&#9;FILE&#9;file:///var/www/html/mailer/mail.php&#10;logi&#9;FILE&#9;file:///var/www/html/login.php&#10;save&#9;FILE&#9;file:///var/www/html/student/question/saveans.php" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/master/masscreator" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/teacher/profile" />
-      <recent name="$PROJECT_DIR$/student/code" />
-      <recent name="$PROJECT_DIR$/student" />
+      <recent name="$PROJECT_DIR$/ico/" />
+      <recent name="$PROJECT_DIR$/ico" />
+      <recent name="$PROJECT_DIR$/js" />
+      <recent name="$PROJECT_DIR$/master/masscreator" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/student/code" />
-      <recent name="$PROJECT_DIR$/way2sms" />
+      <recent name="$PROJECT_DIR$/ico" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/student/profile/images" />
-      <recent name="$PROJECT_DIR$/accountcreator/addstud" />
+      <recent name="$PROJECT_DIR$/css/font-awesome" />
+      <recent name="$PROJECT_DIR$/css/fonts" />
+      <recent name="$PROJECT_DIR$/teacher/updatepro" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.test.php">
@@ -474,7 +722,10 @@
       <workItem from="1489730694734" duration="1350000" />
       <workItem from="1489739661557" duration="9697000" />
       <workItem from="1489820704742" duration="2207000" />
-      <workItem from="1489837474952" duration="8135000" />
+      <workItem from="1489837474952" duration="52557000" />
+      <workItem from="1489981988297" duration="791000" />
+      <workItem from="1490020175949" duration="5539000" />
+      <workItem from="1490109758853" duration="3799000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 11 March">
       <created>1489233468758</created>
@@ -501,36 +752,41 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377965000" />
+    <option name="totallyTimeSpent" value="432516000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="1431" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18908532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16679478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3916293" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39940387" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39940387" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -539,7 +795,10 @@
     <MESSAGE value="Commit 11 March" />
     <MESSAGE value="Commit 17 March" />
     <MESSAGE value="Commit 17 March Push 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 17 March Push 2" />
+    <MESSAGE value="Commit 19 March" />
+    <MESSAGE value="Commit 21 March" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 21 March" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -548,385 +807,387 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/student/videoconnect/ipvideo.php">
+    <entry file="file://$PROJECT_DIR$/student/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="89" column="35" lean-forward="false" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+        <state relative-caret-position="-5579">
+          <caret line="97" column="4" lean-forward="true" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student/videoconnect/vidkeysub.php">
+    <entry file="file://$PROJECT_DIR$/student/code/just.php" />
+    <entry file="file://$PROJECT_DIR$/student/code/leaderboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="89" column="35" lean-forward="false" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+        <state relative-caret-position="495">
+          <caret line="111" column="59" lean-forward="false" selection-start-line="111" selection-start-column="59" selection-end-line="111" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/master/teacherinfo/delteacher.php">
+    <entry file="file://$PROJECT_DIR$/student/code/selectkey.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="68" column="64" lean-forward="true" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
+        <state relative-caret-position="495">
+          <caret line="101" column="59" lean-forward="false" selection-start-line="101" selection-start-column="59" selection-end-line="101" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/addcode/adddetail.php">
+    <entry file="file://$PROJECT_DIR$/teacher/profile/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="81" column="35" lean-forward="false" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        <state relative-caret-position="255">
+          <caret line="81" column="3" lean-forward="false" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/addcode/manage.php">
+    <entry file="file://$PROJECT_DIR$/student/profile/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="54" column="35" lean-forward="false" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/addques/addstaging.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="85" column="35" lean-forward="false" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/addques/addfinal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="149" column="35" lean-forward="false" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/addques/open_set.php" />
-    <entry file="file://$PROJECT_DIR$/teacher/addques/submitques.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-855">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/contest/details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/addques/manageset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="83" column="35" lean-forward="false" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/videoconnect/room.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="67" column="35" lean-forward="false" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/videoconnect/roomsub.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-675">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-6734">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/teacher/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="124" column="20" lean-forward="false" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
+        <state relative-caret-position="120">
+          <caret line="77" column="10" lean-forward="false" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/validatefinal.php">
+    <entry file="file://$PROJECT_DIR$/student/videoconnect/ipsubmit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-525">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/validate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/leaderboard/leaderboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="113" column="35" lean-forward="false" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/leaderboard/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/student/videoconnect/ipvideo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="101" column="17" lean-forward="false" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+          <caret line="80" column="59" lean-forward="true" selection-start-line="59" selection-start-column="3" selection-end-line="80" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accountcreator/create.php">
+    <entry file="file://$PROJECT_DIR$/student/videoconnect/vidkeysub.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="96" column="20" lean-forward="false" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/profile/images/DR1CndWlhMbXuKBuZN9f.jpg" />
-    <entry file="file://$PROJECT_DIR$/include/tracker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/confidential/mysql_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/way2sms/sendsms.php" />
-    <entry file="file://$PROJECT_DIR$/way2sms/README.md" />
-    <entry file="file://$PROJECT_DIR$/twilio-php-master/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/way2sms/test.php" />
-    <entry file="file://$PROJECT_DIR$/teacher/addcode/addcode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="65" column="35" lean-forward="false" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/addcode/submit/submitcode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2745">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/code/queslist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="55" column="35" lean-forward="false" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="105" column="24" lean-forward="false" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="29" lean-forward="false" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
-          <folding>
-            <marker date="1489837921780" expanded="true" signature="770:918" ph="SELECT name,... " />
-            <marker date="1489837921780" expanded="true" signature="1330:1385" ph="SELECT * FRO... profile" />
-            <marker date="1489837921780" expanded="true" signature="1746:1778" ph="SELECT * FRO... globaldata" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_7.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/studentinfo/studadd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="62" />
-          <folding>
-            <marker date="1489686118254" expanded="true" signature="3488:3538" ph="SELECT * FRO... login" />
-            <marker date="1489686118254" expanded="true" signature="4148:4232" ph="INSERT INTO nextvac.login... " />
-            <marker date="1489686118254" expanded="true" signature="4622:4701" ph="INSERT INTO nextvac.studentinfo... " />
-            <marker date="1489686118254" expanded="true" signature="5089:5280" ph="INSERT INTO nextvac.profile... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/studentinfo/mass/bla.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dependencies/accountcreate/mailandint.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="75" column="100" lean-forward="false" selection-start-line="75" selection-start-column="100" selection-end-line="75" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/masscreator/masssub.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="59" lean-forward="false" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
-          <folding>
-            <marker date="1489843520509" expanded="true" signature="725:781" ph="SELECT * FRO... uniquecreate" />
-            <marker date="1489843520509" expanded="true" signature="1736:1790" ph="INSERT INTO nextvac.uniquecreate... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accountcreator/addstud/creatorstud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1489652235123" expanded="true" signature="1075:1139" ph="SELECT * FRO... uniquecreate" />
-            <marker date="1489652235123" expanded="true" signature="4468:4552" ph="INSERT INTO nextvac.login... " />
-            <marker date="1489652235123" expanded="true" signature="5007:5086" ph="INSERT INTO nextvac.studentinfo... " />
-            <marker date="1489652235123" expanded="true" signature="5539:5730" ph="INSERT INTO nextvac.profile... " />
-            <marker date="1489652235123" expanded="true" signature="7208:7330" ph="UPDATE nextv... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accountcreator/thankyou.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/studentinfo/studentdash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="91" column="51" lean-forward="false" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/masterinfo/delmaster.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1489519919950" expanded="true" signature="483:563" ph="SELECT * FRO... login" />
-            <marker date="1489519919950" expanded="true" signature="1005:1067" ph="SELECT * FRO... login" />
-            <marker date="1489519919950" expanded="true" signature="1510:1569" ph="DELETE FROM " />
-            <marker date="1489519919950" expanded="true" signature="1707:1761" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/studentinfo/studdelete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="102" column="17" lean-forward="false" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/masterinfo/masterdash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="96" column="12" lean-forward="false" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/masterinfo/masterdelete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="97" column="17" lean-forward="false" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/teacherinfo/teacherdash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="101" column="17" lean-forward="false" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/teacherinfo/teacherdelete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="101" column="17" lean-forward="false" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master/masscreator/massadd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="90" column="17" lean-forward="false" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-          <folding>
-            <marker date="1489844052320" expanded="true" signature="443:459" ph="..." />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="80" column="59" lean-forward="false" selection-start-line="80" selection-start-column="59" selection-end-line="80" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/master/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="149" column="7" lean-forward="false" selection-start-line="149" selection-start-column="7" selection-end-line="149" selection-end-column="7" />
-          <folding>
-            <marker date="1489844185478" expanded="true" signature="540:614" ph="SELECT SUM(v... piwiklog_visit" />
-            <marker date="1489844185478" expanded="true" signature="1136:1187" ph="SELECT COUNT... studentinfo" />
-            <marker date="1489844185478" expanded="true" signature="1443:1494" ph="SELECT COUNT... teacherinfo" />
-            <marker date="1489844185478" expanded="true" signature="1749:1821" ph="SELECT COUNT... login" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="163" column="0" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
+    <entry file="file://$PROJECT_DIR$/master/teacherinfo/teacherdelete.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="345">
+          <caret line="76" column="59" lean-forward="false" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student/code/.htaccess">
+    <entry file="file://$PROJECT_DIR$/master/teacherinfo/teacherdash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-2369">
+          <caret line="78" column="59" lean-forward="false" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/studentinfo/studdelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="82" column="59" lean-forward="false" selection-start-line="82" selection-start-column="59" selection-end-line="82" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/masterinfo/masterdash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="75" column="59" lean-forward="false" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/masterinfo/masterdelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="55" column="59" lean-forward="false" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/master/addnetwork.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="61" column="22" lean-forward="false" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+        <state relative-caret-position="465">
+          <caret line="78" column="56" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="78" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/font-awesome/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-990">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/font-awesome/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/tempdockers/CgsEx68F403kxyImS4Qsa7gfilEZyk/solution.cpp" />
+    <entry file="file://$PROJECT_DIR$/student/code/contest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1545">
+          <caret line="108" column="59" lean-forward="false" selection-start-line="108" selection-start-column="59" selection-end-line="108" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcreator/thankyou.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/masscreator/masssub.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master/masscreator/massadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcreator/addstud/creatorstud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1949">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accountcreator/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="82" column="56" lean-forward="false" selection-start-line="82" selection-start-column="56" selection-end-line="82" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/addcode/submit/verify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/addcode/submit/done.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/addcode/submit/submitcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2700">
+          <caret line="94" column="39" lean-forward="false" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/code/problem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="223" column="92" lean-forward="false" selection-start-line="223" selection-start-column="92" selection-end-line="223" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/addcode/questions/8jmeGidCMUI4qyOmRlnYuw7aUR4GmR/fuaCJRVWtHRcLhKAECV2BpyIztAEaW/input1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/addcode/questions/EKV3cozvSbcf28nEQj3P3NBmD8gbYC/sampleinp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out.txt" />
+    <entry file="file://$PROJECT_DIR$/master/studentinfo/studentdash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="127" column="49" lean-forward="false" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.cpp" />
+    <entry file="file://$PROJECT_DIR$/include/tracker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/tempdockers/bLAnGSxhwJAjnZbR6De0UzrLEnKv0c/out.txt" />
+    <entry file="file://$PROJECT_DIR$/teacher/addcode/questions/EKV3cozvSbcf28nEQj3P3NBmD8gbYC/sampleout.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/code/queslist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="261" column="45" lean-forward="false" selection-start-line="261" selection-start-column="45" selection-end-line="261" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginpage.html" />
+    <entry file="file://$PROJECT_DIR$/bisso.PNG" />
+    <entry file="file://$PROJECT_DIR$/master/studentinfo/studadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
           <folding>
-            <marker date="1489844190026" expanded="true" signature="551:567" ph="..." />
-            <marker date="1489844190026" expanded="true" signature="14839:14899" ph="{...}" />
+            <marker date="1490115541013" expanded="true" signature="975:1078" ph="SELECT * FRO... login" />
+            <marker date="1490115541013" expanded="true" signature="4074:4124" ph="SELECT * FRO... login" />
+            <marker date="1490115541013" expanded="true" signature="4712:4796" ph="INSERT INTO nextvac.login... " />
+            <marker date="1490115541013" expanded="true" signature="5186:5265" ph="INSERT INTO nextvac.studentinfo... " />
+            <marker date="1490115541013" expanded="true" signature="5653:5844" ph="INSERT INTO nextvac.profile... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1305">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <marker date="1489956188024" expanded="true" signature="927:989" ph="SELECT * FRO... login" />
+            <marker date="1489956188024" expanded="true" signature="1566:1639" ph="UPDATE nextv... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redirect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1488702579841" expanded="true" signature="306:376" ph="SELECT sessi... login" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="70" column="7" lean-forward="true" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/code/realsub.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="271" column="87" lean-forward="true" selection-start-line="271" selection-start-column="87" selection-end-line="271" selection-end-column="87" />
+          <folding>
+            <marker date="1490113122571" expanded="true" signature="1600:1728" ph="SELECT * FRO... codingdb" />
+            <marker date="1490113122571" expanded="true" signature="3544:3653" ph="SELECT * FRO... coderesults" />
+            <marker date="1490113122571" expanded="true" signature="10360:10440" ph="UPDATE nextv... " />
+            <marker date="1490113122571" expanded="true" signature="11041:11131" ph="INSERT INTO nextvac.coderesults... " />
+            <marker date="1490113122571" expanded="true" signature="18188:18268" ph="UPDATE nextv... " />
+            <marker date="1490113122571" expanded="true" signature="18869:18959" ph="INSERT INTO nextvac.coderesults... " />
+            <marker date="1490113122571" expanded="true" signature="25262:25342" ph="UPDATE nextv... " />
+            <marker date="1490113122571" expanded="true" signature="25903:25993" ph="INSERT INTO nextvac.coderesults... " />
+            <marker date="1490113122571" expanded="true" signature="31787:31867" ph="UPDATE nextv... " />
+            <marker date="1490113122571" expanded="true" signature="32428:32518" ph="INSERT INTO nextvac.coderesults... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/code/samplessub.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="229" column="12" lean-forward="false" selection-start-line="229" selection-start-column="12" selection-end-line="229" selection-end-column="12" />
+          <folding>
+            <marker date="1490113123143" expanded="true" signature="1764:1884" ph="SELECT * FRO... codingdb" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/addques/carddetails/carddetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="165" column="47" lean-forward="false" selection-start-line="165" selection-start-column="47" selection-end-line="165" selection-end-column="47" />
+          <folding>
+            <marker date="1490111586946" expanded="true" signature="1723:1818" ph="SELECT * FRO... questiondb" />
+            <marker date="1490111586946" expanded="true" signature="8068:8240" ph="..." />
+            <marker date="1490111586946" expanded="true" signature="8112:8240" ph="..." />
+            <marker date="1490111586946" expanded="true" signature="8152:8240" ph="..." />
+            <marker date="1490111586946" expanded="true" signature="8199:8240" ph="..." />
+            <marker date="1490111586946" expanded="true" signature="8357:8862" ph="..." />
+            <marker date="1490111586946" expanded="true" signature="8409:8829" ph="..." />
+            <marker date="1490111586946" expanded="true" signature="8513:8615" ph="..." />
+            <marker date="1490111586946" expanded="true" signature="8723:8794" ph="..." />
+            <marker date="1490111586946" expanded="true" signature="8973:9062" ph="..." />
+            <marker date="1490111586946" expanded="true" signature="9015:9062" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/question/saveans.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="92" column="73" lean-forward="true" selection-start-line="92" selection-start-column="73" selection-end-line="92" selection-end-column="73" />
+          <folding>
+            <marker date="1490113122815" expanded="true" signature="419:515" ph="SELECT sessi... login" />
+            <marker date="1490113122815" expanded="true" signature="1245:1329" ph="SELECT * FRO... questiondb" />
+            <marker date="1490113122815" expanded="true" signature="1919:2030" ph="SELECT * FRO... answersdb" />
+            <marker date="1490113122815" expanded="true" signature="2546:2646" ph="INSERT INTO nextvac.answersdb... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/question/quesstaging.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="85" column="59" lean-forward="false" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
+          <folding>
+            <marker date="1489917849425" expanded="true" signature="924:1020" ph="SELECT sessi... login" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/question/quespage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="209" column="48" lean-forward="false" selection-start-line="209" selection-start-column="48" selection-end-line="209" selection-end-column="48" />
+          <folding>
+            <marker date="1490113123379" expanded="true" signature="5572:5668" ph="SELECT sessi... login" />
+            <marker date="1490113123379" expanded="true" signature="6631:6740" ph="SELECT * FRO... questiondb" />
+            <marker date="1490113123379" expanded="true" signature="7682:7785" ph="SELECT * FRO... answersdb" />
+            <marker date="1490113123379" expanded="true" signature="8727:8955" ph="..." />
+            <marker date="1490113123379" expanded="true" signature="8787:8955" ph="..." />
+            <marker date="1490113123379" expanded="true" signature="8841:8955" ph="..." />
+            <marker date="1490113123379" expanded="true" signature="8905:8955" ph="..." />
+            <marker date="1490113123379" expanded="true" signature="9011:9177" ph="..." />
+            <marker date="1490113123379" expanded="true" signature="9466:9520" ph="..." />
+            <marker date="1490113123379" expanded="true" signature="9548:9704" ph="..." />
+            <marker date="1490113123379" expanded="true" signature="9609:9704" ph="..." />
+            <marker date="1490113123379" expanded="true" signature="11550:11782" ph="..." />
+            <marker date="1490113123379" expanded="false" signature="11658:11665" ph="×" />
+            <marker date="1490113123379" expanded="true" signature="12075:12333" ph="..." />
+            <marker date="1490113123379" expanded="false" signature="12183:12190" ph="×" />
+            <marker date="1490113123379" expanded="true" signature="13839:13851" ph="{...}" />
           </folding>
         </state>
       </provider>

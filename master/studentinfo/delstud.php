@@ -12,6 +12,21 @@ session_start();
 require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/connector.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/mysql_login.php';
 
+
+$check_session_var_string = "SELECT * FROM nextvac.login WHERE secretkey = :seckey AND sessionvar = :sesvar AND designation = :desig";
+$check_session_var = $mysql_conn->prepare($check_session_var_string);
+$check_session_var->bindParam(':seckey', $_SESSION['secretkey'], PDO::PARAM_STR);
+$check_session_var->bindParam(':sesvar', session_id(), PDO::PARAM_STR);
+$check_session_var->bindParam(':desig', $_SESSION['designation'], PDO::PARAM_STR);
+$check_session_var->execute();
+
+if ($check_session_var->rowCount() > 0) {
+
+} else {
+    header('Location: ../../logout.php');
+    die();
+}
+
 if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION['designation'] == 'master' && isset($_GET['username']))
 {
     //Verify Master

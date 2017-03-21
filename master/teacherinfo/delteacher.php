@@ -15,8 +15,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/mysql_login.php';
 if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION['designation'] == 'master' && isset($_GET['username']))
 {
     //Verify Master
-    $verify_conn = $mysql_conn->prepare('SELECT * FROM nextvac.login WHERE secretkey = :seckey AND designation = "master"');
+    $verify_conn = $mysql_conn->prepare('SELECT * FROM nextvac.login WHERE secretkey = :seckey AND designation = "master" AND sessionvar = :sesvar');
     $verify_conn->bindParam(':seckey',$_SESSION['secretkey']);
+    $verify_conn->bindParam(':sesvar', session_id(), PDO::PARAM_STR);
     $verify_conn->execute();
 
     if($verify_conn->rowCount() > 0)

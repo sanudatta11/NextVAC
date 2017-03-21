@@ -13,22 +13,6 @@ Get that Asshole?
 
 <?php
 session_start();
-if(isset($_POST['check']) && $_POST['check'] == 'Yes')
-{
-    ini_set('session.cookie_lifetime', 60 * 60 * 24 * 2);  // 2 day cookie lifetime
-}
-else{
-    ini_set('session.cookie_lifetime',0);  // Till Browser Closes
-}
-
-
-if($_SESSION['accept']!=true)
-{
-    header('Location:index.php?attempt?=fail');
-    die();
-}
-
-
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/connector.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/mysql_login.php';

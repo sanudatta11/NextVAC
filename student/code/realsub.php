@@ -137,22 +137,12 @@ else{
             if(isset($compile_error) && $ret_temp != 0) {
                 $final_error = "";
                 foreach ($compile_error as $compileline) {
-                    $compileline = substr($compileline, 98);
+                    $compileline = substr($compileline, 65);
                     $final_error = $final_error . '<br>' . $compileline;
                 }
-//                $compile_error =substr($compile_error,98);
-                //Error Has Occured
+
                 $data['errortop'] = 'compileerror';
                 $data['compileerror'] = $final_error;
-            }
-            $compile_error = shell_exec("g++ -o /var/www/html/student/tempdockers/".$random_folder."/solution /var/www/html/student/tempdockers/".$random_folder."/solution.cpp 2>&1");
-
-            if(isset($compile_error))
-            {
-                $compile_error =substr($compile_error,98);
-                //Error Has Occured
-                $data['errortop'] = 'compileerror';
-                $data['compileerror'] = $compile_error;
                 echo json_encode($data);
             }
             else
@@ -219,7 +209,7 @@ else{
                                 else
                                     $temp_data['output'] = file_get_contents($now_out);
 
-                                if(sha1_file($now_out) == sha1_file($out_temp))
+                                if (sha1_file($now_out) == sha1_file($out_temp) || abs(file_get_contents($now_out) - file_get_contents($out_temp)) == 0 || abs(file_get_contents($now_out) - file_get_contents($out_temp)) < 0.00001)
                                 {
                                     $score = $score + ($max_score/$total_test);
                                     $temp_data['verdict'] = 2;
@@ -277,7 +267,9 @@ else{
                 //Removing all temporary files and directories
                 array_map('unlink', glob("/var/www/html/student/tempdockers/".$random_folder."/*.*"));
                 unlink("/var/www/html/student/tempdockers/".$random_folder."/solution");
+                unlink("/var/www/html/student/tempdockers/" . $random_folder . "/solution.cpp");
                 rmdir("/var/www/html/student/tempdockers/".$random_folder);
+                shell_exec("rm -rf /var/www/html/student/tempdockers/" . $random_folder);
 
                 echo json_encode($data,JSON_UNESCAPED_SLASHES);
                 die();
@@ -364,7 +356,7 @@ else{
                                 else
                                     $temp_data['output'] = file_get_contents($now_out);
 
-                                if(sha1_file($now_out) == sha1_file($out_temp))
+                                if (sha1_file($now_out) == sha1_file($out_temp) || abs(file_get_contents($now_out) - file_get_contents($out_temp)) == 0 || abs(file_get_contents($now_out) - file_get_contents($out_temp)) < 0.00001)
                                 {
                                     $score = $score + ($max_score/$total_test);
                                     $temp_data['verdict'] = 2;
@@ -423,13 +415,15 @@ else{
                 //Removing all temporary files and directories
                 array_map('unlink', glob("/var/www/html/student/tempdockers/".$random_folder."/*.*"));
                 unlink("/var/www/html/student/tempdockers/".$random_folder."/solution");
+                unlink("/var/www/html/student/tempdockers/" . $random_folder . "/solution.c");
                 rmdir("/var/www/html/student/tempdockers/".$random_folder);
+                shell_exec("rm -rf /var/www/html/student/tempdockers/" . $random_folder);
 
                 echo json_encode($data,JSON_UNESCAPED_SLASHES);
                 die();
             }
 
-            $compile_error = shell_exec("gcc /var/www/html/student/tempdockers/".$random_folder."/solution.c -o /var/www/html/student/tempdockers/".$random_folder."/solution.out  2>&1");
+            //$compile_error = shell_exec("gcc /var/www/html/student/tempdockers/".$random_folder."/solution.c -o /var/www/html/student/tempdockers/".$random_folder."/solution.out  2>&1");
 
         }
         elseif ($language_select == 'Java')
@@ -499,7 +493,7 @@ else{
                             else
                                 $temp_data['output'] = file_get_contents($now_out);
 
-                            if(sha1_file($now_out) == sha1_file($out_temp))
+                            if (sha1_file($now_out) == sha1_file($out_temp) || abs(file_get_contents($now_out) - file_get_contents($out_temp)) == 0 || abs(file_get_contents($now_out) - file_get_contents($out_temp)) < 0.00001)
                             {
                                 $score = $score + ($max_score/$total_test);
                                 $temp_data['verdict'] = 2;
@@ -557,8 +551,9 @@ else{
 
             //Removing all temporary files and directories
             array_map('unlink', glob("/var/www/html/student/tempdockers/".$random_folder."/*.*"));
-            unlink("/var/www/html/student/tempdockers/".$random_folder."/solution");
+            unlink("/var/www/html/student/tempdockers/" . $random_folder . "/solution.py");
             rmdir("/var/www/html/student/tempdockers/".$random_folder);
+            shell_exec("rm -rf /var/www/html/student/tempdockers/" . $random_folder);
 
             echo json_encode($data,JSON_UNESCAPED_SLASHES);
             die();
@@ -626,7 +621,7 @@ else{
                             else
                                 $temp_data['output'] = file_get_contents($now_out);
 
-                            if(sha1_file($now_out) == sha1_file($out_temp))
+                            if (sha1_file($now_out) == sha1_file($out_temp) || abs(file_get_contents($now_out) - file_get_contents($out_temp)) == 0 || abs(file_get_contents($now_out) - file_get_contents($out_temp)) < 0.00001)
                             {
                                 $score = $score + ($max_score/$total_test);
                                 $temp_data['verdict'] = 2;
@@ -684,8 +679,9 @@ else{
 
             //Removing all temporary files and directories
             array_map('unlink', glob("/var/www/html/student/tempdockers/".$random_folder."/*.*"));
-            unlink("/var/www/html/student/tempdockers/".$random_folder."/solution");
+            unlink("/var/www/html/student/tempdockers/" . $random_folder . "/solution.py");
             rmdir("/var/www/html/student/tempdockers/".$random_folder);
+            shell_exec("rm -rf /var/www/html/student/tempdockers/" . $random_folder);
 
             echo json_encode($data,JSON_UNESCAPED_SLASHES);
             die();

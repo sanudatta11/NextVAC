@@ -48,6 +48,12 @@ if(!(isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'teacher'))
     <meta name="description" content="">
     <meta name="author" content="">-->
 
+
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+    <script src="../../jquery/jquery.min.js"></script>
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
+    <script src="../../bootstrap/css/bootstrap.min.css"></script>
+
     <title>NextVAC</title>
 
     <!-- Bootstrap Core CSS -->
@@ -57,11 +63,8 @@ if(!(isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'teacher'))
     <link href="../../css/theme/dashboard_simple-sidebar.css" rel="stylesheet">
     <link href="../../css/theme/dashboard.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="../../js/backsupport/html5shiv.js"></script>
+    <script src="../../js/backsupport/respond.js"></script>
     <![endif]-->
     <!--    Piwik Tracker-->
     <script src="../../include/tracker.js"></script>
@@ -114,7 +117,7 @@ if(!(isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'teacher'))
                 <a href="#"><span class="fa fa-users"></span> ConnectYou</a>
             </li>
             <li>
-                <a href="#"><span class="fa fa-user"></span> My Profile</a>
+                <a href="../profile/view.php"><span class="fa fa-user"></span> My Profile</a>
             </li>
         </ul>
     </div>
@@ -205,9 +208,6 @@ if(!(isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'teacher'))
 
 </div>
 <!--container ends here-->
-</div>
-<!-- /#page-content-wrapper -->
-<!-- HackDev and BissoBoss Will poty here-->
 
 <!-- /#wrapper -->
 

@@ -148,21 +148,14 @@ else
             $final_error ="";
             foreach ($compile_error as $compileline)
             {
-                $compileline = substr($compileline,98);
+                $compileline = substr($compileline, 65);
                 $final_error=$final_error.'<br>'.$compileline;
+                unset($compileline);
             }
 //                $compile_error =substr($compile_error,98);
             //Error Has Occured
             $data['verdict'] = 0;
             $data['output'] = $final_error;
-        }
-        $compile_error = shell_exec("g++ -o /var/www/html/student/tempdockers/".$random_folder."/solution /var/www/html/student/tempdockers/".$random_folder."/solution.cpp 2>&1");
-        if(isset($compile_error))
-        {
-            $compile_error =substr($compile_error,98);
-            //Error Has Occured
-            $data['verdict'] = 0;
-            $data['output'] = $compile_error;
             echo json_encode($data);
         }
         else
@@ -207,6 +200,7 @@ else
                 unlink($now_out);
             }
             else{
+                $data['mytest'] = file_get_contents($now_out);
                 $char = substr(file_get_contents($now_out), -1);
                 if($char == PHP_EOL)
                 {
@@ -219,7 +213,7 @@ else
                 else
                     $data['output'] = file_get_contents($now_out);
 
-                if(sha1_file($now_out) == sha1_file($final_path_out))
+                if (sha1_file($now_out) == sha1_file($final_path_out) || abs(file_get_contents($now_out) - file_get_contents($final_path_out)) == 0 || abs(file_get_contents($now_out) - file_get_contents($final_path_out)) < 0.00001)
                 {
                     $data['verdict'] = 2;
                 }else{
@@ -232,6 +226,7 @@ else
             array_map('unlink', glob("/var/www/html/student/tempdockers/".$random_folder."/*.*"));
             unlink("/var/www/html/student/tempdockers/".$random_folder."/solution");
             rmdir("/var/www/html/student/tempdockers/".$random_folder);
+            shell_exec("rm -rf /var/www/html/student/tempdockers/" . $random_folder);
 
             echo json_encode($data);
 
@@ -310,7 +305,7 @@ else
                 else
                     $data['output'] = file_get_contents($now_out);
 
-                if(sha1_file($now_out) == sha1_file($final_path_out))
+                if (sha1_file($now_out) == sha1_file($final_path_out) || abs(file_get_contents($now_out) - file_get_contents($final_path_out)) == 0 || abs(file_get_contents($now_out) - file_get_contents($final_path_out)) < 0.00001)
                 {
                     $data['verdict'] = 2;
                 }else{
@@ -323,6 +318,7 @@ else
             array_map('unlink', glob("/var/www/html/student/tempdockers/".$random_folder."/*.*"));
             unlink("/var/www/html/student/tempdockers/".$random_folder."/solution");
             rmdir("/var/www/html/student/tempdockers/".$random_folder);
+            shell_exec("rm -rf /var/www/html/student/tempdockers/" . $random_folder);
 
             echo json_encode($data);
 
@@ -389,7 +385,7 @@ else
                 else
                     $data['output'] = file_get_contents($now_out);
 
-                if(sha1_file($now_out) == sha1_file($final_path_out))
+                if (sha1_file($now_out) == sha1_file($final_path_out) || abs(file_get_contents($now_out) - file_get_contents($final_path_out)) == 0 || abs(file_get_contents($now_out) - file_get_contents($final_path_out)) < 0.00001)
                 {
                     $data['verdict'] = 2;
                 }else{
@@ -402,6 +398,8 @@ else
             array_map('unlink', glob("/var/www/html/student/tempdockers/".$random_folder."/*.*"));
             unlink("/var/www/html/student/tempdockers/".$random_folder."/solution");
             rmdir("/var/www/html/student/tempdockers/".$random_folder);
+        shell_exec("rm -rf /var/www/html/student/tempdockers/" . $random_folder);
+
             echo json_encode($data);
     }
     elseif ($language_select == 'Python2')
@@ -458,7 +456,7 @@ else
             else
                 $data['output'] = file_get_contents($now_out);
 
-            if(sha1_file($now_out) == sha1_file($final_path_out))
+            if (sha1_file($now_out) == sha1_file($final_path_out) || abs(file_get_contents($now_out) - file_get_contents($final_path_out)) == 0 || abs(file_get_contents($now_out) - file_get_contents($final_path_out)) < 0.00001)
             {
                 $data['verdict'] = 2;
             }else{
@@ -471,6 +469,8 @@ else
         array_map('unlink', glob("/var/www/html/student/tempdockers/".$random_folder."/*.*"));
         unlink("/var/www/html/student/tempdockers/".$random_folder."/solution");
         rmdir("/var/www/html/student/tempdockers/".$random_folder);
+        shell_exec("rm -rf /var/www/html/student/tempdockers/" . $random_folder);
+
         echo json_encode($data);
 
     }

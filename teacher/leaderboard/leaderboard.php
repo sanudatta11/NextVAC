@@ -76,18 +76,16 @@ else{
 <html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+    <script src="../../jquery/jquery.min.js"></script>
     <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../bootstrap/css/bootstrap.min.css"></script>
     <!--<link rel="stylesheet" href="nav.css">-->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome/font-awesome.css">
+    <link href="../../css/googlefonts/orbitron.css" rel="stylesheet">
+    <link href="../../css/googlefonts/taviraj.css" rel="stylesheet">
+    <link href="../../css/googlefonts/aldrich.css" rel="stylesheet">
 
     <!--<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -104,12 +102,10 @@ else{
     <link href="../../css/theme/dashboard_simple-sidebar.css" rel="stylesheet">
     <link href="../../css/theme/dashboard.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script href="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script href="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <!--    Piwik Tracker-->
+    <script src="../../js/backsupport/html5shiv.js"></script>
+    <script src="../../js/backsupport/respond.js"></script>
+
+    <!--    Piwik Tracker-->
     <script src="../../include/tracker.js"></script>
     <!--    End of Piwik Tracker-->
     <![endif]-->
@@ -273,7 +269,7 @@ else{
                 <a href="#"><span class="fa fa-users"></span> ConnectYou</a>
             </li>
             <li>
-                <a href="#"><span class="fa fa-user"></span> My Profile</a>
+                <a href="../profile/view.php"><span class="fa fa-user"></span> My Profile</a>
             </li>
         </ul>
     </div>

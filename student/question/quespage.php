@@ -1,21 +1,32 @@
-<?php session_start();
+<?php
+session_start();
+
 unset($_SESSION['submitauth']);
+//    Include Database Connetors
+require_once $_SERVER['DOCUMENT_ROOT'] . '/confidential/connector.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/confidential/mysql_login.php';
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script href="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+    <script src="../../jquery/jquery.min.js"></script>
     <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
-    <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../bootstrap/css/bootstrap.min.css"></script>
     <!--<link rel="stylesheet" href="nav.css">-->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome/font-awesome.css">
+    <link href="../../css/googlefonts/orbitron.css" rel="stylesheet">
+    <link href="../../css/googlefonts/taviraj.css" rel="stylesheet">
+    <link href="../../css/googlefonts/aldrich.css" rel="stylesheet">
+
+    <!--<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">-->
 
     <title>NextVAC</title>
 
@@ -26,12 +37,9 @@ unset($_SESSION['submitauth']);
     <link href="../../css/theme/dashboard_simple-sidebar.css" rel="stylesheet">
     <link href="../../css/theme/dashboard.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script href="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script href="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script src="../../js/backsupport/html5shiv.js"></script>
+    <script src="../../js/backsupport/respond.js"></script>
+
     <!--    Piwik Tracker-->
     <script src="../../include/tracker.js"></script>
     <!--    End of Piwik Tracker-->
@@ -63,7 +71,8 @@ unset($_SESSION['submitauth']);
                 <a href="../videoconnect/vidkeysub.php"><span class="glyphicon glyphicon-facetime-video"></span> VConnect</a>
             </li>
             <li>
-                <a href="#"><span class="glyphicon glyphicon-pencil"></span>Solve Questions</a>
+                <a href="../question/quesstaging.php"><span class="glyphicon glyphicon-pencil"></span>Solve
+                    Questions</a>
             </li>
             <li>
                 <a href="#"> <span class="glyphicon glyphicon-book"></span> Digtal Library</a>
@@ -121,14 +130,14 @@ unset($_SESSION['submitauth']);
          * Time: 3:19 PM
          */
 
-        session_start();
-
-        //    Include Database Connetors
-        require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/connector.php';
-        require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/mysql_login.php';
-
         if(isset($_SESSION['secretkey'])&& $_SESSION['designation']=='student')
         {
+
+            if (isset($_SESSION['quesans']) && $_SESSION['quesans'] == true && isset($_GET['attempted']) && $_GET['hashsec'] == '4JJq9q9') {
+                unset($_SESSION['quesans']);
+                echo '<script>window.alert("Question ' . htmlspecialchars($_GET['attempted']) . ' has been answered")</script>';
+            }
+
             $find_student_info_string = "SELECT sessionvar FROM nextvac.login WHERE secretkey = :seckey AND sessionvar = :sessvar LIMIT 1";
             $infoquery = $mysql_conn->prepare($find_student_info_string);
             $infoquery->bindParam(':seckey',$_SESSION['secretkey']);
@@ -167,6 +176,7 @@ unset($_SESSION['submitauth']);
                   //  echo "<script>window.alert('Hello');</script>";
                     $_SESSION['quescode'] = $quescode;
                     $flag = 0;
+                    $counter = 1;
                     while ($details = $ques_query_one->fetch())
                     {
                         $question = $details['question'];
@@ -197,6 +207,7 @@ unset($_SESSION['submitauth']);
                                         <div class="col-xs-12">
                                             <wbr>';
                                             echo '<b>';
+                            echo $counter . '.';
                                             echo $question;
                                             echo '</b>';
                                             echo '</wbr>
@@ -237,6 +248,7 @@ unset($_SESSION['submitauth']);
 
 //                         <!--End it here-->
                         }
+                        $counter = $counter + 1;
                     }
 
                     if(!$flag)
@@ -260,7 +272,7 @@ unset($_SESSION['submitauth']);
             }
             else{
 
-                header('Location: quesstaging.php');
+                header('Location: quesstaging.php?something=wrong');
                 die();
             }
 

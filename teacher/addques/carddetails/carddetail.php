@@ -142,16 +142,16 @@ else{
                 <a href="../../dashboard.php"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a>
             </li>
             <li>
-                <a href="#"><span class="glyphicon glyphicon-facetime-video"></span> VConnect</a>
+                <a href="../../videoconnect/room.php"><span class="glyphicon glyphicon-facetime-video"></span> VConnect</a>
             </li>
             <li>
                 <a href="#"> <span class="glyphicon glyphicon-book"></span> Digtal Library</a>
             </li>
             <li>
-                <a href="#"><span class="fa fa-code"></span> Coding Ground</a>
+                <a href="../../addcode/manage.php"><span class="fa fa-code"></span> Coding Ground</a>
             </li>
             <li class>
-                <a href="#"><span class="glyphicon glyphicon-plus"></span> Add Q&A</a>
+                <a href="../../addques/addstaging.php"><span class="glyphicon glyphicon-plus"></span> Add Q&A</a>
             </li>
             <li>
                 <a href="../manageset.php"><span class="glyphicon glyphicon-plus"></span> Manage Q&A</a>
@@ -163,7 +163,7 @@ else{
                 <a href="#"><span class="fa fa-users"></span> ConnectYou</a>
             </li>
             <li>
-                <a href="#"><span class="fa fa-user"></span> My Profile</a>
+                <a href="../../profile/view.php"><span class="fa fa-user"></span> My Profile</a>
             </li>
         </ul>
     </div>

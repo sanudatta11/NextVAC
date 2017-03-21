@@ -83,9 +83,13 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
     <title>NextVAC</title>
     <link rel="stylesheet" href="../../css/student/profile.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+    <script src="../../jquery/jquery.min.js"></script>
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
+    <script src="../../bootstrap/css/bootstrap.min.css"></script>
+
+
+    <script src="../../js/bootstrap.min.js"></script>
 
     <style>
         .container {

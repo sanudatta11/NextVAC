@@ -1,9 +1,9 @@
 <?php return array (
-  'lifetime' => 1489846077,
+    'lifetime' => 1490012732,
   'data' => 
   array (
     'isBrowserTriggerEnabled' => true,
-    'lastTrackerCronRun' => '1489842239',
+      'lastTrackerCronRun' => '1489995630',
     'allUrlsByHostAndIdSite' => 
     array (
       'nextvac.in' => 

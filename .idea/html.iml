@@ -75,5 +75,7 @@
     <orderEntry type="library" name="ace" level="application" />
     <orderEntry type="library" name="jquery-ui" level="application" />
     <orderEntry type="library" name="jquery-3.1.1" level="application" />
+    <orderEntry type="library" name="jquery-1.9.0" level="application" />
+    <orderEntry type="library" name="jquery.runner" level="application" />
   </component>
 </module>

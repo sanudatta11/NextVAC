@@ -8,15 +8,14 @@
 session_start();
 unset($_SESSION['submitauth']);
 
-if(isset($_SESSION['secretkey'])&&$_SESSION['designation']=='student')
+if (isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'teacher')
 {
     //Authorized Personnel here Give Respect
 
-}
-else if(isset($_SESSION['secretkey']) && $_SESSION['designation']=='teacher')
+} else if (isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'student')
 {
     //Teacher go to your Dashboard dont Roam Around
-    header('Location: ../../teacher/dashboard.php');
+    header('Location: ../../student/dashboard.php');
     die();
 }
 else{
@@ -73,7 +72,7 @@ if (isset($_FILES['coverphoto']) && $_FILES['coverphoto']['size'] > 0)
 
     //        Uploading Cover start
     $upload_status = true;
-    $target_dir = 'cover/';
+    $target_dir = '../profile/cover/';
     $target_file = $target_dir.basename($_FILES['coverphoto']['name']);
     $extension =pathinfo($target_file,PATHINFO_EXTENSION);
 
@@ -95,7 +94,7 @@ if (isset($_FILES['coverphoto']) && $_FILES['coverphoto']['size'] > 0)
         //Redirect the person
         $_SESSION['profileerror'] = "Size of Image too large!";
         $mysql_conn = null;
-        header('Location: view.php');
+        header('Location: ../profile/view.php');
         die();
 
     }
@@ -105,7 +104,7 @@ if (isset($_FILES['coverphoto']) && $_FILES['coverphoto']['size'] > 0)
         $upload_status = false;
         // echo "Not correct";
         $_SESSION['profileerror'] = "Image Type Error! Cannot Upload!";
-        header('Location: view.php');
+        header('Location: ../profile/view.php');
         $mysql_conn = null;
         die();
         //Not image redirect this asshole
@@ -121,8 +120,8 @@ if (isset($_FILES['coverphoto']) && $_FILES['coverphoto']['size'] > 0)
             //Redirect with Success
             $_SESSION['profilesuccess'] = true;
             if($prev_cover != 'defaultcover.jpg')
-                unlink("cover/".$prev_cover);
-            header('Location: view.php');
+                unlink("../profile/cover/" . $prev_cover);
+            header('Location: ../profile/view.php');
             die();
 
         }
@@ -131,7 +130,7 @@ if (isset($_FILES['coverphoto']) && $_FILES['coverphoto']['size'] > 0)
             //Redirect
             $_SESSION['profileerror'] = "Cannot Upload Image";
             $mysql_conn = null;
-            header('Location: view.php');
+            header('Location: ../profile/view.php');
             die();
         }
 
@@ -139,7 +138,7 @@ if (isset($_FILES['coverphoto']) && $_FILES['coverphoto']['size'] > 0)
     else{
         $_SESSION['profileerror'] = "Cannot Upload Image! Error Occured!";
         $mysql_conn = null;
-        header('Location: view.php');
+        header('Location: ../profile/view.php');
         die();
     }
 

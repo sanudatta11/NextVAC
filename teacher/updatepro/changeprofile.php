@@ -9,15 +9,14 @@
 session_start();
 unset($_SESSION['submitauth']);
 
-if(isset($_SESSION['secretkey'])&&$_SESSION['designation']=='student')
+if (isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'teacher')
 {
     //Authorized Personnel here Give Respect
 
-}
-else if(isset($_SESSION['secretkey']) && $_SESSION['designation']=='teacher')
+} else if (isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'student')
 {
     //Teacher go to your Dashboard dont Roam Around
-    header('Location: ../../teacher/dashboard.php');
+    header('Location: ../../student/dashboard.php');
     die();
 }
 else{
@@ -85,7 +84,7 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
 
     //        Uploading Image start
              $upload_status = true;
-             $target_dir = 'images/';
+         $target_dir = '../profile/';
              $target_file = $target_dir.basename($_FILES['profilepic']['name']);
              $extension =pathinfo($target_file,PATHINFO_EXTENSION);
 
@@ -108,7 +107,7 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
                  //Redirect the person
                  $_SESSION['profileerror'] = "Size of Image too large!";
                  $mysql_conn = null;
-                 header('Location: view.php');
+                 header('Location: ../profile/view.php');
                  die();
 
              }
@@ -118,7 +117,7 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
                  $upload_status = false;
                  // echo "Not correct";
                  $_SESSION['profileerror'] = "Image Type Error! Cannot Upload!";
-                 header('Location: view.php');
+                 header('Location: ../profile/view.php');
                  $mysql_conn = null;
                  die();
                  //Not image redirect this asshole
@@ -136,7 +135,7 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
                      if($prev_propic != 'default.jpg' && $prev_propic != 'female.jpg' && $prev_propic != 'male.jpg')
                          shell_exec("rm -rf images/".$prev_propic);
                      $mysql_conn = null;
-                     header('Location: view.php');
+                     header('Location: ../profile/view.php');
                      die();
 
                  }
@@ -145,7 +144,7 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
                      //Redirect
                      $_SESSION['profileerror'] = "Cannot Upload Image";
                      $mysql_conn = null;
-                     header('Location: view.php');
+                     header('Location: ../profile/view.php');
                      die();
                  }
 
@@ -153,7 +152,7 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
              else{
                  $_SESSION['profileerror'] = "Cannot Upload Image! Error Occured!";
                  $mysql_conn = null;
-                 header('Location: view.php');
+                 header('Location: ../profile/view.php');
                  die();
              }
              //Uploading Image end
@@ -175,7 +174,7 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
 
          $_SESSION['profilesuccess'] = true;
          $mysql_conn = null;
-         header('Location: view.php');
+         header('Location: ../profile/view.php');
          die();
      }
 
@@ -184,7 +183,7 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
 else{
     $_SESSION['profileerror'] = "Cannot Update!Error Occured!";
     $mysql_conn = null;
-    header('Location: view.php');
+    header('Location: ../profile/view.php');
     die();
 }
 

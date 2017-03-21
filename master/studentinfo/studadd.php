@@ -29,22 +29,36 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/dependencies/accountcreate/mailandint.p
 
 //require_once $_SERVER['DOCUMENT_ROOT'].'/mailer/apimail.php';
 
-if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION['designation'] == 'master')
+
+$check_session_var_string = "SELECT * FROM nextvac.login WHERE secretkey = :seckey AND sessionvar = :sesvar AND designation = :desig";
+$check_session_var = $mysql_conn->prepare($check_session_var_string);
+$check_session_var->bindParam(':seckey', $_SESSION['secretkey'], PDO::PARAM_STR);
+$check_session_var->bindParam(':sesvar', session_id(), PDO::PARAM_STR);
+$check_session_var->bindParam(':desig', $_SESSION['designation'], PDO::PARAM_STR);
+$check_session_var->execute();
+
+if ($check_session_var->rowCount() > 0)
 {
-    if(!is_connected())
-    {
-        echo '<script>window.alert("Internet Not Connected. Didn\'t Add User")</script>';
-        header('Location: studentdash.php');
-        die();
-    }
+
+} else {
+    header('Location: ../../logout.php');
+    die();
+}
+
+
+if (isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION['designation'] == 'master') {
+//    if(!is_connected())
+//    {
+//        echo '<script>window.alert("Internet Not Connected. Didn\'t Add User")</script>';
+//        header('Location: studentdash.php');
+//        die();
+//    }
 
     //Checking Both Login and Studentinfo DB table data for saving
-    if(isset($_POST['username']) && isset($_POST['section']) && isset($_POST['regno']))
-    {
+    if (isset($_POST['username']) && isset($_POST['section']) && isset($_POST['regno'])) {
 //        Make the attendance to be just 0 and make the rank to be the mazimum plus 1 to the original value
 //        Checking the Profile Table data has came or not
-        if(isset($_POST['email']) && isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['number']) && isset($_POST['course']) && isset($_POST['semester']) )
-        {
+        if (isset($_POST['email']) && isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['number']) && isset($_POST['course']) && isset($_POST['semester'])) {
             if(!isset($_POST['hometown']))
                 $_POST['hometown'] = 'undefined';
             /*
@@ -84,14 +98,12 @@ if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION
             $check_obj->bindParam(':user',$username,PDO::PARAM_INT);
             $check_obj->execute();
 
-            if($check_obj->rowCount() > 0)
-            {
+            if ($check_obj->rowCount() > 0) {
                 //User Already Added
                 $_SESSION['error'] = "Account already exist!";
                 header('Location: ../addnetwork.php');
                 die();
-            }
-            else{
+            } else {
                 //Account not Created
                 //Go Ahead
             }
@@ -129,18 +141,14 @@ if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION
 
             $gender = preg_replace("/[^0-9]+/", "",$_POST['gender']);
 
-            if(isset($gender) && $gender == 1 || $gender == 2)
-            {
+            if (isset($gender) && $gender == 1 || $gender == 2) {
                 $conn_obj_add->bindParam(':gender',$gender,PDO::PARAM_STR);
-                if($gender == 1)
-                {
+                if ($gender == 1) {
                     $conn_obj_add->bindValue(':propic','male.jpg');
-                }
-                else
-                    $conn_obj_add->bindValue(':propic','female.jpg');
+                } else
+                    $conn_obj_add->bindValue(':propic', 'female.jpg');
 
-            }else
-            {
+            } else {
                 $gender = 3;
                 $conn_obj_add->bindParam(':gender',$gender,PDO::PARAM_STR);
                 $conn_obj_add->bindValue(':propic','default.jpg');
@@ -153,26 +161,24 @@ if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION
              * be able to change it
              */
             //Start Mail here
-            if(is_connected())
-                sendcreatemail($email,$name,$username,$password);
-            else
-                echo '<script>window.alert("Internet Not Connected . Mail Error")</script>';
+//            if(is_connected())
+//                sendcreatemail($email,$name,$username,$password);
+//            else
+//                echo '<script>window.alert("Internet Not Connected . Mail Error")</script>';
 
             //End Mail Here
 
             $_SESSION['donecreate'] = true;
-                   //Send it wherever you want actually Check for sessionvar and unset it
+            //Send it wherever you want actually Check for sessionvar and unset it
             header('Location: studentdash.php');
             die();
 
-        }
-        else{
+        } else {
             header('Location: ../index.php');
             die();
         }
 
-    }
-    else{
+    } else {
         header('Location: ../index.php');
         die();
     }
@@ -180,6 +186,6 @@ if(isset($_SESSION['secretkey']) && isset($_SESSION['designation']) && $_SESSION
 }
 else
 {
- unset($_SESSION);
- header('Location: ../../index.php');
+    unset($_SESSION);
+    header('Location: ../../index.php');
 }

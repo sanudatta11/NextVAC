@@ -1,5 +1,5 @@
 <?php return array (
-  'lifetime' => 1489887292,
+    'lifetime' => 1490040204,
   'data' => 
   array (
     'PluginCorePluginsAdminMetadata' => 
@@ -5592,8 +5592,139 @@
     'PluginUserIdVisualizations\\Piwik\\Plugin\\ViewDataTable' => 
     array (
     ),
-    'PluginCustomPiwikJsVisualizations\\Piwik\\Plugin\\ViewDataTable' => 
-    array (
-    ),
+    'PluginCustomPiwikJsVisualizations\\Piwik\\Plugin\\ViewDataTable' =>
+        array(),
+      'PluginCorePluginsAdminLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginCoreAdminHomeLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginCoreHomeLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginWebsiteMeasurableLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginDiagnosticsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginCoreVisualizationsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginProxyLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginAPILocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginExamplePluginLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginWidgetizeLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginTransitionsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginLanguagesManagerLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginActionsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginDashboardLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginMultiSitesLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginReferrersLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginUserLanguageLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginDevicesDetectionLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginGoalsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginEcommerceLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginSEOLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginEventsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginUserCountryLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(
+              '/var/www/html/analytics/plugins/UserCountry/LocationProvider/DefaultProvider.php' => 'Piwik\\Plugins\\UserCountry\\LocationProvider\\DefaultProvider',
+              '/var/www/html/analytics/plugins/UserCountry/LocationProvider/GeoIp/Pecl.php' => 'Piwik\\Plugins\\UserCountry\\LocationProvider\\GeoIp\\Pecl',
+              '/var/www/html/analytics/plugins/UserCountry/LocationProvider/GeoIp/Php.php' => 'Piwik\\Plugins\\UserCountry\\LocationProvider\\GeoIp\\Php',
+              '/var/www/html/analytics/plugins/UserCountry/LocationProvider/GeoIp/ServerBased.php' => 'Piwik\\Plugins\\UserCountry\\LocationProvider\\GeoIp\\ServerBased',
+          ),
+      'PluginVisitsSummaryLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginVisitFrequencyLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginVisitTimeLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginVisitorInterestLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginExampleAPILocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginRssWidgetLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginFeedbackLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginMonologLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginLoginLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginUsersManagerLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginSitesManagerLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginInstallationLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginCoreUpdaterLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginCoreConsoleLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginScheduledReportsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginUserCountryMapLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginLiveLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginCustomVariablesLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginPrivacyManagerLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginImageGraphLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginAnnotationsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginMobileMessagingLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginOverlayLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginSegmentEditorLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginInsightsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginMorpheusLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginContentsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginBulkTrackingLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginResolutionLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginDevicePluginsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginHeartbeatLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginIntlLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginMarketplaceLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginProfessionalServicesLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginUserIdLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'PluginCustomPiwikJsLocationProviderPiwik\\Plugins\\UserCountry\\LocationProvider' =>
+          array(),
+      'Marketplace_ExpiredPlugins' =>
+          array(
+              'exceeded' =>
+                  array(),
+              'expired' =>
+                  array(),
+              'noLicense' =>
+                  array(),
+          ),
   ),
 );

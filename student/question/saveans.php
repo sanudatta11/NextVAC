@@ -30,27 +30,31 @@ if(isset($_SESSION['secretkey'])&& $_SESSION['designation']=='student')
 
     if(isset($_POST))
     {
+
         foreach ($_POST as $name => $val)
         {
            // echo htmlspecialchars($name . ': ' . $val) . "\n";
 
             //        Ques Part
             $quescode = preg_replace("/[^A-Za-z0-9]+/","",$_SESSION['quescode']);
-            $codeid = preg_replace("/[^A-Za-z0-9]+/","",$name);
+            $codeid = preg_replace("/[^0-9]+/", "", $name);
             $ques_string = "SELECT * FROM nextvac.questiondb WHERE code = :quescode AND codeid = :codeid LIMIT 1";
             $quesdb_obj = $mysql_conn->prepare($ques_string);
 
-            $quesdb_obj->bindParam(':quescode',$quescode);
-            $quesdb_obj->bindParam(':codeid',$codeid);
+            $quesdb_obj->bindParam(':quescode', $quescode, PDO::PARAM_STR);
+            $quesdb_obj->bindParam(':codeid', $codeid, PDO::PARAM_INT);
 
             $quesdb_obj->execute();
             $quesdb_obj->setFetchMode(PDO::FETCH_ASSOC);
             $ques_details = $quesdb_obj->fetch();
 
-            if($quescode['status'] == 0)
+            if ($ques_details['status'] == 0)
             {
+                echo "Fuckkk";
+                die();
                 continue;
             }
+
 
             //Test if already answered or not!
             $test_string = "SELECT * FROM nextvac.answersdb WHERE secretkey = :seckey AND quescode = :quescode AND codeid = :codeid LIMIT 1";
@@ -67,6 +71,7 @@ if(isset($_SESSION['secretkey'])&& $_SESSION['designation']=='student')
                 continue;
             }
 
+
             //        Answer Part
             $ans_string = "INSERT INTO nextvac.answersdb (secretkey,section,quescode,codeid,answer,verdict) VALUES(?,?,?,?,?,?)";
             $ans_obj = $mysql_conn->prepare($ans_string);
@@ -78,14 +83,14 @@ if(isset($_SESSION['secretkey'])&& $_SESSION['designation']=='student')
 
             if($ques_details['correct'] == $val)
             {
-                $ans_obj->bindValue(6,1);
+                $ans_obj->bindValue(6, 1, PDO::PARAM_INT);
             }else{
-                $ans_obj->bindValue(6,0);
+                $ans_obj->bindValue(6, 0, PDO::PARAM_INT);
             }
 
             $ans_obj->execute();
-
-            header('Location: quespage.php');
+            $_SESSION['quesans'] = true;
+            header('Location: quespage.php?attempted=' . $codeid . '&hashsec=4JJq9q9');
             die();
         }
         header('Location: quespage.php');

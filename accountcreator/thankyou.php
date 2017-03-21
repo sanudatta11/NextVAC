@@ -6,4 +6,4 @@
  * Time: 12:49 AM
  */
 
-echo "Thank you";
+echo "Thank you! Your Account has been created";

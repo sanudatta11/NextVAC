@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{ace, bootstrap, html5shiv, jquery, jquery-3.1.1, jquery-ui, respond}" />
+    <file url="PROJECT" libraries="{ace, bootstrap, html5shiv, jquery, jquery-1.9.0, jquery-3.1.1, jquery-ui, jquery.runner, respond}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
   </component>
 </project>

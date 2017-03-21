@@ -99,8 +99,8 @@ if(isset($_POST))
         $statement = preg_replace('/[^A-Za-z0-9. ]+/','',$_POST['statement']);
         $inputstat = preg_replace('/[^A-Za-z0-9. ]+/','',$_POST['inputstat']);
         $outputstat = preg_replace('/[^A-Za-z0-9. ]+/','',$_POST['outputstat']);
-        $sampleinp = preg_replace('/[^A-Za-z0-9.\s\n ]+/','',$_POST['sampleinp']);
-        $sampleout = preg_replace('/[^A-Za-z0-9.\s\n ]+/','',$_POST['sampleout']);
+        $sampleinp = $_POST['sampleinp'];
+        $sampleout = $_POST['sampleout'];
         $duration = preg_replace('/[^0-9:]+/','',$_POST['duration']);
         $marks = preg_replace('/[^0-9:]+/','',$_POST['marks']);
 
@@ -296,11 +296,9 @@ if(isset($_POST))
             //Inputing as text
             for($var_i = 0;$var_i < $val_tot; ++$var_i)
             {
-                $inptext[$var_i] = preg_replace('/[^A-Za-z0-9.\s\n ]+/','',$inptext[$var_i]);
                 //Saving input from text to files
                 file_put_contents($inpfolder.'/input'.($var_i+1).'.txt',$inptext[$var_i]);
 
-                $outtext[$var_i] = preg_replace('/[^A-Za-z0-9.\s\n ]+/','',$outtext[$var_i]);
                 //Saving output from text to files
                 file_put_contents($outfolder.'/output'.($var_i+1).'.txt',$outtext[$var_i]);
             }

@@ -12,15 +12,14 @@ session_start();
 require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/connector.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/confidential/mysql_login.php';
 
-if(isset($_SESSION['secretkey'])&&$_SESSION['designation']=='student')
+if (isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'teacher')
 {
     //Authorized Personnel here Give Respect
 
-}
-else if(isset($_SESSION['secretkey']) && $_SESSION['designation']=='teacher')
+} else if (isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'student')
 {
     //Teacher go to your Dashboard dont Roam Around
-    header('Location: ../../teacher/dashboard.php');
+    header('Location: ../../student/dashboard.php');
     die();
 }
 else{
@@ -31,8 +30,8 @@ else{
 }
 
 //Query For Student info
-$find_student_info_string = "SELECT sessionvar FROM nextvac.login WHERE secretkey = :seckey AND sessionvar = :sessvar LIMIT 1";
-$infoquery = $mysql_conn->prepare($find_student_info_string);
+$find_teacher_info_string = "SELECT sessionvar FROM nextvac.login WHERE secretkey = :seckey AND sessionvar = :sessvar LIMIT 1";
+$infoquery = $mysql_conn->prepare($find_teacher_info_string);
 $infoquery->bindParam(':seckey',$_SESSION['secretkey']);
 $infoquery->bindParam(':sessvar',session_id());
 $infoquery->execute();
@@ -49,8 +48,6 @@ else{
 
 if(isset($_SESSION['profileerror']))
 {
-   $message = $_SESSION['profileerror'];
-
    echo '<script>window.alert("'.$_SESSION['profileerror'].'")</script>';
    unset($_SESSION['profileerror']);
 }
@@ -68,13 +65,13 @@ $find_profile = $mysql_conn->prepare($find_profile_string);
 $find_profile->bindParam(':seckey',$_SESSION['secretkey']);
 $find_profile->execute();
 $find_profile->setFetchMode(PDO::FETCH_ASSOC);
-$student_profile = $find_profile->fetch();
+$teacher_profile = $find_profile->fetch();
 
-$_SESSION['name'] = $student_profile['firstname']." ".$student_profile['lastname'];
-$_SESSION['propic'] = preg_replace("/[^A_Za-z.0-9]+/","",$student_profile['propic']);
-$_SESSION['incomming'] = filter_var($student_profile['incomming'], FILTER_SANITIZE_NUMBER_INT);
-$_SESSION['messages'] = filter_var($student_profile['messages'], FILTER_SANITIZE_NUMBER_INT);
-$_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
+$_SESSION['name'] = $teacher_profile['firstname'] . " " . $teacher_profile['lastname'];
+$_SESSION['propic'] = preg_replace("/[^A_Za-z.0-9]+/", "", $teacher_profile['propic']);
+$_SESSION['incomming'] = filter_var($teacher_profile['incomming'], FILTER_SANITIZE_NUMBER_INT);
+$_SESSION['messages'] = filter_var($teacher_profile['messages'], FILTER_SANITIZE_NUMBER_INT);
+$_SESSION['status'] = preg_replace("/[^ \w]+/", "", $teacher_profile['status']);
 
 ?>
 
@@ -82,10 +79,13 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
 <head>
     <title>NextVAC</title>
     <link rel="stylesheet" href="../../css/student/profile.css">
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+    <script src="../../jquery/jquery.min.js"></script>
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
+    <script src="../../bootstrap/css/bootstrap.min.css"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="../../js/bootstrap.min.js"></script>
 
     <style>
         .container {
@@ -113,7 +113,8 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
         <div class="col-lg-12 col-sm-12">
             <div class="card hovercard" style="height: 200px;">
                 <div class="card-background" style="width: 100%;height: 100%;">
-                    <img class="card-bkimg" alt="cover" src="cover/<?php echo $student_profile['cover']; ?>" style="width: 100%;height: 280%;">
+                    <img class="card-bkimg" alt="cover" src="cover/<?php echo $teacher_profile['cover']; ?>"
+                         style="width: 100%;height: 280%;">
                     <!--THIS IMG CHANGES THE TOP PART's BACKGROUND-->
                     <!-- http://lorempixel.com/850/280/people/9/ -->
                 </div>
@@ -127,13 +128,13 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
                             <button class="btn btn-sm btn-danger btn-transparent" data-toggle="modal" data-target="#cover_pic" id- "cover_pic"><b>UPDATE COVER</b></button>
                         </div>
                     </div>
-                    <img alt="" src="images/<?php echo $student_profile['propic'];?>">
+                    <img alt="" src="<?php echo $teacher_profile['propic']; ?>">
                 </div>
                 <!--Insert name here-->
 
 
                     <div class="modal fade" id="cover_pic" role="dialog">
-                        <form action="savecover.php" method="post" enctype="multipart/form-data">
+                        <form action="../updatepro/savecover.php" method="post" enctype="multipart/form-data">
                             <div class="modal-dialog">
 
                                 <div class="modal-content">
@@ -163,12 +164,14 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
 
                 <div class="card-info" style="left: 10px;top: 120px; margin-top: 25px;"> <span class="card-title"><?php echo $_SESSION['name']; ?></span>
                 </div>
-                <div class="card-info" style="left: 10px;top: 144px; bottom: 0px; font-family: 'Times New Roman';margin-top: 30px; font-size: medium;"> <span class="card-title"><?php echo $student_profile['status']; ?></span>
+                <div class="card-info"
+                     style="left: 10px;top: 144px; bottom: 0px; font-family: 'Times New Roman';margin-top: 30px; font-size: medium;">
+                    <span class="card-title"><?php echo $teacher_profile['status']; ?></span>
                 </div>
                 <div class="card-info" style="left: 10px;top: 144px; bottom: 0px; font-family: 'Times New Roman'; font-size: medium;"> <span class="card-title"></span>
                 </div>
                 <!--                Enter Status Here-->
-                <div class="card-title"> <span class="card-title"><?php echo $student_profile['status']; ?></span>
+                <div class="card-title"><span class="card-title"><?php echo $teacher_profile['status']; ?></span>
                 </div>
 
             </div>
@@ -204,33 +207,11 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
                         <br>
                         <span class="glyphicon glyphicon-education"></span>
                         <label for=""> Course: </label>
-                        <label for=""> <?php echo $student_profile['course']; ?> </label>
-                        <br>
-                        <span class="glyphicon glyphicon-modal-window"> </span>
-                        <label for=""> Year: </label>
-                        <label for=""> <?php
-                                $sem = $student_profile['semester'];
-                                $year = 0;
-                                if($sem == 1 || $sem ==2)
-                                {
-                                    $year =1;
-                                }else if($sem == 3 || $sem == 4)
-                                {
-                                    $year =2;
-                                }else if($sem == 5 ||$sem == 6)
-                                {
-                                    $year = 3;
-                                }else if($sem == 7 || $sem ==8)
-                                {
-                                    $year = 4;
-                                }
-                            echo $year." Year and ".$sem." Semester";
-                                ?>
-                        </label>
+                        <label for=""> <?php echo $teacher_profile['course']; ?> </label>
                         <br>
                         <span class="glyphicon glyphicon-home"> </span>
                         <label for=""> Hometown: </label>
-                        <label for=""> <?php echo $student_profile['hometown']; ?> </label>
+                        <label for=""> <?php echo $teacher_profile['hometown']; ?> </label>
 
                         <br>
                         <div class="text text-warning">
@@ -239,24 +220,19 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
                             <label for="">
                                 <ul>
                                     <?php
-                                    $obj = unserialize($student_profile['organization']);
+                                    $obj = unserialize($teacher_profile['organization']);
+                                    if (empty($obj))
+                                        echo '<li>None</li>';
+
                                     foreach ($obj as $member)
                                     {
                                         echo '<li>'.$member.'</li>';
                                     }
                                     ?>
-                                    <li>RISC-LPU</li>
-                                    <li>SRPC-Student Project and Research Cell</li>
-                                    <li>Cypher</li>
                                 </ul>
                             </label>
                         </div>
                         <br>
-                        <div class="text text-danger">
-                            <span class="glyphicon glyphicon-copyright-mark"> </span>
-                            <label for=""> Current CGPA/TGPA: </label>
-                            <label for=""> <?php echo $student_profile['cgpa'];  ?> </label>
-                        </div>
                         <div class="col-xs-6">
 
                         </div>
@@ -270,7 +246,7 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
                         </div>
                         <div class="modal fade" id="pass" role="dialog">
                             <div class="modal-dialog">
-                                <form action="changepass.php" method="post" enctype="multipart/form-data">
+                                <form action="../updatepro/changepass.php" method="post" enctype="multipart/form-data">
                                     <!-- Modal content-->
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -453,11 +429,11 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
             </div>
             <div class="modal-body">
                 <span class="glyphicon glyphicon-home"></span>
-                <label for="">Hostel Address: <?php echo $student_profile['hostel'];?></label> <br>
+                <label for="">Room Address: <?php echo $teacher_profile['hostel']; ?></label> <br>
                 <span class="glyphicon glyphicon-envelope"></span>
-                <label for="">Email address: <?php echo $student_profile['email']; ?></label> <br>
+                <label for="">Email address: <?php echo $teacher_profile['email']; ?></label> <br>
                 <span class="glyphicon glyphicon-phone"></span>
-                <label for="">Contact Number: <?php echo $student_profile['number']; ?></label> <br>
+                <label for="">Contact Number: <?php echo $teacher_profile['number']; ?></label> <br>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -468,7 +444,8 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
 </div>
 
 
-<form class="form-horizontal" role="form" method="post" action="changeprofile.php" enctype="multipart/form-data">
+<form class="form-horizontal" role="form" method="post" action="../updatepro/changeprofile.php"
+      enctype="multipart/form-data">
 <!--Edit Profile Starts below-->
 <div class="modal fade" id="myModal2" role="dialog">
     <div class="modal-dialog">
@@ -483,7 +460,8 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
 
 
                 <div class="text-center">
-                    <img src="images/<?php echo $student_profile['propic']; ?>" class="avatar img-circle" alt="avatar" height="100" width="100">
+                    <img src="<?php echo $teacher_profile['propic']; ?>" class="avatar img-circle" alt="avatar"
+                         height="100" width="100">
                     <h6>Upload a different photo...</h6>
                     <input type="file" class="form-control" name="profilepic" id="profilepic">
                 </div>
@@ -491,56 +469,40 @@ $_SESSION['status'] = preg_replace("/[^ \w]+/", "", $student_profile['status']);
                     <div class="form-group">
                         <label class="col-lg-3 control-label">First name:</label>
                         <div class="col-lg-8">
-                            <input class="form-control" type="text" value="<?php echo $student_profile['firstname']; ?>" name="firstname">
+                            <input class="form-control" type="text" value="<?php echo $teacher_profile['firstname']; ?>"
+                                   name="firstname">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Last name:</label>
                         <div class="col-lg-8">
-                            <input class="form-control" type="text" value="<?php echo $student_profile['lastname']; ?>" name="lastname">
+                            <input class="form-control" type="text" value="<?php echo $teacher_profile['lastname']; ?>"
+                                   name="lastname">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Status:</label>
                         <div class="col-lg-8">
-                            <input class="form-control" type="text" value="<?php echo $student_profile['status']; ?>" name="status">
+                            <input class="form-control" type="text" value="<?php echo $teacher_profile['status']; ?>"
+                                   name="status">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Email:</label>
                         <div class="col-lg-8">
-                            <input class="form-control" type="text" value="<?php echo $student_profile['email']; ?>" name="email">
+                            <input class="form-control" type="text" value="<?php echo $teacher_profile['email']; ?>"
+                                   name="email">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Phone Number:</label>
                         <div class="col-lg-8">
-                            <input class="form-control" type="text" value="<?php echo $student_profile['number'];?>" name="number">
+                            <input class="form-control" type="text" value="<?php echo $teacher_profile['number']; ?>"
+                                   name="number">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="col-lg-3 control-label">Year of study: </label>
-                        <div class="col-lg-8">
-                            <div class="ui-select">
-                                <select id="user_time_zone" class="form-control">
-                                    <?php
-                                    $selected = 'selected="selected"';
-                                    ?>
 
-                                    <option value="1" <?php if($sem==1) echo $selected; ?>>1st Year : 1st Semester</option>
-                                    <option value="2" <?php if($sem==2) echo $selected; ?>>1st Year : 2nd Semester</option>
-                                    <option value="3" <?php if($sem==3) echo $selected; ?>>2nd Year : 3rd Semester</option>
-                                    <option value="4" <?php if($sem==4) echo $selected; ?>>2nd Year : 4th Semester</option>
-                                    <option value="5" <?php if($sem==5) echo $selected; ?>>3rd Year : 5th Semester</option>
-                                    <option value="6" <?php if($sem==6) echo $selected; ?>>3rd Year : 6th Semester</option>
-                                    <option value="7" <?php if($sem==7) echo $selected; ?>>4th Year : 7th Semester</option>
-                                    <option value="8" <?php if($sem==8) echo $selected; ?>>4th Year : 8th Semester</option>
-
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
+                <div class="form-group">
                         <label class="col-md-3 control-label"></label>
                         <div class="col-md-8">
                             <span></span>

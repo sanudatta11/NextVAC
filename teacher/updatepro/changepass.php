@@ -10,15 +10,14 @@
 session_start();
 unset($_SESSION['submitauth']);
 
-if(isset($_SESSION['secretkey'])&&$_SESSION['designation']=='student')
+if (isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'teacher')
 {
     //Authorized Personnel here Give Respect
 
-}
-else if(isset($_SESSION['secretkey']) && $_SESSION['designation']=='teacher')
+} else if (isset($_SESSION['secretkey']) && $_SESSION['designation'] == 'student')
 {
     //Teacher go to your Dashboard dont Roam Around
-    header('Location: ../../teacher/dashboard.php');
+    header('Location: ../../student/dashboard.php');
     die();
 }
 else{
@@ -64,7 +63,7 @@ if(isset($_POST['pass1']) && isset($_POST['pass2']) && isset($_POST['prevpass'])
     else{
         //Go Back
         $_SESSION['profileerror'] = "Sorry the Old Password was incorrect!";
-        header('Location: view.php');
+        header('Location: ../profile/view.php');
         die();
     }
 
@@ -79,15 +78,15 @@ if(isset($_POST['pass1']) && isset($_POST['pass2']) && isset($_POST['prevpass'])
         $change_profile->bindParam(':pass',$pass,PDO::PARAM_STR);
         $change_profile->execute();
         $_SESSION['profileerror'] = "Password Updated Successfully!";
-        header('Location: view.php');
+        header('Location: ../profile/view.php');
         die();
     }else{
         $_SESSION['profileerror'] = "Passwords didn't Matched!";
-        header('Location: view.php');
+        header('Location: ../profile/view.php');
         die();
     }
 }
 else{
-    header('Location: view.php');
+    header('Location: ../profile/view.php');
     die();
 }

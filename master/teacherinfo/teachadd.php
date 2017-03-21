@@ -19,6 +19,21 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/dependencies/randomize/randomstring.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/dependencies/accountcreate/mailandint.php';
 
+
+$check_session_var_string = "SELECT * FROM nextvac.login WHERE secretkey = :seckey AND sessionvar = :sesvar AND designation = :desig";
+$check_session_var = $mysql_conn->prepare($check_session_var_string);
+$check_session_var->bindParam(':seckey', $_SESSION['secretkey'], PDO::PARAM_STR);
+$check_session_var->bindParam(':sesvar', session_id(), PDO::PARAM_STR);
+$check_session_var->bindParam(':desig', $_SESSION['designation'], PDO::PARAM_STR);
+$check_session_var->execute();
+
+if ($check_session_var->rowCount() > 0) {
+
+} else {
+    header('Location: ../../logout.php');
+    die();
+}
+
 if(!is_connected())
 {
     $_SESSION['error'] = "Internet Not Connected. Didn\'t Add User";

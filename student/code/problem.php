@@ -29,6 +29,20 @@ else{
     die();
 }
 
+$check_session_var_string = "SELECT * FROM nextvac.login WHERE secretkey = :seckey AND sessionvar = :sesvar AND designation = :desig";
+$check_session_var = $mysql_conn->prepare($check_session_var_string);
+$check_session_var->bindParam(':seckey', $_SESSION['secretkey'], PDO::PARAM_STR);
+$check_session_var->bindParam(':sesvar', session_id(), PDO::PARAM_STR);
+$check_session_var->bindParam(':desig', $_SESSION['designation'], PDO::PARAM_STR);
+$check_session_var->execute();
+
+if ($check_session_var->rowCount() > 0) {
+
+} else {
+    header('Location: ../../logout.php');
+    die();
+}
+
 if(isset($_GET['contest']) && isset($_GET['problem']))
 {
     unset($_SESSION['submitauth']);
@@ -70,19 +84,22 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script href="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+    <script src="../../jquery/jquery.min.js"></script>
     <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
-    <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../bootstrap/css/bootstrap.min.css"></script>
     <!--<link rel="stylesheet" href="nav.css">-->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome/font-awesome.css">
+    <link href="../../css/googlefonts/orbitron.css" rel="stylesheet">
+    <link href="../../css/googlefonts/taviraj.css" rel="stylesheet">
+    <link href="../../css/googlefonts/aldrich.css" rel="stylesheet">
 
+    <!--<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">-->
 
     <title>NextVAC</title>
 
@@ -93,13 +110,10 @@ else
     <link href="../../css/theme/dashboard_simple-sidebar.css" rel="stylesheet">
     <link href="../../css/theme/dashboard.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script href="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script href="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js"></script>
+    <script src="../../js/backsupport/html5shiv.js"></script>
+    <script src="../../js/backsupport/respond.js"></script>
+
+    <script src="../../js/ace/ace.js"></script>
     <link href="../../css/student/codingground.css" rel="stylesheet">
     <link href="../../css/processingbox/main.css" rel="stylesheet">
     <style type="text/css" media="screen">
@@ -206,7 +220,7 @@ else
                     <div class="modal-content">
                         <div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;
                             </button>
-                            <h3 class="modal-title">Welcome <i>Biswarup Banerjee</i></h3>
+                            <h3 class="modal-title">Welcome <i><?php echo $_SESSION['name']; ?></i></h3>
                         </div>
                         <div class="modal-body">
                             <div class="media">
@@ -338,7 +352,14 @@ else
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-8">
+                        <div class="col-sm-6">
+                        </div>
+
+                        <div class="col-xs-2">
+                            <div class="btn-group btn-group-lg">
+                                <button type="button" class="btn btn-lg btn-primary" id="savebt">SAVE</button>
+                                <button type="button" class="btn btn-lg btn-warning" id="loadbt">LOAD</button>
+                            </div>
                         </div>
                         <div class="col-sm-1">
                             <form action="samplessub.php" method="post" name="runform" id="runform">
@@ -353,7 +374,6 @@ else
                             <form action="realsub.php" method="post" id="subform" name="subform">
                                 <textarea class="form-control" style="display:none" id="code_arena_sub" name="code_arena" required></textarea>
                                 <input type="hidden" class="language hidden" value="C++" name="language" id="sublang">
-                                <input type="hidden" class="language hidden" value="C++" name="language">
                                 <input type="hidden" class="hidden" name="ccode" id="ccode" value="<?php echo $contestcode;?>">
                                 <input type="hidden" class="hidden" name="pcode" id="pcode" value="<?php echo $problemcode;?>">
                                 <button type="submit" class="btn btn-lg btn-success" id="subbt">SUBMIT</button>
@@ -364,6 +384,11 @@ else
                         <div class="col-sm-1">
                                 <button type="button" class="btn btn-lg btn-warning" onclick="goFS()"> Fullscreen </button>
                         </div>
+                        <br><br><br>
+                        <div id="alert-save-load">
+
+                        </div>
+
                     </div>
 
                     <div class="row">
@@ -434,8 +459,8 @@ else
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/student.dashboard.bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script src="../../js/codingground/codesub.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <script src="../../js/codingground/codesub.js?version=1"></script>
 
     <script src="../../ace/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="../../ace/ace-builds/src-noconflict/ext-language_tools.js"></script>
@@ -465,7 +490,6 @@ else
                 //  console.log('Am I fullscreen? ' + (screenfull.isFullscreen ? 'Yes' : 'No'));
             });
         }
-
 
     </script>
 

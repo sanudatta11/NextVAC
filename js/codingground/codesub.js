@@ -3,6 +3,161 @@
  */
 
 $(document).ready(function() {
+    //Start of First Load
+    var prevcode = "";
+
+    var loaddata = {
+        'pcode': $('#pcode').val(),
+        'ccode': $('#ccode').val()
+    };
+    //console.log(loaddata);
+    $.ajax({
+        type: "POST",
+        url: "../../dependencies/savecode/loadlocal.php",
+        data: loaddata,
+        datatype: 'json',
+        encode: true,
+        cache: false
+    }).done(function (data) {
+        result = JSON && JSON.parse(data) || $.parseJSON(data);
+        //console.log(result);
+        if (result.success == true) {
+            editor.setValue(result.mainload);
+        }
+    });
+
+    //End of First Load
+
+
+    setInterval(function () {
+        var codedata = {
+            'codemain': editor.getValue(),
+            'pcode': $('#pcode').val(),
+            'ccode': $('#ccode').val()
+        };
+        // console.log(codedata);
+        if (codedata.codemain != "" && codedata.codemain != prevcode) {
+            $.ajax({
+                type: "POST",
+                url: "../../dependencies/savecode/savelocal.php",
+                data: codedata,
+                datatype: 'json',
+                encode: true,
+                cache: false
+            }).done(function (data) {
+                result = JSON && JSON.parse(data) || $.parseJSON(data);
+                // console.log(result);
+                if (result.success == true) {
+                    $('#alert-save-load').empty();
+                    $('#alert-save-load').append('<div class="alert alert-success" id="success-alert"><button type="button" class="close"></button><h5><strong>Success! </strong>Code Saved</h5></div>');
+                    $("#success-alert").fadeTo(2000, 400).slideUp(400, function () {
+                        $("#success-alert").slideUp(400);
+                    });
+                } else if (result.errors == "1") {
+                    $('#alert-save-load').empty();
+                    $('#alert-save-load').append('<div class="alert alert-danger" id="danger-alert"><button type="button" class="close"></button><h5><strong>Sorry! </strong>Code is empty</h5></div>');
+                    $("#danger-alert").fadeTo(2000, 400).slideUp(400, function () {
+                        $("#danger-alert").slideUp(400);
+                    });
+                }
+                else {
+                    $('#alert-save-load').empty();
+                    $('#alert-save-load').append('<div class="alert alert-danger" id="danger-alert"><button type="button" class="close"></button><h5><strong>Sorry! </strong>Some Error Occured</h5></div>');
+                    $("#danger-alert").fadeTo(2000, 400).slideUp(400, function () {
+                        $("#danger-alert").slideUp(400);
+                    });
+                }
+            });
+        }
+        prevcode = codedata.codemain;
+
+    }, 10000);
+    //Auto Save
+
+
+    //End of AutoSave
+
+    $('#savebt').click(function () {
+        var codedata = {
+            'codemain': editor.getValue(),
+            'pcode': $('#pcode').val(),
+            'ccode': $('#ccode').val()
+        };
+        // console.log(codedata);
+        $.ajax({
+            type: "POST",
+            url: "../../dependencies/savecode/savelocal.php",
+            data: codedata,
+            datatype: 'json',
+            encode: true,
+            cache: false
+        }).done(function (data) {
+            result = JSON && JSON.parse(data) || $.parseJSON(data);
+            // console.log(result);
+            if (result.success == true) {
+                $('#alert-save-load').empty();
+                $('#alert-save-load').append('<div class="alert alert-success" id="success-alert"><button type="button" class="close"></button><h5><strong>Success! </strong>Code Saved</h5></div>');
+                $("#success-alert").fadeTo(2000, 400).slideUp(400, function () {
+                    $("#success-alert").slideUp(400);
+                });
+            } else if (result.errors == "1") {
+                $('#alert-save-load').empty();
+                $('#alert-save-load').append('<div class="alert alert-danger" id="danger-alert"><button type="button" class="close"></button><h5><strong>Sorry! </strong>Code is empty</h5></div>');
+                $("#danger-alert").fadeTo(2000, 400).slideUp(400, function () {
+                    $("#danger-alert").slideUp(400);
+                });
+            }
+            else {
+                $('#alert-save-load').empty();
+                $('#alert-save-load').append('<div class="alert alert-danger" id="danger-alert"><button type="button" class="close"></button><h5><strong>Sorry! </strong>Some Error Occured</h5></div>');
+                $("#danger-alert").fadeTo(2000, 400).slideUp(400, function () {
+                    $("#danger-alert").slideUp(400);
+                });
+            }
+        });
+        event.preventDefault();
+    });
+
+    $('#loadbt').click(function () {
+        var loaddata = {
+            'pcode': $('#pcode').val(),
+            'ccode': $('#ccode').val()
+        };
+        //console.log(loaddata);
+        $.ajax({
+            type: "POST",
+            url: "../../dependencies/savecode/loadlocal.php",
+            data: loaddata,
+            datatype: 'json',
+            encode: true,
+            cache: false
+        }).done(function (data) {
+            result = JSON && JSON.parse(data) || $.parseJSON(data);
+            //console.log(result);
+            if (result.success == true) {
+                editor.setValue(result.mainload);
+                $('#alert-save-load').empty();
+                $('#alert-save-load').append('<div class="alert alert-success" id="success-alert"><button type="button" class="close"></button><h5><strong>Success! </strong>Code Loaded to Editor</h5></div>');
+                $("#success-alert").fadeTo(2000, 400).slideUp(400, function () {
+                    $("#success-alert").slideUp(400);
+                });
+            } else if (result.errors == "1") {
+                $('#alert-save-load').empty();
+                $('#alert-save-load').append('<div class="alert alert-danger" id="danger-alert"><button type="button" class="close"></button><h5><strong>Sorry! </strong>No Code saved before</h5></div>');
+                $("#danger-alert").fadeTo(2000, 400).slideUp(400, function () {
+                    $("#danger-alert").slideUp(400);
+                });
+            }
+            else {
+                $('#alert-save-load').empty();
+                $('#alert-save-load').append('<div class="alert alert-danger" id="danger-alert"><button type="button" class="close"></button><h5><strong>Sorry! </strong>Some Error Occured</h5></div>');
+                $("#danger-alert").fadeTo(2000, 400).slideUp(400, function () {
+                    $("#danger-alert").slideUp(400);
+                });
+            }
+        });
+        event.preventDefault();
+    });
 
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
